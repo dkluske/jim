@@ -17,7 +17,23 @@ import kotlin.time.Duration.Companion.days
 import kotlin.time.Instant
 
 data object MainViewModel {
-    fun getDaysBeforeAndAfter(now: Instant, days: Int): List<Instant> {
+    fun getCalendarEntries(now: Instant): List<JimCalendarWidgetEntry> {
+        return getDaysBeforeAndAfter(
+            now = now,
+            days = 3
+        ).mapIndexed { index, instant -> // TODO: add real logic whether user has worked out on that day
+            JimCalendarWidgetEntry(
+                date = instant,
+                hasWorkedOut = if (index % 2 == 0) {
+                    true
+                } else {
+                    false
+                }
+            )
+        }
+    }
+
+    private fun getDaysBeforeAndAfter(now: Instant, days: Int): List<Instant> {
         val sanitizedDays = if (days < 0) {
             1
         } else {
@@ -50,7 +66,7 @@ fun MainView(
          * Heading
          */
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
             horizontalArrangement = Arrangement.Start
         ) {
             Text(
@@ -62,22 +78,12 @@ fun MainView(
          * Calendar Part
          */
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().padding(4.dp),
         ) {
             JimCalendarWidget(
-                dates = vm.getDaysBeforeAndAfter(
-                    now = Clock.System.now(),
-                    days = 3
-                ).mapIndexed { index, instant -> // TODO: add real logic whether user has worked out on that day
-                    JimCalendarWidgetEntry(
-                        date = instant,
-                        hasWorkedOut = if (index % 2 == 0) {
-                            true
-                        } else {
-                            false
-                        }
-                    )
-                }
+                dates = vm.getCalendarEntries(
+                    now = Clock.System.now()
+                )
             )
         }
     }

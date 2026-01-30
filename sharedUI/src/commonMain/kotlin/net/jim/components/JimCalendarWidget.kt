@@ -31,13 +31,14 @@ fun JimCalendarWidget(
 ) {
     Column(
         modifier = Modifier.fillMaxWidth()
-            .background(
-                color = MaterialTheme.colorScheme.primaryContainer,
-                shape = RoundedCornerShape(8.dp)
-            )
             .border(
                 width = 1.dp,
                 color = MaterialTheme.colorScheme.outline,
+                shape = RoundedCornerShape(8.dp)
+            )
+            .background(
+                color = MaterialTheme.colorScheme.primaryContainer,
+                shape = RoundedCornerShape(8.dp)
             )
             .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -58,14 +59,22 @@ private fun JimCalendarWidgetEntry(
     value: JimCalendarWidgetEntry
 ) {
     val date = value.date.toLocalDateTime(TimeZone.currentSystemDefault())
-    Column {
-        Row {
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Row(
+            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
+        ) {
             Text(
                 text = date.dayOfWeek.toAbbreviatedString(),
-                style = MaterialTheme.typography.displaySmall
+                style = MaterialTheme.typography.displaySmall,
+                color = MaterialTheme.colorScheme.onSecondary
             )
         }
-        Row {
+        Row(
+            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
+        ) {
             Box(
                 modifier = Modifier.background(
                     color = if (value.hasWorkedOut) {
@@ -74,10 +83,12 @@ private fun JimCalendarWidgetEntry(
                         MaterialTheme.colorScheme.primaryContainer
                     },
                     shape = CircleShape
-                )
+                ).size(12.dp)
             )
         }
-        Row {
+        Row(
+            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
+        ) {
             Text(
                 text = date.day.toString(),
                 style = MaterialTheme.typography.displaySmall
