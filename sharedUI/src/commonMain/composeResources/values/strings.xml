@@ -3,6 +3,11 @@
     <string name="stop">Stop</string>
     <string name="theme">Theme</string>
     <string name="readyToWorkQuestion">Ready to work?</string>
+    <string name="yourPlans">Your workout plans</string>
+    <string name="latestWorkouts">Latest Workouts</string>
+    <string name="noWorkoutsStartNow">No workouts recorded yet. Start one now!</string>
+    <string name="noPlansCreateOne">No plans yet. Create one now.</string>
+    <string name="showMore">Show more</string>
     <string name="mondayAbbreviated">Mon</string>
     <string name="tuesdayAbbreviated">Tue</string>
     <string name="wednesdayAbbreviated">Wed</string>

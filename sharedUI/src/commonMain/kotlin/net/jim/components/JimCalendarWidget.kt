@@ -1,12 +1,10 @@
 package net.jim.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,6 +15,7 @@ import jim.sharedui.generated.resources.*
 import kotlinx.datetime.DayOfWeek
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
+import net.jim.components.utils.JimCard
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Instant
 
@@ -29,20 +28,7 @@ data class JimCalendarWidgetEntry(
 fun JimCalendarWidget(
     dates: List<JimCalendarWidgetEntry>
 ) {
-    Column(
-        modifier = Modifier.fillMaxWidth()
-            .border(
-                width = 1.dp,
-                color = MaterialTheme.colorScheme.outline,
-                shape = RoundedCornerShape(8.dp)
-            )
-            .background(
-                color = MaterialTheme.colorScheme.primaryContainer,
-                shape = RoundedCornerShape(8.dp)
-            )
-            .padding(8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
+    JimCard {
         LazyRow(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
