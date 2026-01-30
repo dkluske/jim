@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
@@ -36,6 +35,7 @@ kotlin {
             implementation(libs.coil.network.ktor)
             implementation(libs.kotlinx.datetime)
             implementation(libs.kstore)
+            implementation(libs.jetbrains.androidx.icons.core)
         }
 
         commonTest.dependencies {

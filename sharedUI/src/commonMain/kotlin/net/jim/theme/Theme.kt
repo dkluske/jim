@@ -1,16 +1,16 @@
 package net.jim.theme
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.compositionLocalOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
+import net.jim.components.JimBottomBar
 
 private val DarkColorScheme = darkColorScheme(
-    primary = PrimaryDark,
+    primary = Color(0xFF0FE22F),
     onPrimary = OnPrimaryDark,
     primaryContainer = Color(0xFF313131),
     onPrimaryContainer = OnPrimaryContainerDark,
@@ -47,8 +47,6 @@ private val DarkColorScheme = darkColorScheme(
     surfaceContainerHighest = SurfaceContainerHighestDark,
 )
 
-internal val LocalThemeIsDark = compositionLocalOf { mutableStateOf(true) }
-
 @Composable
 internal fun AppTheme(
     content: @Composable () -> Unit
@@ -56,7 +54,17 @@ internal fun AppTheme(
     CompositionLocalProvider {
         MaterialTheme(
             colorScheme = DarkColorScheme,
-            content = { Surface(content = content) }
+            typography = typography,
+            content = {
+                Scaffold(
+                    content = {
+                        Surface(content = content)
+                    },
+                    bottomBar = {
+                        JimBottomBar()
+                    }
+                )
+            }
         )
     }
 }
