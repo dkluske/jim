@@ -38,7 +38,8 @@ fun JimCalendarWidget(
             .border(
                 width = 1.dp,
                 color = MaterialTheme.colorScheme.outline,
-            ),
+            )
+            .padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         LazyRow(

@@ -24,7 +24,7 @@ data object MainViewModel {
             days
         }
         return buildList {
-            for (i in sanitizedDays..1) {
+            for (i in sanitizedDays downTo 1) {
                 add(now.minus(i.days))
             }
             add(now)
