@@ -60,7 +60,7 @@ private fun JimCalendarWidgetEntry(
     Column {
         Row {
             Text(
-                text = date.dayOfWeek.toAbreviatedString(),
+                text = date.dayOfWeek.toAbbreviatedString(),
                 style = MaterialTheme.typography.displaySmall
             )
         }
@@ -86,7 +86,7 @@ private fun JimCalendarWidgetEntry(
 }
 
 @Composable
-private fun DayOfWeek.toAbreviatedString(): String {
+private fun DayOfWeek.toAbbreviatedString(): String {
     return when (this) {
         DayOfWeek.MONDAY -> stringResource(Res.string.mondayAbbreviated)
         DayOfWeek.TUESDAY -> stringResource(Res.string.tuesdayAbbreviated)
