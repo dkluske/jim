@@ -1,6 +1,8 @@
 package net.jim
 
-import androidx.compose.animation.core.*
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -14,9 +16,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import jim.sharedui.generated.resources.*
+import kotlinx.coroutines.isActive
 import net.jim.theme.AppTheme
 import net.jim.theme.LocalThemeIsDark
-import kotlinx.coroutines.isActive
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
@@ -24,8 +26,7 @@ import org.jetbrains.compose.resources.vectorResource
 @Preview
 @Composable
 fun App(
-    onThemeChanged: @Composable (isDark: Boolean) -> Unit = {}
-) = AppTheme(onThemeChanged) {
+) = AppTheme {
     Column(
         modifier = Modifier
             .fillMaxSize()
