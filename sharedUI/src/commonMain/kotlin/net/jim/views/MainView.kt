@@ -20,7 +20,9 @@ import kotlin.time.Duration.Companion.days
 import kotlin.time.Instant
 import kotlin.uuid.ExperimentalUuidApi
 
-data object MainViewModel : JimViewModel {
+data class MainViewModel(
+    override val root: Root
+) : JimViewModel {
     fun getWorkoutPlans(): List<JimWorkoutWidgetPlan> {
         // TODO: fetch from DB
         return listOf()
