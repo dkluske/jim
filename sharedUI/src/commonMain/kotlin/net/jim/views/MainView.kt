@@ -36,7 +36,7 @@ data class MainViewModel(
     fun getCalendarEntries(now: Instant): List<JimCalendarWidgetEntry> {
         return getDaysBeforeAndAfter(
             now = now,
-            days = 3
+            days = 6
         ).mapIndexed { index, instant -> // TODO: add real logic whether user has worked out on that day
             JimCalendarWidgetEntry(
                 date = instant,
@@ -56,12 +56,9 @@ data class MainViewModel(
             days
         }
         return buildList {
+            add(now)
             for (i in sanitizedDays downTo 1) {
                 add(now.minus(i.days))
-            }
-            add(now)
-            for (i in 1..sanitizedDays) {
-                add(now.plus(i.days))
             }
         }
     }
