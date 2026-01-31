@@ -1,6 +1,7 @@
 {
   "exercises": [
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "3/4 Sit-Up",
       "force": "pull",
       "level": "beginner",
@@ -20,6 +21,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "90/90 Hamstring",
       "force": "push",
       "level": "beginner",
@@ -40,6 +42,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Ab Crunch Machine",
       "force": "pull",
       "level": "intermediate",
@@ -58,6 +61,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Ab Roller",
       "force": "pull",
       "level": "intermediate",
@@ -78,6 +82,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Adductor",
       "force": "static",
       "level": "intermediate",
@@ -95,6 +100,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Adductor/Groin",
       "force": "static",
       "level": "intermediate",
@@ -113,6 +119,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Advanced Kettlebell Windmill",
       "force": "push",
       "level": "intermediate",
@@ -135,6 +142,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Air Bike",
       "force": "pull",
       "level": "beginner",
@@ -155,6 +163,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "All Fours Quad Stretch",
       "force": "static",
       "level": "intermediate",
@@ -174,6 +183,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternate Hammer Curl",
       "force": "pull",
       "level": "beginner",
@@ -196,6 +206,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternate Heel Touchers",
       "force": "pull",
       "level": "beginner",
@@ -215,6 +226,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternate Incline Dumbbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -236,6 +248,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternate Leg Diagonal Bound",
       "force": "push",
       "level": "beginner",
@@ -260,6 +273,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Cable Shoulder Press",
       "force": "push",
       "level": "beginner",
@@ -280,6 +294,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Deltoid Raise",
       "force": "push",
       "level": "beginner",
@@ -299,6 +314,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Floor Press",
       "force": "push",
       "level": "beginner",
@@ -321,6 +337,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Hang Clean",
       "force": "pull",
       "level": "intermediate",
@@ -345,6 +362,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Kettlebell Press",
       "force": "push",
       "level": "intermediate",
@@ -364,6 +382,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Kettlebell Row",
       "force": "pull",
       "level": "intermediate",
@@ -384,6 +403,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Alternating Renegade Row",
       "force": "pull",
       "level": "expert",
@@ -407,6 +427,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Ankle Circles",
       "force": "pull",
       "level": "beginner",
@@ -424,6 +445,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Ankle On The Knee",
       "force": "static",
       "level": "beginner",
@@ -441,6 +463,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Anterior Tibialis-SMR",
       "force": "static",
       "level": "intermediate",
@@ -457,6 +480,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Anti-Gravity Press",
       "force": "push",
       "level": "beginner",
@@ -479,6 +503,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Arm Circles",
       "force": "push",
       "level": "beginner",
@@ -498,6 +523,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Arnold Dumbbell Press",
       "force": "push",
       "level": "intermediate",
@@ -519,6 +545,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Around The Worlds",
       "force": "push",
       "level": "intermediate",
@@ -538,6 +565,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Atlas Stone Trainer",
       "force": "pull",
       "level": "intermediate",
@@ -562,6 +590,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Atlas Stones",
       "force": "pull",
       "level": "expert",
@@ -591,6 +620,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Axle Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -616,6 +646,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Back Flyes - With Bands",
       "force": "pull",
       "level": "beginner",
@@ -639,6 +670,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Backward Drag",
       "force": "pull",
       "level": "beginner",
@@ -661,6 +693,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Backward Medicine Ball Throw",
       "force": "push",
       "level": "beginner",
@@ -679,6 +712,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Balance Board",
       "force": null,
       "level": "beginner",
@@ -699,6 +733,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Ball Leg Curl",
       "force": "pull",
       "level": "beginner",
@@ -721,6 +756,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Band Assisted Pull-Up",
       "force": null,
       "level": "beginner",
@@ -743,6 +779,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Band Good Morning",
       "force": "pull",
       "level": "beginner",
@@ -763,6 +800,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Band Good Morning (Pull Through)",
       "force": "pull",
       "level": "beginner",
@@ -783,6 +821,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Band Hip Adductions",
       "force": "pull",
       "level": "beginner",
@@ -803,6 +842,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Band Pull Apart",
       "force": "pull",
       "level": "beginner",
@@ -824,6 +864,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Band Skull Crusher",
       "force": "push",
       "level": "beginner",
@@ -841,6 +882,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Ab Rollout",
       "force": "pull",
       "level": "intermediate",
@@ -862,6 +904,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Ab Rollout - On Knees",
       "force": "pull",
       "level": "expert",
@@ -883,6 +926,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Bench Press - Medium Grip",
       "force": "push",
       "level": "beginner",
@@ -905,6 +949,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -926,6 +971,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Curls Lying Against An Incline",
       "force": "pull",
       "level": "beginner",
@@ -944,6 +990,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -972,6 +1019,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Full Squat",
       "force": "push",
       "level": "intermediate",
@@ -997,6 +1045,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Glute Bridge",
       "force": "push",
       "level": "intermediate",
@@ -1017,6 +1066,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Guillotine Bench Press",
       "force": "push",
       "level": "intermediate",
@@ -1039,6 +1089,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Hack Squat",
       "force": "push",
       "level": "intermediate",
@@ -1061,6 +1112,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Hip Thrust",
       "force": "push",
       "level": "intermediate",
@@ -1081,6 +1133,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Incline Bench Press - Medium Grip",
       "force": "push",
       "level": "beginner",
@@ -1103,6 +1156,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Incline Shoulder Raise",
       "force": "push",
       "level": "beginner",
@@ -1123,6 +1177,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Lunge",
       "force": "push",
       "level": "intermediate",
@@ -1146,6 +1201,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Rear Delt Row",
       "force": "pull",
       "level": "beginner",
@@ -1169,6 +1225,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Rollout from Bench",
       "force": "pull",
       "level": "intermediate",
@@ -1191,6 +1248,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Seated Calf Raise",
       "force": "push",
       "level": "beginner",
@@ -1211,6 +1269,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Shoulder Press",
       "force": "push",
       "level": "intermediate",
@@ -1233,6 +1292,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Shrug",
       "force": "pull",
       "level": "beginner",
@@ -1251,6 +1311,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Shrug Behind The Back",
       "force": "pull",
       "level": "beginner",
@@ -1272,6 +1333,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Side Bend",
       "force": "pull",
       "level": "beginner",
@@ -1292,6 +1354,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Side Split Squat",
       "force": "push",
       "level": "beginner",
@@ -1314,6 +1377,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Squat",
       "force": "push",
       "level": "beginner",
@@ -1339,6 +1403,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Squat To A Bench",
       "force": "push",
       "level": "expert",
@@ -1366,6 +1431,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Step Ups",
       "force": "push",
       "level": "intermediate",
@@ -1389,6 +1455,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Barbell Walking Lunge",
       "force": "push",
       "level": "beginner",
@@ -1411,6 +1478,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Battling Ropes",
       "force": "push",
       "level": "beginner",
@@ -1432,6 +1500,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bear Crawl Sled Drags",
       "force": "push",
       "level": "beginner",
@@ -1452,6 +1521,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Behind Head Chest Stretch",
       "force": "static",
       "level": "expert",
@@ -1472,6 +1542,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bench Dips",
       "force": "push",
       "level": "beginner",
@@ -1493,6 +1564,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bench Jump",
       "force": "push",
       "level": "intermediate",
@@ -1516,6 +1588,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bench Press - Powerlifting",
       "force": "push",
       "level": "intermediate",
@@ -1539,6 +1612,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bench Press - With Bands",
       "force": "push",
       "level": "beginner",
@@ -1563,6 +1637,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bench Press with Chains",
       "force": "push",
       "level": "expert",
@@ -1585,6 +1660,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bench Sprint",
       "force": "push",
       "level": "beginner",
@@ -1607,6 +1683,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent-Arm Barbell Pullover",
       "force": "pull",
       "level": "intermediate",
@@ -1631,6 +1708,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent-Arm Dumbbell Pullover",
       "force": "push",
       "level": "intermediate",
@@ -1655,6 +1733,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent-Knee Hip Raise",
       "force": "pull",
       "level": "beginner",
@@ -1674,6 +1753,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over Barbell Row",
       "force": "pull",
       "level": "beginner",
@@ -1696,6 +1776,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over Dumbbell Rear Delt Raise With Head On Bench",
       "force": "pull",
       "level": "beginner",
@@ -1715,6 +1796,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over Low-Pulley Side Lateral",
       "force": "pull",
       "level": "beginner",
@@ -1738,6 +1820,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over One-Arm Long Bar Row",
       "force": "pull",
       "level": "beginner",
@@ -1763,6 +1846,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over Two-Arm Long Bar Row",
       "force": "pull",
       "level": "intermediate",
@@ -1786,6 +1870,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over Two-Dumbbell Row",
       "force": "pull",
       "level": "beginner",
@@ -1808,6 +1893,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Over Two-Dumbbell Row With Palms In",
       "force": "pull",
       "level": "beginner",
@@ -1829,6 +1915,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bent Press",
       "force": "pull",
       "level": "expert",
@@ -1853,6 +1940,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bicycling",
       "force": null,
       "level": "beginner",
@@ -1872,6 +1960,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bicycling, Stationary",
       "force": null,
       "level": "beginner",
@@ -1892,6 +1981,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Board Press",
       "force": "push",
       "level": "intermediate",
@@ -1915,6 +2005,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Body-Up",
       "force": "push",
       "level": "intermediate",
@@ -1936,6 +2027,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Body Tricep Press",
       "force": "push",
       "level": "beginner",
@@ -1955,6 +2047,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bodyweight Flyes",
       "force": "push",
       "level": "intermediate",
@@ -1978,6 +2071,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bodyweight Mid Row",
       "force": "pull",
       "level": "intermediate",
@@ -1998,6 +2092,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bodyweight Squat",
       "force": "push",
       "level": "beginner",
@@ -2018,6 +2113,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bodyweight Walking Lunge",
       "force": "push",
       "level": "beginner",
@@ -2040,6 +2136,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bosu Ball Cable Crunch With Side Bends",
       "force": "pull",
       "level": "beginner",
@@ -2064,6 +2161,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bottoms-Up Clean From The Hang Position",
       "force": "pull",
       "level": "intermediate",
@@ -2083,6 +2181,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bottoms Up",
       "force": "pull",
       "level": "beginner",
@@ -2100,6 +2199,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Box Jump (Multiple Response)",
       "force": "push",
       "level": "beginner",
@@ -2123,6 +2223,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Box Skip",
       "force": "push",
       "level": "beginner",
@@ -2148,6 +2249,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Box Squat",
       "force": "push",
       "level": "intermediate",
@@ -2172,6 +2274,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Box Squat with Bands",
       "force": "push",
       "level": "expert",
@@ -2197,6 +2300,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Box Squat with Chains",
       "force": "push",
       "level": "expert",
@@ -2223,6 +2327,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Brachialis-SMR",
       "force": "static",
       "level": "intermediate",
@@ -2239,6 +2344,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Bradford/Rocky Presses",
       "force": "push",
       "level": "beginner",
@@ -2261,6 +2367,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Butt-Ups",
       "force": "pull",
       "level": "beginner",
@@ -2280,6 +2387,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Butt Lift (Bridge)",
       "force": "push",
       "level": "beginner",
@@ -2299,6 +2407,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Butterfly",
       "force": "pull",
       "level": "beginner",
@@ -2318,6 +2427,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Chest Press",
       "force": "push",
       "level": "beginner",
@@ -2339,6 +2449,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Crossover",
       "force": "push",
       "level": "beginner",
@@ -2360,6 +2471,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Crunch",
       "force": "pull",
       "level": "beginner",
@@ -2380,6 +2492,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Deadlifts",
       "force": "pull",
       "level": "beginner",
@@ -2403,6 +2516,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Hammer Curls - Rope Attachment",
       "force": "pull",
       "level": "beginner",
@@ -2423,6 +2537,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Hip Adduction",
       "force": "pull",
       "level": "beginner",
@@ -2444,6 +2559,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Incline Pushdown",
       "force": "pull",
       "level": "beginner",
@@ -2463,6 +2579,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Incline Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -2482,6 +2599,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Internal Rotation",
       "force": "pull",
       "level": "beginner",
@@ -2501,6 +2619,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Iron Cross",
       "force": "push",
       "level": "beginner",
@@ -2520,6 +2639,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Judo Flip",
       "force": "pull",
       "level": "beginner",
@@ -2539,6 +2659,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Lying Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -2558,6 +2679,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable One Arm Tricep Extension",
       "force": "push",
       "level": "beginner",
@@ -2578,6 +2700,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Preacher Curl",
       "force": "pull",
       "level": "beginner",
@@ -2601,6 +2724,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Rear Delt Fly",
       "force": "pull",
       "level": "beginner",
@@ -2619,6 +2743,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Reverse Crunch",
       "force": "pull",
       "level": "beginner",
@@ -2639,6 +2764,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Rope Overhead Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -2658,6 +2784,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Rope Rear-Delt Rows",
       "force": "pull",
       "level": "beginner",
@@ -2681,6 +2808,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Russian Twists",
       "force": "pull",
       "level": "beginner",
@@ -2702,6 +2830,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Seated Crunch",
       "force": "pull",
       "level": "beginner",
@@ -2721,6 +2850,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Seated Lateral Raise",
       "force": "pull",
       "level": "beginner",
@@ -2745,6 +2875,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Shoulder Press",
       "force": "push",
       "level": "beginner",
@@ -2765,6 +2896,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Shrugs",
       "force": "pull",
       "level": "beginner",
@@ -2784,6 +2916,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cable Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -2804,6 +2937,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf-Machine Shoulder Shrug",
       "force": "pull",
       "level": "beginner",
@@ -2822,6 +2956,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf Press",
       "force": "push",
       "level": "beginner",
@@ -2840,6 +2975,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf Press On The Leg Press Machine",
       "force": "push",
       "level": "beginner",
@@ -2859,6 +2995,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf Raise On A Dumbbell",
       "force": "push",
       "level": "intermediate",
@@ -2878,6 +3015,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf Raises - With Bands",
       "force": "push",
       "level": "beginner",
@@ -2897,6 +3035,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf Stretch Elbows Against Wall",
       "force": "static",
       "level": "beginner",
@@ -2914,6 +3053,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calf Stretch Hands Against Wall",
       "force": "static",
       "level": "beginner",
@@ -2931,6 +3071,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Calves-SMR",
       "force": "static",
       "level": "intermediate",
@@ -2947,6 +3088,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Car Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -2971,6 +3113,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Car Drivers",
       "force": "push",
       "level": "beginner",
@@ -2991,6 +3134,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Carioca Quick Step",
       "force": null,
       "level": "beginner",
@@ -3015,6 +3159,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cat Stretch",
       "force": "static",
       "level": "beginner",
@@ -3035,6 +3180,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Catch and Overhead Throw",
       "force": "push",
       "level": "beginner",
@@ -3056,6 +3202,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chain Handle Extension",
       "force": "push",
       "level": "intermediate",
@@ -3073,6 +3220,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chain Press",
       "force": "push",
       "level": "intermediate",
@@ -3093,6 +3241,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chair Leg Extended Stretch",
       "force": "static",
       "level": "beginner",
@@ -3113,6 +3262,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chair Lower Back Stretch",
       "force": "static",
       "level": "beginner",
@@ -3132,6 +3282,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chair Squat",
       "force": "push",
       "level": "beginner",
@@ -3156,6 +3307,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chair Upper Body Stretch",
       "force": "static",
       "level": "beginner",
@@ -3175,6 +3327,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chest And Front Of Shoulder Stretch",
       "force": "static",
       "level": "beginner",
@@ -3194,6 +3347,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chest Push (multiple response)",
       "force": "push",
       "level": "beginner",
@@ -3216,6 +3370,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chest Push (single response)",
       "force": "push",
       "level": "beginner",
@@ -3237,6 +3392,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chest Push from 3 point stance",
       "force": "push",
       "level": "beginner",
@@ -3258,6 +3414,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chest Push with Run Release",
       "force": "push",
       "level": "beginner",
@@ -3279,6 +3436,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chest Stretch on Stability Ball",
       "force": "static",
       "level": "beginner",
@@ -3296,6 +3454,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Child's Pose",
       "force": "static",
       "level": "beginner",
@@ -3316,6 +3475,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chin-Up",
       "force": "pull",
       "level": "beginner",
@@ -3339,6 +3499,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Chin To Chest Stretch",
       "force": "static",
       "level": "beginner",
@@ -3357,6 +3518,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Circus Bell",
       "force": "push",
       "level": "expert",
@@ -3382,6 +3544,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean",
       "force": "pull",
       "level": "intermediate",
@@ -3410,6 +3573,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean Deadlift",
       "force": "pull",
       "level": "beginner",
@@ -3434,6 +3598,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean Pull",
       "force": "pull",
       "level": "intermediate",
@@ -3457,6 +3622,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean Shrug",
       "force": "pull",
       "level": "beginner",
@@ -3476,6 +3642,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean and Jerk",
       "force": "push",
       "level": "expert",
@@ -3506,6 +3673,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean and Press",
       "force": "push",
       "level": "intermediate",
@@ -3538,6 +3706,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clean from Blocks",
       "force": "pull",
       "level": "intermediate",
@@ -3562,6 +3731,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Clock Push-Up",
       "force": "push",
       "level": "intermediate",
@@ -3585,6 +3755,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip Barbell Bench Press",
       "force": "push",
       "level": "beginner",
@@ -3607,6 +3778,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip Dumbbell Press",
       "force": "push",
       "level": "beginner",
@@ -3629,6 +3801,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip EZ-Bar Curl with Band",
       "force": "pull",
       "level": "beginner",
@@ -3650,6 +3823,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip EZ-Bar Press",
       "force": "push",
       "level": "beginner",
@@ -3672,6 +3846,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip EZ Bar Curl",
       "force": "pull",
       "level": "beginner",
@@ -3693,6 +3868,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip Front Lat Pulldown",
       "force": "pull",
       "level": "beginner",
@@ -3717,6 +3893,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip Push-Up off of a Dumbbell",
       "force": "push",
       "level": "intermediate",
@@ -3739,6 +3916,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Close-Grip Standing Barbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -3760,6 +3938,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cocoons",
       "force": "pull",
       "level": "beginner",
@@ -3777,6 +3956,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Conan's Wheel",
       "force": null,
       "level": "intermediate",
@@ -3801,6 +3981,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Concentration Curls",
       "force": "pull",
       "level": "beginner",
@@ -3822,6 +4003,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cross-Body Crunch",
       "force": "pull",
       "level": "beginner",
@@ -3841,6 +4023,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cross Body Hammer Curl",
       "force": "pull",
       "level": "beginner",
@@ -3861,6 +4044,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cross Over - With Bands",
       "force": "push",
       "level": "beginner",
@@ -3884,6 +4068,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Crossover Reverse Lunge",
       "force": "pull",
       "level": "intermediate",
@@ -3907,6 +4092,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Crucifix",
       "force": "static",
       "level": "beginner",
@@ -3925,6 +4111,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Crunch - Hands Overhead",
       "force": "pull",
       "level": "beginner",
@@ -3944,6 +4131,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Crunch - Legs On Exercise Ball",
       "force": "pull",
       "level": "beginner",
@@ -3965,6 +4153,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Crunches",
       "force": "pull",
       "level": "beginner",
@@ -3985,6 +4174,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Cuban Press",
       "force": "push",
       "level": "intermediate",
@@ -4006,6 +4196,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dancer's Stretch",
       "force": "static",
       "level": "beginner",
@@ -4027,6 +4218,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dead Bug",
       "force": "pull",
       "level": "beginner",
@@ -4048,6 +4240,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Deadlift with Bands",
       "force": "pull",
       "level": "expert",
@@ -4072,6 +4265,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Deadlift with Chains",
       "force": "pull",
       "level": "expert",
@@ -4097,6 +4291,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Barbell Bench Press",
       "force": "push",
       "level": "beginner",
@@ -4120,6 +4315,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Close-Grip Bench To Skull Crusher",
       "force": "push",
       "level": "intermediate",
@@ -4144,6 +4340,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Crunch",
       "force": "pull",
       "level": "intermediate",
@@ -4164,6 +4361,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Dumbbell Bench Press",
       "force": "push",
       "level": "beginner",
@@ -4187,6 +4385,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Dumbbell Flyes",
       "force": "push",
       "level": "beginner",
@@ -4206,6 +4405,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -4225,6 +4425,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline EZ Bar Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -4244,6 +4445,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Oblique Crunch",
       "force": "pull",
       "level": "beginner",
@@ -4264,6 +4466,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Push-Up",
       "force": "push",
       "level": "beginner",
@@ -4285,6 +4488,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Reverse Crunch",
       "force": "pull",
       "level": "beginner",
@@ -4304,6 +4508,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Decline Smith Press",
       "force": "push",
       "level": "beginner",
@@ -4326,6 +4531,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Deficit Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -4350,6 +4556,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Depth Jump Leap",
       "force": "push",
       "level": "beginner",
@@ -4374,6 +4581,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dip Machine",
       "force": "push",
       "level": "beginner",
@@ -4396,6 +4604,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dips - Chest Version",
       "force": "push",
       "level": "intermediate",
@@ -4417,6 +4626,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dips - Triceps Version",
       "force": "push",
       "level": "beginner",
@@ -4438,6 +4648,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Donkey Calf Raises",
       "force": "push",
       "level": "intermediate",
@@ -4457,6 +4668,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Double Kettlebell Alternating Hang Clean",
       "force": "pull",
       "level": "intermediate",
@@ -4482,6 +4694,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Double Kettlebell Jerk",
       "force": "push",
       "level": "intermediate",
@@ -4507,6 +4720,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Double Kettlebell Push Press",
       "force": "push",
       "level": "intermediate",
@@ -4528,6 +4742,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Double Kettlebell Snatch",
       "force": "pull",
       "level": "expert",
@@ -4549,6 +4764,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Double Kettlebell Windmill",
       "force": "pull",
       "level": "intermediate",
@@ -4572,6 +4788,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Double Leg Butt Kick",
       "force": "push",
       "level": "beginner",
@@ -4596,6 +4813,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Downward Facing Balance",
       "force": "static",
       "level": "intermediate",
@@ -4615,6 +4833,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Drag Curl",
       "force": "pull",
       "level": "intermediate",
@@ -4635,6 +4854,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Drop Push",
       "force": "push",
       "level": "intermediate",
@@ -4655,6 +4875,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Alternate Bicep Curl",
       "force": "pull",
       "level": "beginner",
@@ -4676,6 +4897,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Bench Press",
       "force": "push",
       "level": "beginner",
@@ -4698,6 +4920,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Bench Press with Neutral Grip",
       "force": "push",
       "level": "beginner",
@@ -4719,6 +4942,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Bicep Curl",
       "force": "pull",
       "level": "beginner",
@@ -4739,6 +4963,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Clean",
       "force": "pull",
       "level": "intermediate",
@@ -4766,6 +4991,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Floor Press",
       "force": "push",
       "level": "intermediate",
@@ -4786,6 +5012,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Flyes",
       "force": "push",
       "level": "beginner",
@@ -4805,6 +5032,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Incline Row",
       "force": "pull",
       "level": "beginner",
@@ -4828,6 +5056,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Incline Shoulder Raise",
       "force": "push",
       "level": "beginner",
@@ -4849,6 +5078,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Lunges",
       "force": "push",
       "level": "beginner",
@@ -4871,6 +5101,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Lying One-Arm Rear Lateral Raise",
       "force": "pull",
       "level": "intermediate",
@@ -4892,6 +5123,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Lying Pronation",
       "force": "pull",
       "level": "intermediate",
@@ -4912,6 +5144,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Lying Rear Lateral Raise",
       "force": "pull",
       "level": "intermediate",
@@ -4931,6 +5164,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Lying Supination",
       "force": "pull",
       "level": "intermediate",
@@ -4951,6 +5185,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell One-Arm Shoulder Press",
       "force": "push",
       "level": "intermediate",
@@ -4973,6 +5208,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell One-Arm Triceps Extension",
       "force": "push",
       "level": "intermediate",
@@ -4993,6 +5229,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell One-Arm Upright Row",
       "force": "pull",
       "level": "intermediate",
@@ -5015,6 +5252,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Prone Incline Curl",
       "force": "pull",
       "level": "intermediate",
@@ -5035,6 +5273,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Raise",
       "force": "pull",
       "level": "beginner",
@@ -5055,6 +5294,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Rear Lunge",
       "force": "push",
       "level": "intermediate",
@@ -5077,6 +5317,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Scaption",
       "force": "push",
       "level": "beginner",
@@ -5096,6 +5337,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Seated Box Jump",
       "force": "push",
       "level": "intermediate",
@@ -5118,6 +5360,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Seated One-Leg Calf Raise",
       "force": "push",
       "level": "beginner",
@@ -5138,6 +5381,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Shoulder Press",
       "force": "push",
       "level": "intermediate",
@@ -5160,6 +5404,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Shrug",
       "force": "pull",
       "level": "beginner",
@@ -5178,6 +5423,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Side Bend",
       "force": "pull",
       "level": "beginner",
@@ -5196,6 +5442,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Squat",
       "force": "push",
       "level": "beginner",
@@ -5220,6 +5467,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Squat To A Bench",
       "force": "push",
       "level": "intermediate",
@@ -5244,6 +5492,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Step Ups",
       "force": "push",
       "level": "intermediate",
@@ -5266,6 +5515,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dumbbell Tricep Extension -Pronated Grip",
       "force": "push",
       "level": "beginner",
@@ -5284,6 +5534,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dynamic Back Stretch",
       "force": "pull",
       "level": "beginner",
@@ -5300,6 +5551,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Dynamic Chest Stretch",
       "force": "pull",
       "level": "beginner",
@@ -5318,6 +5570,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "EZ-Bar Curl",
       "force": "pull",
       "level": "beginner",
@@ -5337,6 +5590,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "EZ-Bar Skullcrusher",
       "force": "push",
       "level": "beginner",
@@ -5357,6 +5611,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Elbow Circles",
       "force": "pull",
       "level": "beginner",
@@ -5376,6 +5631,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Elbow to Knee",
       "force": "pull",
       "level": "beginner",
@@ -5393,6 +5649,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Elbows Back",
       "force": "static",
       "level": "beginner",
@@ -5412,6 +5669,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Elevated Back Lunge",
       "force": "push",
       "level": "intermediate",
@@ -5433,6 +5691,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Elevated Cable Rows",
       "force": "pull",
       "level": "intermediate",
@@ -5457,6 +5716,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Elliptical Trainer",
       "force": null,
       "level": "intermediate",
@@ -5477,6 +5737,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Exercise Ball Crunch",
       "force": "pull",
       "level": "beginner",
@@ -5496,6 +5757,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Exercise Ball Pull-In",
       "force": "pull",
       "level": "beginner",
@@ -5515,6 +5777,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Extended Range One-Arm Kettlebell Floor Press",
       "force": "push",
       "level": "beginner",
@@ -5534,6 +5797,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "External Rotation",
       "force": "pull",
       "level": "beginner",
@@ -5554,6 +5818,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "External Rotation with Band",
       "force": "pull",
       "level": "beginner",
@@ -5573,6 +5838,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "External Rotation with Cable",
       "force": "pull",
       "level": "beginner",
@@ -5591,6 +5857,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Face Pull",
       "force": "pull",
       "level": "intermediate",
@@ -5608,6 +5875,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Farmer's Walk",
       "force": null,
       "level": "intermediate",
@@ -5632,6 +5900,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Fast Skipping",
       "force": "push",
       "level": "beginner",
@@ -5655,6 +5924,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Finger Curls",
       "force": "pull",
       "level": "beginner",
@@ -5673,6 +5943,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Flat Bench Cable Flyes",
       "force": "push",
       "level": "intermediate",
@@ -5694,6 +5965,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Flat Bench Leg Pull-In",
       "force": "pull",
       "level": "beginner",
@@ -5713,6 +5985,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Flat Bench Lying Leg Raise",
       "force": "pull",
       "level": "beginner",
@@ -5731,6 +6004,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Flexor Incline Dumbbell Curls",
       "force": "pull",
       "level": "beginner",
@@ -5751,6 +6025,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Floor Glute-Ham Raise",
       "force": "pull",
       "level": "intermediate",
@@ -5772,6 +6047,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Floor Press",
       "force": "push",
       "level": "intermediate",
@@ -5792,6 +6068,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Floor Press with Chains",
       "force": "push",
       "level": "intermediate",
@@ -5813,6 +6090,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Flutter Kicks",
       "force": "pull",
       "level": "beginner",
@@ -5834,6 +6112,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Foot-SMR",
       "force": "static",
       "level": "intermediate",
@@ -5850,6 +6129,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Forward Drag with Press",
       "force": "push",
       "level": "intermediate",
@@ -5873,6 +6153,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Frankenstein Squat",
       "force": "push",
       "level": "intermediate",
@@ -5896,6 +6177,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Freehand Jump Squat",
       "force": "push",
       "level": "intermediate",
@@ -5920,6 +6202,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Frog Hops",
       "force": "push",
       "level": "intermediate",
@@ -5940,6 +6223,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Frog Sit-Ups",
       "force": "pull",
       "level": "intermediate",
@@ -5961,6 +6245,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Barbell Squat",
       "force": "push",
       "level": "expert",
@@ -5985,6 +6270,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Barbell Squat To A Bench",
       "force": "push",
       "level": "expert",
@@ -6009,6 +6295,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Box Jump",
       "force": "push",
       "level": "beginner",
@@ -6033,6 +6320,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Cable Raise",
       "force": "push",
       "level": "beginner",
@@ -6052,6 +6340,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Cone Hops (or hurdle hops)",
       "force": "push",
       "level": "beginner",
@@ -6077,6 +6366,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Dumbbell Raise",
       "force": "push",
       "level": "beginner",
@@ -6095,6 +6385,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Incline Dumbbell Raise",
       "force": "push",
       "level": "beginner",
@@ -6114,6 +6405,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Leg Raises",
       "force": "pull",
       "level": "beginner",
@@ -6130,6 +6422,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Plate Raise",
       "force": "push",
       "level": "intermediate",
@@ -6148,6 +6441,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Raise And Pullover",
       "force": "pull",
       "level": "beginner",
@@ -6171,6 +6465,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Squat (Clean Grip)",
       "force": "push",
       "level": "intermediate",
@@ -6193,6 +6488,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Squats With Two Kettlebells",
       "force": "push",
       "level": "intermediate",
@@ -6213,6 +6509,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Front Two-Dumbbell Raise",
       "force": "push",
       "level": "beginner",
@@ -6231,6 +6528,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Full Range-Of-Motion Lat Pulldown",
       "force": "pull",
       "level": "intermediate",
@@ -6251,6 +6549,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Gironda Sternum Chins",
       "force": "pull",
       "level": "intermediate",
@@ -6274,6 +6573,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Glute Ham Raise",
       "force": "pull",
       "level": "intermediate",
@@ -6294,6 +6594,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Glute Kickback",
       "force": "push",
       "level": "beginner",
@@ -6314,6 +6615,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Goblet Squat",
       "force": "push",
       "level": "beginner",
@@ -6336,6 +6638,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Good Morning",
       "force": "push",
       "level": "intermediate",
@@ -6357,6 +6660,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Good Morning off Pins",
       "force": "push",
       "level": "intermediate",
@@ -6377,6 +6681,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Gorilla Chin/Crunch",
       "force": "pull",
       "level": "intermediate",
@@ -6399,6 +6704,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Groin and Back Stretch",
       "force": "static",
       "level": "intermediate",
@@ -6416,6 +6722,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Groiners",
       "force": "pull",
       "level": "intermediate",
@@ -6433,6 +6740,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hack Squat",
       "force": "push",
       "level": "beginner",
@@ -6458,6 +6766,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hammer Curls",
       "force": "pull",
       "level": "beginner",
@@ -6477,6 +6786,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hammer Grip Incline DB Bench Press",
       "force": "push",
       "level": "beginner",
@@ -6501,6 +6811,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hamstring-SMR",
       "force": "static",
       "level": "beginner",
@@ -6518,6 +6829,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hamstring Stretch",
       "force": "static",
       "level": "beginner",
@@ -6535,6 +6847,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Handstand Push-Ups",
       "force": "push",
       "level": "expert",
@@ -6556,6 +6869,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hang Clean",
       "force": "pull",
       "level": "intermediate",
@@ -6581,6 +6895,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hang Clean - Below the Knees",
       "force": "pull",
       "level": "intermediate",
@@ -6607,6 +6922,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hang Snatch",
       "force": "pull",
       "level": "expert",
@@ -6634,6 +6950,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hang Snatch - Below Knees",
       "force": "pull",
       "level": "expert",
@@ -6661,6 +6978,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hanging Bar Good Morning",
       "force": "push",
       "level": "intermediate",
@@ -6683,6 +7001,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hanging Leg Raise",
       "force": "pull",
       "level": "expert",
@@ -6701,6 +7020,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hanging Pike",
       "force": "pull",
       "level": "expert",
@@ -6720,6 +7040,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Heaving Snatch Balance",
       "force": "push",
       "level": "intermediate",
@@ -6744,6 +7065,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Heavy Bag Thrust",
       "force": "push",
       "level": "beginner",
@@ -6765,6 +7087,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "High Cable Curls",
       "force": "pull",
       "level": "intermediate",
@@ -6783,6 +7106,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hip Circles (prone)",
       "force": "pull",
       "level": "beginner",
@@ -6802,6 +7126,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hip Extension with Bands",
       "force": "push",
       "level": "beginner",
@@ -6822,6 +7147,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hip Flexion with Band",
       "force": "pull",
       "level": "beginner",
@@ -6840,6 +7166,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hip Lift with Band",
       "force": "push",
       "level": "beginner",
@@ -6861,6 +7188,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hug A Ball",
       "force": "static",
       "level": "beginner",
@@ -6881,6 +7209,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hug Knees To Chest",
       "force": "static",
       "level": "beginner",
@@ -6900,6 +7229,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hurdle Hops",
       "force": "push",
       "level": "beginner",
@@ -6924,6 +7254,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hyperextensions (Back Extensions)",
       "force": "pull",
       "level": "beginner",
@@ -6947,6 +7278,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Hyperextensions With No Hyperextension Bench",
       "force": "pull",
       "level": "intermediate",
@@ -6969,6 +7301,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "IT Band and Glute Stretch",
       "force": "static",
       "level": "intermediate",
@@ -6985,6 +7318,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Iliotibial Tract-SMR",
       "force": "static",
       "level": "intermediate",
@@ -7002,6 +7336,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Inchworm",
       "force": null,
       "level": "beginner",
@@ -7021,6 +7356,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Barbell Triceps Extension",
       "force": "push",
       "level": "intermediate",
@@ -7043,6 +7379,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Bench Pull",
       "force": "pull",
       "level": "beginner",
@@ -7067,6 +7404,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Cable Chest Press",
       "force": "push",
       "level": "beginner",
@@ -7087,6 +7425,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Cable Flye",
       "force": "push",
       "level": "intermediate",
@@ -7109,6 +7448,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Dumbbell Bench With Palms Facing In",
       "force": "push",
       "level": "beginner",
@@ -7133,6 +7473,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Dumbbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -7151,6 +7492,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Dumbbell Flyes",
       "force": "push",
       "level": "beginner",
@@ -7173,6 +7515,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Dumbbell Flyes - With A Twist",
       "force": "push",
       "level": "beginner",
@@ -7195,6 +7538,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Dumbbell Press",
       "force": "push",
       "level": "beginner",
@@ -7219,6 +7563,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Hammer Curls",
       "force": "pull",
       "level": "beginner",
@@ -7236,6 +7581,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Inner Biceps Curl",
       "force": null,
       "level": "beginner",
@@ -7255,6 +7601,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Push-Up",
       "force": "push",
       "level": "beginner",
@@ -7275,6 +7622,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Push-Up Close-Grip",
       "force": "push",
       "level": "beginner",
@@ -7297,6 +7645,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Push-Up Depth Jump",
       "force": "push",
       "level": "beginner",
@@ -7318,6 +7667,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Push-Up Medium",
       "force": "push",
       "level": "beginner",
@@ -7341,6 +7691,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Push-Up Reverse Grip",
       "force": "push",
       "level": "beginner",
@@ -7364,6 +7715,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Incline Push-Up Wide",
       "force": "push",
       "level": "beginner",
@@ -7387,6 +7739,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Intermediate Groin Stretch",
       "force": "static",
       "level": "intermediate",
@@ -7403,6 +7756,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Intermediate Hip Flexor and Quad Stretch",
       "force": "static",
       "level": "intermediate",
@@ -7419,6 +7773,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Internal Rotation with Band",
       "force": null,
       "level": "beginner",
@@ -7438,6 +7793,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Inverted Row",
       "force": "pull",
       "level": "beginner",
@@ -7459,6 +7815,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Inverted Row with Straps",
       "force": "pull",
       "level": "beginner",
@@ -7480,6 +7837,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Iron Cross",
       "force": "push",
       "level": "intermediate",
@@ -7500,6 +7858,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Iron Crosses (stretch)",
       "force": "pull",
       "level": "intermediate",
@@ -7517,6 +7876,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Isometric Chest Squeezes",
       "force": "static",
       "level": "beginner",
@@ -7539,6 +7899,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Isometric Neck Exercise - Front And Back",
       "force": "static",
       "level": "beginner",
@@ -7558,6 +7919,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Isometric Neck Exercise - Sides",
       "force": "static",
       "level": "beginner",
@@ -7577,6 +7939,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Isometric Wipers",
       "force": "push",
       "level": "beginner",
@@ -7599,6 +7962,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "JM Press",
       "force": "push",
       "level": "beginner",
@@ -7621,6 +7985,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Jackknife Sit-Up",
       "force": "pull",
       "level": "beginner",
@@ -7639,6 +8004,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Janda Sit-Up",
       "force": "pull",
       "level": "beginner",
@@ -7657,6 +8023,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Jefferson Squats",
       "force": "push",
       "level": "intermediate",
@@ -7684,6 +8051,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Jerk Balance",
       "force": "push",
       "level": "intermediate",
@@ -7706,6 +8074,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Jerk Dip Squat",
       "force": "push",
       "level": "intermediate",
@@ -7725,6 +8094,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Jogging, Treadmill",
       "force": null,
       "level": "beginner",
@@ -7744,6 +8114,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Keg Load",
       "force": "pull",
       "level": "intermediate",
@@ -7773,6 +8144,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Arnold Press",
       "force": "push",
       "level": "intermediate",
@@ -7792,6 +8164,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Dead Clean",
       "force": "pull",
       "level": "intermediate",
@@ -7815,6 +8188,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Figure 8",
       "force": "pull",
       "level": "intermediate",
@@ -7834,6 +8208,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Hang Clean",
       "force": "pull",
       "level": "intermediate",
@@ -7857,6 +8232,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell One-Legged Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -7877,6 +8253,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Pass Between The Legs",
       "force": "pull",
       "level": "intermediate",
@@ -7897,6 +8274,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Pirate Ships",
       "force": "push",
       "level": "beginner",
@@ -7917,6 +8295,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Pistol Squat",
       "force": "push",
       "level": "expert",
@@ -7940,6 +8319,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Seated Press",
       "force": "push",
       "level": "intermediate",
@@ -7959,6 +8339,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Seesaw Press",
       "force": "push",
       "level": "intermediate",
@@ -7978,6 +8359,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Sumo High Pull",
       "force": "pull",
       "level": "intermediate",
@@ -8000,6 +8382,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Thruster",
       "force": "push",
       "level": "intermediate",
@@ -8021,6 +8404,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Turkish Get-Up (Lunge style)",
       "force": "push",
       "level": "intermediate",
@@ -8043,6 +8427,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Turkish Get-Up (Squat style)",
       "force": "push",
       "level": "intermediate",
@@ -8066,6 +8451,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kettlebell Windmill",
       "force": "pull",
       "level": "intermediate",
@@ -8088,6 +8474,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kipping Muscle Up",
       "force": "pull",
       "level": "intermediate",
@@ -8115,6 +8502,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Knee Across The Body",
       "force": "static",
       "level": "beginner",
@@ -8134,6 +8522,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Knee Circles",
       "force": "pull",
       "level": "beginner",
@@ -8154,6 +8543,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Knee/Hip Raise On Parallel Bars",
       "force": "pull",
       "level": "beginner",
@@ -8173,6 +8563,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Knee Tuck Jump",
       "force": "push",
       "level": "beginner",
@@ -8196,6 +8587,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Arm Drill",
       "force": "pull",
       "level": "beginner",
@@ -8216,6 +8608,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Cable Crunch With Alternating Oblique Twists",
       "force": "pull",
       "level": "beginner",
@@ -8239,6 +8632,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Cable Triceps Extension",
       "force": "push",
       "level": "intermediate",
@@ -8260,6 +8654,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Forearm Stretch",
       "force": "static",
       "level": "beginner",
@@ -8276,6 +8671,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling High Pulley Row",
       "force": "pull",
       "level": "beginner",
@@ -8296,6 +8692,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Hip Flexor",
       "force": "static",
       "level": "beginner",
@@ -8314,6 +8711,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Jump Squat",
       "force": "push",
       "level": "expert",
@@ -8336,6 +8734,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Single-Arm High Pulley Row",
       "force": "pull",
       "level": "beginner",
@@ -8357,6 +8756,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Kneeling Squat",
       "force": "push",
       "level": "intermediate",
@@ -8378,6 +8778,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Landmine 180's",
       "force": "pull",
       "level": "beginner",
@@ -8401,6 +8802,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Landmine Linear Jammer",
       "force": "push",
       "level": "intermediate",
@@ -8427,6 +8829,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lateral Bound",
       "force": "push",
       "level": "beginner",
@@ -8452,6 +8855,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lateral Box Jump",
       "force": "push",
       "level": "beginner",
@@ -8477,6 +8881,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lateral Cone Hops",
       "force": "push",
       "level": "beginner",
@@ -8501,6 +8906,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lateral Raise - With Bands",
       "force": "push",
       "level": "beginner",
@@ -8519,6 +8925,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Latissimus Dorsi-SMR",
       "force": "static",
       "level": "beginner",
@@ -8535,6 +8942,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leg-Over Floor Press",
       "force": "push",
       "level": "intermediate",
@@ -8555,6 +8963,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leg-Up Hamstring Stretch",
       "force": "push",
       "level": "beginner",
@@ -8572,6 +8981,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leg Extensions",
       "force": "push",
       "level": "beginner",
@@ -8590,6 +9000,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leg Lift",
       "force": "push",
       "level": "beginner",
@@ -8611,6 +9022,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leg Press",
       "force": "push",
       "level": "beginner",
@@ -8634,6 +9046,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leg Pull-In",
       "force": "pull",
       "level": "beginner",
@@ -8652,6 +9065,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Chest Press",
       "force": "push",
       "level": "beginner",
@@ -8673,6 +9087,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Deadlift",
       "force": "pull",
       "level": "beginner",
@@ -8692,6 +9107,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Decline Chest Press",
       "force": "push",
       "level": "beginner",
@@ -8712,6 +9128,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage High Row",
       "force": "pull",
       "level": "beginner",
@@ -8732,6 +9149,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Incline Chest Press",
       "force": "push",
       "level": "beginner",
@@ -8752,6 +9170,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Iso Row",
       "force": "pull",
       "level": "beginner",
@@ -8772,6 +9191,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Shoulder Press",
       "force": "push",
       "level": "beginner",
@@ -8791,6 +9211,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Leverage Shrug",
       "force": "pull",
       "level": "beginner",
@@ -8812,6 +9233,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Linear 3-Part Start Technique",
       "force": "push",
       "level": "beginner",
@@ -8833,6 +9255,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Linear Acceleration Wall Drill",
       "force": null,
       "level": "beginner",
@@ -8855,6 +9278,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Linear Depth Jump",
       "force": "push",
       "level": "intermediate",
@@ -8877,6 +9301,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Log Lift",
       "force": "push",
       "level": "intermediate",
@@ -8904,6 +9329,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "London Bridges",
       "force": "pull",
       "level": "intermediate",
@@ -8926,6 +9352,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Looking At Ceiling",
       "force": "static",
       "level": "beginner",
@@ -8942,6 +9369,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Low Cable Crossover",
       "force": "push",
       "level": "beginner",
@@ -8962,6 +9390,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Low Cable Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -8982,6 +9411,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Low Pulley Row To Neck",
       "force": "pull",
       "level": "beginner",
@@ -9005,6 +9435,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lower Back-SMR",
       "force": "static",
       "level": "beginner",
@@ -9021,6 +9452,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lower Back Curl",
       "force": "static",
       "level": "beginner",
@@ -9037,6 +9469,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lunge Pass Through",
       "force": "push",
       "level": "intermediate",
@@ -9060,6 +9493,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lunge Sprint",
       "force": "push",
       "level": "intermediate",
@@ -9082,6 +9516,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Bent Leg Groin",
       "force": "static",
       "level": "expert",
@@ -9099,6 +9534,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Cable Curl",
       "force": "pull",
       "level": "intermediate",
@@ -9119,6 +9555,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Cambered Barbell Row",
       "force": "pull",
       "level": "beginner",
@@ -9141,6 +9578,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Close-Grip Bar Curl On High Pulley",
       "force": "pull",
       "level": "beginner",
@@ -9162,6 +9600,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Close-Grip Barbell Triceps Extension Behind The Head",
       "force": "push",
       "level": "intermediate",
@@ -9181,6 +9620,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Close-Grip Barbell Triceps Press To Chin",
       "force": "push",
       "level": "intermediate",
@@ -9200,6 +9640,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Crossover",
       "force": "static",
       "level": "expert",
@@ -9218,6 +9659,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Dumbbell Tricep Extension",
       "force": "push",
       "level": "intermediate",
@@ -9239,6 +9681,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Face Down Plate Neck Resistance",
       "force": "pull",
       "level": "intermediate",
@@ -9257,6 +9700,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Face Up Plate Neck Resistance",
       "force": "pull",
       "level": "intermediate",
@@ -9275,6 +9719,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Glute",
       "force": "static",
       "level": "expert",
@@ -9295,6 +9740,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Hamstring",
       "force": "static",
       "level": "expert",
@@ -9314,6 +9760,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying High Bench Barbell Curl",
       "force": "pull",
       "level": "intermediate",
@@ -9332,6 +9779,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Leg Curls",
       "force": "pull",
       "level": "beginner",
@@ -9350,6 +9798,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Machine Squat",
       "force": "push",
       "level": "intermediate",
@@ -9374,6 +9823,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying One-Arm Lateral Raise",
       "force": "pull",
       "level": "intermediate",
@@ -9393,6 +9843,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Prone Quadriceps",
       "force": null,
       "level": "expert",
@@ -9411,6 +9862,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Rear Delt Raise",
       "force": "pull",
       "level": "intermediate",
@@ -9430,6 +9882,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Supine Dumbbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -9449,6 +9902,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying T-Bar Row",
       "force": "pull",
       "level": "intermediate",
@@ -9472,6 +9926,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Lying Triceps Press",
       "force": "push",
       "level": "intermediate",
@@ -9491,6 +9946,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Machine Bench Press",
       "force": "push",
       "level": "beginner",
@@ -9515,6 +9971,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Machine Bicep Curl",
       "force": "pull",
       "level": "beginner",
@@ -9533,6 +9990,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Machine Preacher Curls",
       "force": "pull",
       "level": "beginner",
@@ -9552,6 +10010,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Machine Shoulder (Military) Press",
       "force": "push",
       "level": "beginner",
@@ -9573,6 +10032,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Machine Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -9591,6 +10051,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Medicine Ball Chest Pass",
       "force": "push",
       "level": "beginner",
@@ -9613,6 +10074,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Medicine Ball Full Twist",
       "force": "pull",
       "level": "beginner",
@@ -9633,6 +10095,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Medicine Ball Scoop Throw",
       "force": "push",
       "level": "beginner",
@@ -9654,6 +10117,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Middle Back Shrug",
       "force": "pull",
       "level": "intermediate",
@@ -9672,6 +10136,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Middle Back Stretch",
       "force": "static",
       "level": "beginner",
@@ -9692,6 +10157,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Mixed Grip Chin",
       "force": "pull",
       "level": "expert",
@@ -9714,6 +10180,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Monster Walk",
       "force": "pull",
       "level": "beginner",
@@ -9731,6 +10198,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Mountain Climbers",
       "force": "pull",
       "level": "beginner",
@@ -9751,6 +10219,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Moving Claw Series",
       "force": null,
       "level": "beginner",
@@ -9771,6 +10240,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Muscle Snatch",
       "force": "pull",
       "level": "intermediate",
@@ -9794,6 +10264,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Muscle Up",
       "force": "pull",
       "level": "intermediate",
@@ -9820,6 +10291,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Narrow Stance Hack Squats",
       "force": "push",
       "level": "intermediate",
@@ -9845,6 +10317,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Narrow Stance Leg Press",
       "force": "push",
       "level": "intermediate",
@@ -9868,6 +10341,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Narrow Stance Squats",
       "force": "push",
       "level": "intermediate",
@@ -9893,6 +10367,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Natural Glute Ham Raise",
       "force": "pull",
       "level": "intermediate",
@@ -9915,6 +10390,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Neck-SMR",
       "force": "static",
       "level": "intermediate",
@@ -9931,6 +10407,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Neck Press",
       "force": "push",
       "level": "intermediate",
@@ -9953,6 +10430,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Oblique Crunches",
       "force": "pull",
       "level": "beginner",
@@ -9974,6 +10452,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Oblique Crunches - On The Floor",
       "force": "pull",
       "level": "beginner",
@@ -9993,6 +10472,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Olympic Squat",
       "force": "push",
       "level": "intermediate",
@@ -10014,6 +10494,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "On-Your-Back Quad Stretch",
       "force": "static",
       "level": "beginner",
@@ -10032,6 +10513,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "On Your Side Quad Stretch",
       "force": "static",
       "level": "beginner",
@@ -10048,6 +10530,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Dumbbell Row",
       "force": "pull",
       "level": "beginner",
@@ -10073,6 +10556,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Flat Bench Dumbbell Flye",
       "force": "push",
       "level": "beginner",
@@ -10093,6 +10577,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm High-Pulley Cable Side Bends",
       "force": "pull",
       "level": "beginner",
@@ -10115,6 +10600,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Incline Lateral Raise",
       "force": "push",
       "level": "beginner",
@@ -10135,6 +10621,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Clean",
       "force": "pull",
       "level": "intermediate",
@@ -10157,6 +10644,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Clean and Jerk",
       "force": "push",
       "level": "intermediate",
@@ -10177,6 +10665,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Floor Press",
       "force": "push",
       "level": "intermediate",
@@ -10196,6 +10685,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Jerk",
       "force": "push",
       "level": "intermediate",
@@ -10218,6 +10708,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Military Press To The Side",
       "force": "push",
       "level": "intermediate",
@@ -10237,6 +10728,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Para Press",
       "force": "push",
       "level": "intermediate",
@@ -10256,6 +10748,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Push Press",
       "force": "push",
       "level": "intermediate",
@@ -10277,6 +10770,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Row",
       "force": "pull",
       "level": "intermediate",
@@ -10295,6 +10789,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Snatch",
       "force": "pull",
       "level": "expert",
@@ -10319,6 +10814,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Split Jerk",
       "force": "push",
       "level": "intermediate",
@@ -10343,6 +10839,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Split Snatch",
       "force": "pull",
       "level": "expert",
@@ -10364,6 +10861,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Kettlebell Swings",
       "force": "pull",
       "level": "intermediate",
@@ -10382,6 +10880,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Long Bar Row",
       "force": "pull",
       "level": "beginner",
@@ -10404,6 +10903,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Medicine Ball Slam",
       "force": "pull",
       "level": "beginner",
@@ -10425,6 +10925,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Open Palm Kettlebell Clean",
       "force": "pull",
       "level": "intermediate",
@@ -10449,6 +10950,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Overhead Kettlebell Squats",
       "force": "push",
       "level": "expert",
@@ -10471,6 +10973,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Side Deadlift",
       "force": "pull",
       "level": "expert",
@@ -10498,6 +11001,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Arm Side Laterals",
       "force": "push",
       "level": "beginner",
@@ -10518,6 +11022,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One-Legged Cable Kickback",
       "force": "push",
       "level": "intermediate",
@@ -10540,6 +11045,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Against Wall",
       "force": "static",
       "level": "beginner",
@@ -10556,6 +11062,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Chin-Up",
       "force": "pull",
       "level": "expert",
@@ -10581,6 +11088,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Dumbbell Bench Press",
       "force": "push",
       "level": "beginner",
@@ -10605,6 +11113,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Dumbbell Preacher Curl",
       "force": "pull",
       "level": "beginner",
@@ -10624,6 +11133,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Floor Press",
       "force": "push",
       "level": "intermediate",
@@ -10648,6 +11158,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Lat Pulldown",
       "force": "pull",
       "level": "beginner",
@@ -10669,6 +11180,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Pronated Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -10689,6 +11201,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Arm Supinated Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -10710,6 +11223,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Half Locust",
       "force": "static",
       "level": "beginner",
@@ -10732,6 +11246,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Handed Hang",
       "force": "static",
       "level": "beginner",
@@ -10749,6 +11264,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Knee To Chest",
       "force": "static",
       "level": "beginner",
@@ -10770,6 +11286,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "One Leg Barbell Squat",
       "force": "push",
       "level": "expert",
@@ -10795,6 +11312,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Open Palm Kettlebell Clean",
       "force": "pull",
       "level": "expert",
@@ -10817,6 +11335,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Otis-Up",
       "force": "pull",
       "level": "beginner",
@@ -10839,6 +11358,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Overhead Cable Curl",
       "force": "pull",
       "level": "intermediate",
@@ -10859,6 +11379,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Overhead Lat",
       "force": "static",
       "level": "expert",
@@ -10878,6 +11399,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Overhead Slam",
       "force": "pull",
       "level": "beginner",
@@ -10896,6 +11418,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Overhead Squat",
       "force": "push",
       "level": "expert",
@@ -10924,6 +11447,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Overhead Stretch",
       "force": "static",
       "level": "beginner",
@@ -10945,6 +11469,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Overhead Triceps",
       "force": "static",
       "level": "expert",
@@ -10964,6 +11489,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pallof Press",
       "force": "pull",
       "level": "beginner",
@@ -10988,6 +11514,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pallof Press With Rotation",
       "force": "pull",
       "level": "beginner",
@@ -11015,6 +11542,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Palms-Down Dumbbell Wrist Curl Over A Bench",
       "force": "pull",
       "level": "beginner",
@@ -11036,6 +11564,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Palms-Down Wrist Curl Over A Bench",
       "force": "pull",
       "level": "beginner",
@@ -11057,6 +11586,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Palms-Up Barbell Wrist Curl Over A Bench",
       "force": "pull",
       "level": "beginner",
@@ -11078,6 +11608,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Palms-Up Dumbbell Wrist Curl Over A Bench",
       "force": "pull",
       "level": "beginner",
@@ -11099,6 +11630,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Parallel Bar Dip",
       "force": "push",
       "level": "beginner",
@@ -11120,6 +11652,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pelvic Tilt Into Bridge",
       "force": "static",
       "level": "intermediate",
@@ -11137,6 +11670,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Peroneals-SMR",
       "force": "static",
       "level": "intermediate",
@@ -11153,6 +11687,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Peroneals Stretch",
       "force": "static",
       "level": "intermediate",
@@ -11169,6 +11704,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Physioball Hip Bridge",
       "force": "push",
       "level": "beginner",
@@ -11188,6 +11724,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pin Presses",
       "force": "push",
       "level": "intermediate",
@@ -11214,6 +11751,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Piriformis-SMR",
       "force": "static",
       "level": "intermediate",
@@ -11230,6 +11768,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Plank",
       "force": "static",
       "level": "beginner",
@@ -11246,6 +11785,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Plate Pinch",
       "force": "static",
       "level": "intermediate",
@@ -11265,6 +11805,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Plate Twist",
       "force": "pull",
       "level": "intermediate",
@@ -11284,6 +11825,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Platform Hamstring Slides",
       "force": "pull",
       "level": "beginner",
@@ -11304,6 +11846,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Plie Dumbbell Squat",
       "force": "push",
       "level": "beginner",
@@ -11328,6 +11871,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Plyo Kettlebell Pushups",
       "force": "push",
       "level": "expert",
@@ -11348,6 +11892,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Plyo Push-up",
       "force": "push",
       "level": "beginner",
@@ -11371,6 +11916,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Posterior Tibialis Stretch",
       "force": "static",
       "level": "intermediate",
@@ -11387,6 +11933,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Clean",
       "force": "pull",
       "level": "intermediate",
@@ -11435,6 +11982,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Clean from Blocks",
       "force": "pull",
       "level": "intermediate",
@@ -11456,6 +12004,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Jerk",
       "force": "push",
       "level": "expert",
@@ -11482,6 +12031,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Partials",
       "force": "push",
       "level": "beginner",
@@ -11501,6 +12051,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Snatch",
       "force": "pull",
       "level": "expert",
@@ -11528,6 +12079,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Snatch from Blocks",
       "force": "pull",
       "level": "intermediate",
@@ -11556,6 +12108,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Power Stairs",
       "force": "pull",
       "level": "intermediate",
@@ -11582,6 +12135,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Preacher Curl",
       "force": "pull",
       "level": "beginner",
@@ -11601,6 +12155,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Preacher Hammer Dumbbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -11621,6 +12176,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Press Sit-Up",
       "force": "push",
       "level": "expert",
@@ -11643,6 +12199,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Prone Manual Hamstring",
       "force": "static",
       "level": "beginner",
@@ -11660,6 +12217,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Prowler Sprint",
       "force": "push",
       "level": "beginner",
@@ -11683,6 +12241,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pull Through",
       "force": "pull",
       "level": "beginner",
@@ -11702,6 +12261,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pullups",
       "force": "pull",
       "level": "beginner",
@@ -11724,6 +12284,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push-Up Wide",
       "force": null,
       "level": "beginner",
@@ -11746,6 +12307,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push-Ups - Close Triceps Position",
       "force": "push",
       "level": "intermediate",
@@ -11767,6 +12329,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push-Ups With Feet Elevated",
       "force": "push",
       "level": "beginner",
@@ -11789,6 +12352,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push-Ups With Feet On An Exercise Ball",
       "force": "push",
       "level": "intermediate",
@@ -11811,6 +12375,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push Press",
       "force": "push",
       "level": "expert",
@@ -11827,6 +12392,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push Press - Behind the Neck",
       "force": "push",
       "level": "intermediate",
@@ -11848,6 +12414,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Push Up to Side Plank",
       "force": "push",
       "level": "beginner",
@@ -11871,6 +12438,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pushups",
       "force": "push",
       "level": "beginner",
@@ -11892,6 +12460,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pushups (Close and Wide Hand Positions)",
       "force": "push",
       "level": "beginner",
@@ -11913,6 +12482,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Pyramid",
       "force": "static",
       "level": "beginner",
@@ -11931,6 +12501,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Quad Stretch",
       "force": "static",
       "level": "intermediate",
@@ -11947,6 +12518,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Quadriceps-SMR",
       "force": "static",
       "level": "intermediate",
@@ -11963,6 +12535,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Quick Leap",
       "force": "push",
       "level": "beginner",
@@ -11984,6 +12557,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rack Delivery",
       "force": "pull",
       "level": "intermediate",
@@ -12004,6 +12578,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rack Pull with Bands",
       "force": "pull",
       "level": "intermediate",
@@ -12027,6 +12602,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rack Pulls",
       "force": "pull",
       "level": "intermediate",
@@ -12049,6 +12625,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rear Leg Raises",
       "force": "push",
       "level": "beginner",
@@ -12065,6 +12642,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Recumbent Bike",
       "force": null,
       "level": "beginner",
@@ -12086,6 +12664,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Return Push from Stance",
       "force": "push",
       "level": "beginner",
@@ -12108,6 +12687,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Band Bench Press",
       "force": "push",
       "level": "intermediate",
@@ -12132,6 +12712,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Band Box Squat",
       "force": "push",
       "level": "intermediate",
@@ -12158,6 +12739,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Band Deadlift",
       "force": "pull",
       "level": "expert",
@@ -12184,6 +12766,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Band Power Squat",
       "force": "push",
       "level": "expert",
@@ -12208,6 +12791,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Band Sumo Deadlift",
       "force": "pull",
       "level": "expert",
@@ -12236,6 +12820,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Barbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -12256,6 +12841,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Barbell Preacher Curls",
       "force": "pull",
       "level": "intermediate",
@@ -12277,6 +12863,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Cable Curl",
       "force": "pull",
       "level": "beginner",
@@ -12297,6 +12884,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Crunch",
       "force": "pull",
       "level": "beginner",
@@ -12316,6 +12904,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Flyes",
       "force": "pull",
       "level": "beginner",
@@ -12336,6 +12925,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Flyes With External Rotation",
       "force": "pull",
       "level": "intermediate",
@@ -12357,6 +12947,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Grip Bent-Over Rows",
       "force": "pull",
       "level": "intermediate",
@@ -12380,6 +12971,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Grip Triceps Pushdown",
       "force": "push",
       "level": "beginner",
@@ -12399,6 +12991,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Hyperextension",
       "force": "pull",
       "level": "intermediate",
@@ -12421,6 +13014,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Machine Flyes",
       "force": "pull",
       "level": "beginner",
@@ -12439,6 +13033,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Plate Curls",
       "force": "pull",
       "level": "beginner",
@@ -12460,6 +13055,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Reverse Triceps Bench Press",
       "force": "push",
       "level": "intermediate",
@@ -12482,6 +13078,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rhomboids-SMR",
       "force": "static",
       "level": "intermediate",
@@ -12500,6 +13097,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rickshaw Carry",
       "force": null,
       "level": "intermediate",
@@ -12524,6 +13122,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rickshaw Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -12547,6 +13146,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Ring Dips",
       "force": "push",
       "level": "intermediate",
@@ -12568,6 +13168,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rocket Jump",
       "force": "push",
       "level": "beginner",
@@ -12588,6 +13189,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rocking Standing Calf Raise",
       "force": "push",
       "level": "beginner",
@@ -12610,6 +13212,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rocky Pull-Ups/Pulldowns",
       "force": "pull",
       "level": "intermediate",
@@ -12634,6 +13237,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Romanian Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -12657,6 +13261,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Romanian Deadlift from Deficit",
       "force": "pull",
       "level": "intermediate",
@@ -12679,6 +13284,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rope Climb",
       "force": "pull",
       "level": "intermediate",
@@ -12703,6 +13309,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rope Crunch",
       "force": "pull",
       "level": "beginner",
@@ -12722,6 +13329,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rope Jumping",
       "force": null,
       "level": "intermediate",
@@ -12741,6 +13349,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rope Straight-Arm Pulldown",
       "force": "pull",
       "level": "beginner",
@@ -12759,6 +13368,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Round The World Shoulder Stretch",
       "force": "static",
       "level": "beginner",
@@ -12779,6 +13389,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Rowing, Stationary",
       "force": null,
       "level": "intermediate",
@@ -12803,6 +13414,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Runner's Stretch",
       "force": "static",
       "level": "beginner",
@@ -12822,6 +13434,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Running, Treadmill",
       "force": null,
       "level": "beginner",
@@ -12842,6 +13455,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Russian Twist",
       "force": "pull",
       "level": "intermediate",
@@ -12863,6 +13477,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sandbag Load",
       "force": "pull",
       "level": "beginner",
@@ -12892,6 +13507,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Scapular Pull-Up",
       "force": "pull",
       "level": "beginner",
@@ -12912,6 +13528,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Scissor Kick",
       "force": "pull",
       "level": "beginner",
@@ -12931,6 +13548,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Scissors Jump",
       "force": "push",
       "level": "beginner",
@@ -12952,6 +13570,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Band Hamstring Curl",
       "force": "pull",
       "level": "beginner",
@@ -12970,6 +13589,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Barbell Military Press",
       "force": "push",
       "level": "intermediate",
@@ -12991,6 +13611,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Barbell Twist",
       "force": "pull",
       "level": "beginner",
@@ -13011,6 +13632,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Bent-Over One-Arm Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -13032,6 +13654,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Bent-Over Rear Delt Raise",
       "force": "pull",
       "level": "intermediate",
@@ -13052,6 +13675,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Bent-Over Two-Arm Dumbbell Triceps Extension",
       "force": "push",
       "level": "intermediate",
@@ -13072,6 +13696,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Biceps",
       "force": "static",
       "level": "expert",
@@ -13092,6 +13717,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Cable Rows",
       "force": "pull",
       "level": "beginner",
@@ -13115,6 +13741,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Cable Shoulder Press",
       "force": "push",
       "level": "beginner",
@@ -13135,6 +13762,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Calf Raise",
       "force": "push",
       "level": "beginner",
@@ -13155,6 +13783,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Calf Stretch",
       "force": "static",
       "level": "beginner",
@@ -13176,6 +13805,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Close-Grip Concentration Barbell Curl",
       "force": "pull",
       "level": "intermediate",
@@ -13195,6 +13825,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Dumbbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -13214,6 +13845,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Dumbbell Inner Biceps Curl",
       "force": "pull",
       "level": "beginner",
@@ -13234,6 +13866,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Dumbbell Palms-Down Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -13255,6 +13888,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Dumbbell Palms-Up Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -13276,6 +13910,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Dumbbell Press",
       "force": "push",
       "level": "beginner",
@@ -13298,6 +13933,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Flat Bench Leg Pull-In",
       "force": "pull",
       "level": "beginner",
@@ -13316,6 +13952,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Floor Hamstring Stretch",
       "force": "static",
       "level": "beginner",
@@ -13334,6 +13971,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Front Deltoid",
       "force": "static",
       "level": "expert",
@@ -13353,6 +13991,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Glute",
       "force": "static",
       "level": "expert",
@@ -13372,6 +14011,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Good Mornings",
       "force": "pull",
       "level": "intermediate",
@@ -13392,6 +14032,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Hamstring",
       "force": "static",
       "level": "expert",
@@ -13411,6 +14052,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Hamstring and Calf Stretch",
       "force": "static",
       "level": "intermediate",
@@ -13429,6 +14071,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Head Harness Neck Resistance",
       "force": "pull",
       "level": "intermediate",
@@ -13449,6 +14092,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Leg Curl",
       "force": "pull",
       "level": "beginner",
@@ -13468,6 +14112,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Leg Tucks",
       "force": "pull",
       "level": "beginner",
@@ -13486,6 +14131,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated One-Arm Dumbbell Palms-Down Wrist Curl",
       "force": "pull",
       "level": "intermediate",
@@ -13506,6 +14152,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated One-Arm Dumbbell Palms-Up Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -13526,6 +14173,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated One-arm Cable Pulley Rows",
       "force": "pull",
       "level": "intermediate",
@@ -13550,6 +14198,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Overhead Stretch",
       "force": "static",
       "level": "beginner",
@@ -13568,6 +14217,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Palm-Up Barbell Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -13587,6 +14237,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Palms-Down Barbell Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -13606,6 +14257,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Side Lateral Raise",
       "force": "push",
       "level": "beginner",
@@ -13624,6 +14276,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Triceps Press",
       "force": "push",
       "level": "beginner",
@@ -13642,6 +14295,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Seated Two-Arm Palms-Up Low-Pulley Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -13665,6 +14319,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "See-Saw Press (Alternating Side Press)",
       "force": "push",
       "level": "intermediate",
@@ -13687,6 +14342,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Shotgun Row",
       "force": "pull",
       "level": "beginner",
@@ -13708,6 +14364,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Shoulder Circles",
       "force": "pull",
       "level": "beginner",
@@ -13726,6 +14383,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Shoulder Press - With Bands",
       "force": "push",
       "level": "beginner",
@@ -13745,6 +14403,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Shoulder Raise",
       "force": "pull",
       "level": "beginner",
@@ -13762,6 +14421,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Shoulder Stretch",
       "force": "pull",
       "level": "beginner",
@@ -13777,6 +14437,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side-Lying Floor Stretch",
       "force": "static",
       "level": "beginner",
@@ -13793,6 +14454,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Bridge",
       "force": "static",
       "level": "beginner",
@@ -13808,6 +14470,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Hop-Sprint",
       "force": "push",
       "level": "beginner",
@@ -13830,6 +14493,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Jackknife",
       "force": "pull",
       "level": "beginner",
@@ -13843,6 +14507,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Lateral Raise",
       "force": "push",
       "level": "beginner",
@@ -13861,6 +14526,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Laterals to Front Raise",
       "force": "push",
       "level": "beginner",
@@ -13883,6 +14549,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Leg Raises",
       "force": "pull",
       "level": "beginner",
@@ -13900,6 +14567,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Lying Groin Stretch",
       "force": "static",
       "level": "beginner",
@@ -13919,6 +14587,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Neck Stretch",
       "force": "static",
       "level": "beginner",
@@ -13935,6 +14604,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Standing Long Jump",
       "force": "push",
       "level": "beginner",
@@ -13956,6 +14626,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side To Side Chins",
       "force": "pull",
       "level": "intermediate",
@@ -13982,6 +14653,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side Wrist Pull",
       "force": "static",
       "level": "beginner",
@@ -14001,6 +14673,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Side to Side Box Shuffle",
       "force": "push",
       "level": "beginner",
@@ -14023,6 +14696,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Arm Cable Crossover",
       "force": "push",
       "level": "beginner",
@@ -14042,6 +14716,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Arm Linear Jammer",
       "force": "push",
       "level": "intermediate",
@@ -14063,6 +14738,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Arm Push-Up",
       "force": "push",
       "level": "intermediate",
@@ -14084,6 +14760,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Cone Sprint Drill",
       "force": "push",
       "level": "beginner",
@@ -14105,6 +14782,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Leg High Box Squat",
       "force": "push",
       "level": "beginner",
@@ -14125,6 +14803,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Leg Hop Progression",
       "force": "push",
       "level": "beginner",
@@ -14148,6 +14827,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Leg Lateral Hop",
       "force": "push",
       "level": "beginner",
@@ -14171,6 +14851,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Leg Leg Extension",
       "force": "push",
       "level": "beginner",
@@ -14189,6 +14870,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single-Leg Stride Jump",
       "force": "push",
       "level": "beginner",
@@ -14211,6 +14893,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single Dumbbell Raise",
       "force": null,
       "level": "beginner",
@@ -14231,6 +14914,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single Leg Butt Kick",
       "force": "push",
       "level": "beginner",
@@ -14252,6 +14936,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single Leg Glute Bridge",
       "force": "push",
       "level": "beginner",
@@ -14272,6 +14957,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Single Leg Push-off",
       "force": "push",
       "level": "beginner",
@@ -14292,6 +14978,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sit-Up",
       "force": "pull",
       "level": "beginner",
@@ -14311,6 +14998,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sit Squats",
       "force": "push",
       "level": "beginner",
@@ -14332,6 +15020,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Skating",
       "force": null,
       "level": "intermediate",
@@ -14354,6 +15043,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sled Drag - Harness",
       "force": "push",
       "level": "beginner",
@@ -14374,6 +15064,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sled Overhead Backward Walk",
       "force": "pull",
       "level": "beginner",
@@ -14395,6 +15086,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sled Overhead Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -14413,6 +15105,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sled Push",
       "force": "push",
       "level": "beginner",
@@ -14435,6 +15128,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sled Reverse Flye",
       "force": "pull",
       "level": "beginner",
@@ -14453,6 +15147,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sled Row",
       "force": "pull",
       "level": "beginner",
@@ -14474,6 +15169,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sledgehammer Swings",
       "force": "pull",
       "level": "beginner",
@@ -14498,6 +15194,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Incline Shoulder Raise",
       "force": "push",
       "level": "beginner",
@@ -14520,6 +15217,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Behind the Back Shrug",
       "force": "pull",
       "level": "beginner",
@@ -14541,6 +15239,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Bench Press",
       "force": "push",
       "level": "beginner",
@@ -14563,6 +15262,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Bent Over Row",
       "force": "pull",
       "level": "beginner",
@@ -14587,6 +15287,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Calf Raise",
       "force": "push",
       "level": "beginner",
@@ -14606,6 +15307,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Close-Grip Bench Press",
       "force": "push",
       "level": "beginner",
@@ -14628,6 +15330,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Decline Press",
       "force": null,
       "level": "beginner",
@@ -14650,6 +15353,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Hang Power Clean",
       "force": "pull",
       "level": "intermediate",
@@ -14676,6 +15380,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Hip Raise",
       "force": "pull",
       "level": "beginner",
@@ -14694,6 +15399,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Incline Bench Press",
       "force": "push",
       "level": "beginner",
@@ -14716,6 +15422,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Leg Press",
       "force": "push",
       "level": "intermediate",
@@ -14737,6 +15444,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine One-Arm Upright Row",
       "force": "pull",
       "level": "beginner",
@@ -14759,6 +15467,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Overhead Shoulder Press",
       "force": "push",
       "level": "beginner",
@@ -14780,6 +15489,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Pistol Squat",
       "force": "push",
       "level": "intermediate",
@@ -14803,6 +15513,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Reverse Calf Raises",
       "force": "push",
       "level": "beginner",
@@ -14823,6 +15534,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Squat",
       "force": "push",
       "level": "beginner",
@@ -14848,6 +15560,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Stiff-Legged Deadlift",
       "force": "pull",
       "level": "beginner",
@@ -14870,6 +15583,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Machine Upright Row",
       "force": "pull",
       "level": "beginner",
@@ -14893,6 +15607,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Smith Single-Leg Split Squat",
       "force": "push",
       "level": "beginner",
@@ -14918,6 +15633,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Snatch",
       "force": "pull",
       "level": "intermediate",
@@ -14947,6 +15663,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Snatch Balance",
       "force": "push",
       "level": "intermediate",
@@ -14971,6 +15688,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Snatch Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -14995,6 +15713,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Snatch Pull",
       "force": "pull",
       "level": "intermediate",
@@ -15019,6 +15738,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Snatch Shrug",
       "force": "pull",
       "level": "intermediate",
@@ -15038,6 +15758,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Snatch from Blocks",
       "force": "pull",
       "level": "expert",
@@ -15066,6 +15787,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Speed Band Overhead Triceps",
       "force": "push",
       "level": "beginner",
@@ -15084,6 +15806,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Speed Box Squat",
       "force": "push",
       "level": "intermediate",
@@ -15107,6 +15830,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Speed Squats",
       "force": "push",
       "level": "expert",
@@ -15132,6 +15856,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Spell Caster",
       "force": "pull",
       "level": "beginner",
@@ -15153,6 +15878,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Spider Crawl",
       "force": "pull",
       "level": "beginner",
@@ -15174,6 +15900,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Spider Curl",
       "force": "pull",
       "level": "beginner",
@@ -15195,6 +15922,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Spinal Stretch",
       "force": "static",
       "level": "beginner",
@@ -15218,6 +15946,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Split Clean",
       "force": "pull",
       "level": "intermediate",
@@ -15246,6 +15975,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Split Jerk",
       "force": "push",
       "level": "intermediate",
@@ -15269,6 +15999,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Split Jump",
       "force": "push",
       "level": "beginner",
@@ -15292,6 +16023,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Split Snatch",
       "force": "pull",
       "level": "expert",
@@ -15322,6 +16054,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Split Squat with Dumbbells",
       "force": "push",
       "level": "beginner",
@@ -15343,6 +16076,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Split Squats",
       "force": "push",
       "level": "intermediate",
@@ -15363,6 +16097,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Squat Jerk",
       "force": "push",
       "level": "expert",
@@ -15386,6 +16121,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Squat with Bands",
       "force": "push",
       "level": "intermediate",
@@ -15410,6 +16146,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Squat with Chains",
       "force": "push",
       "level": "intermediate",
@@ -15434,6 +16171,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Squat with Plate Movers",
       "force": "push",
       "level": "intermediate",
@@ -15462,6 +16200,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Squats - With Bands",
       "force": "push",
       "level": "beginner",
@@ -15486,6 +16225,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Stairmaster",
       "force": null,
       "level": "intermediate",
@@ -15507,6 +16247,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Alternating Dumbbell Press",
       "force": "push",
       "level": "beginner",
@@ -15527,6 +16268,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Barbell Calf Raise",
       "force": "push",
       "level": "beginner",
@@ -15547,6 +16289,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Barbell Press Behind Neck",
       "force": "push",
       "level": "intermediate",
@@ -15569,6 +16312,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Bent-Over One-Arm Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -15591,6 +16335,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Bent-Over Two-Arm Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -15609,6 +16354,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Biceps Cable Curl",
       "force": "pull",
       "level": "beginner",
@@ -15627,6 +16373,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Biceps Stretch",
       "force": "static",
       "level": "beginner",
@@ -15646,6 +16393,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Bradford Press",
       "force": "push",
       "level": "beginner",
@@ -15668,6 +16416,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Cable Chest Press",
       "force": "push",
       "level": "beginner",
@@ -15689,6 +16438,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Cable Lift",
       "force": "pull",
       "level": "beginner",
@@ -15713,6 +16463,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Cable Wood Chop",
       "force": "pull",
       "level": "beginner",
@@ -15737,6 +16488,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Calf Raises",
       "force": "push",
       "level": "beginner",
@@ -15756,6 +16508,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Concentration Curl",
       "force": "pull",
       "level": "beginner",
@@ -15776,6 +16529,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Dumbbell Calf Raise",
       "force": "push",
       "level": "intermediate",
@@ -15794,6 +16548,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Dumbbell Press",
       "force": "push",
       "level": "beginner",
@@ -15813,6 +16568,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Dumbbell Reverse Curl",
       "force": "pull",
       "level": "intermediate",
@@ -15833,6 +16589,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Dumbbell Straight-Arm Front Delt Raise Above Head",
       "force": "push",
       "level": "intermediate",
@@ -15852,6 +16609,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -15871,6 +16629,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Dumbbell Upright Row",
       "force": "pull",
       "level": "beginner",
@@ -15892,6 +16651,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Elevated Quad Stretch",
       "force": "static",
       "level": "beginner",
@@ -15909,6 +16669,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Front Barbell Raise Over Head",
       "force": "push",
       "level": "intermediate",
@@ -15928,6 +16689,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Gastrocnemius Calf Stretch",
       "force": "static",
       "level": "beginner",
@@ -15947,6 +16709,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Hamstring and Calf Stretch",
       "force": "static",
       "level": "beginner",
@@ -15964,6 +16727,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Hip Circles",
       "force": "pull",
       "level": "beginner",
@@ -15984,6 +16748,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Hip Flexors",
       "force": "static",
       "level": "beginner",
@@ -16000,6 +16765,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Inner-Biceps Curl",
       "force": "pull",
       "level": "intermediate",
@@ -16021,6 +16787,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Lateral Stretch",
       "force": "static",
       "level": "beginner",
@@ -16039,6 +16806,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Leg Curl",
       "force": "pull",
       "level": "beginner",
@@ -16058,6 +16826,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Long Jump",
       "force": "push",
       "level": "beginner",
@@ -16080,6 +16849,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Low-Pulley Deltoid Raise",
       "force": "push",
       "level": "beginner",
@@ -16102,6 +16872,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Low-Pulley One-Arm Triceps Extension",
       "force": "push",
       "level": "intermediate",
@@ -16124,6 +16895,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Military Press",
       "force": "push",
       "level": "beginner",
@@ -16146,6 +16918,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Olympic Plate Hand Squeeze",
       "force": "static",
       "level": "beginner",
@@ -16166,6 +16939,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing One-Arm Cable Curl",
       "force": "pull",
       "level": "intermediate",
@@ -16186,6 +16960,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing One-Arm Dumbbell Curl Over Incline Bench",
       "force": "pull",
       "level": "beginner",
@@ -16206,6 +16981,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing One-Arm Dumbbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -16229,6 +17005,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Overhead Barbell Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -16250,6 +17027,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Palm-In One-Arm Dumbbell Press",
       "force": "push",
       "level": "beginner",
@@ -16273,6 +17051,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Palms-In Dumbbell Press",
       "force": "push",
       "level": "intermediate",
@@ -16293,6 +17072,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Palms-Up Barbell Behind The Back Wrist Curl",
       "force": "pull",
       "level": "beginner",
@@ -16313,6 +17093,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Pelvic Tilt",
       "force": "static",
       "level": "beginner",
@@ -16332,6 +17113,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Rope Crunch",
       "force": "pull",
       "level": "beginner",
@@ -16350,6 +17132,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Soleus And Achilles Stretch",
       "force": "static",
       "level": "beginner",
@@ -16366,6 +17149,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Toe Touches",
       "force": "static",
       "level": "beginner",
@@ -16384,6 +17168,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Towel Triceps Extension",
       "force": "push",
       "level": "beginner",
@@ -16402,6 +17187,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Standing Two-Arm Overhead Throw",
       "force": "pull",
       "level": "beginner",
@@ -16422,6 +17208,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Star Jump",
       "force": "push",
       "level": "beginner",
@@ -16444,6 +17231,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Step-up with Knee Raise",
       "force": "push",
       "level": "beginner",
@@ -16464,6 +17252,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Step Mill",
       "force": null,
       "level": "intermediate",
@@ -16484,6 +17273,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Stiff-Legged Barbell Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -16506,6 +17296,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Stiff-Legged Dumbbell Deadlift",
       "force": "pull",
       "level": "beginner",
@@ -16528,6 +17319,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Stiff Leg Barbell Good Morning",
       "force": "push",
       "level": "beginner",
@@ -16551,6 +17343,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Stomach Vacuum",
       "force": "static",
       "level": "beginner",
@@ -16570,6 +17363,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Straight-Arm Dumbbell Pullover",
       "force": "pull",
       "level": "intermediate",
@@ -16594,6 +17388,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Straight-Arm Pulldown",
       "force": "pull",
       "level": "beginner",
@@ -16613,6 +17408,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Straight Bar Bench Mid Rows",
       "force": "pull",
       "level": "beginner",
@@ -16633,6 +17429,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Straight Raises on Incline Bench",
       "force": "push",
       "level": "beginner",
@@ -16653,6 +17450,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Stride Jump Crossover",
       "force": "push",
       "level": "beginner",
@@ -16676,6 +17474,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sumo Deadlift",
       "force": "pull",
       "level": "intermediate",
@@ -16702,6 +17501,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sumo Deadlift with Bands",
       "force": "pull",
       "level": "intermediate",
@@ -16729,6 +17529,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Sumo Deadlift with Chains",
       "force": "pull",
       "level": "intermediate",
@@ -16757,6 +17558,7 @@
       "category": "powerlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Superman",
       "force": "static",
       "level": "beginner",
@@ -16778,6 +17580,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Supine Chest Throw",
       "force": "push",
       "level": "beginner",
@@ -16799,6 +17602,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Supine One-Arm Overhead Throw",
       "force": "pull",
       "level": "beginner",
@@ -16820,6 +17624,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Supine Two-Arm Overhead Throw",
       "force": "pull",
       "level": "beginner",
@@ -16842,6 +17647,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Suspended Fallout",
       "force": "pull",
       "level": "intermediate",
@@ -16865,6 +17671,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Suspended Push-Up",
       "force": "push",
       "level": "beginner",
@@ -16886,6 +17693,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Suspended Reverse Crunch",
       "force": "pull",
       "level": "beginner",
@@ -16904,6 +17712,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Suspended Row",
       "force": "pull",
       "level": "beginner",
@@ -16924,6 +17733,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Suspended Split Squat",
       "force": "push",
       "level": "intermediate",
@@ -16948,6 +17758,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Svend Press",
       "force": "push",
       "level": "beginner",
@@ -16970,6 +17781,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "T-Bar Row with Handle",
       "force": "pull",
       "level": "beginner",
@@ -16992,6 +17804,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Tate Press",
       "force": "push",
       "level": "intermediate",
@@ -17014,6 +17827,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "The Straddle",
       "force": "static",
       "level": "beginner",
@@ -17033,6 +17847,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Thigh Abductor",
       "force": "push",
       "level": "beginner",
@@ -17053,6 +17868,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Thigh Adductor",
       "force": "pull",
       "level": "beginner",
@@ -17074,6 +17890,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Tire Flip",
       "force": "pull",
       "level": "intermediate",
@@ -17101,6 +17918,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Toe Touchers",
       "force": "pull",
       "level": "beginner",
@@ -17121,6 +17939,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Torso Rotation",
       "force": "pull",
       "level": "beginner",
@@ -17137,6 +17956,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Trail Running/Walking",
       "force": null,
       "level": "beginner",
@@ -17157,6 +17977,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Trap Bar Deadlift",
       "force": "pull",
       "level": "beginner",
@@ -17178,6 +17999,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Tricep Dumbbell Kickback",
       "force": "push",
       "level": "beginner",
@@ -17196,6 +18018,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Tricep Side Stretch",
       "force": "static",
       "level": "beginner",
@@ -17213,6 +18036,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Triceps Overhead Extension with Rope",
       "force": "push",
       "level": "beginner",
@@ -17231,6 +18055,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Triceps Pushdown",
       "force": "push",
       "level": "beginner",
@@ -17250,6 +18075,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Triceps Pushdown - Rope Attachment",
       "force": "push",
       "level": "beginner",
@@ -17269,6 +18095,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Triceps Pushdown - V-Bar Attachment",
       "force": "push",
       "level": "beginner",
@@ -17288,6 +18115,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Triceps Stretch",
       "force": "static",
       "level": "beginner",
@@ -17305,6 +18133,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Tuck Crunch",
       "force": "pull",
       "level": "beginner",
@@ -17325,6 +18154,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Two-Arm Dumbbell Preacher Curl",
       "force": "pull",
       "level": "beginner",
@@ -17343,6 +18173,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Two-Arm Kettlebell Clean",
       "force": "pull",
       "level": "intermediate",
@@ -17366,6 +18197,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Two-Arm Kettlebell Jerk",
       "force": "push",
       "level": "intermediate",
@@ -17385,6 +18217,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Two-Arm Kettlebell Military Press",
       "force": "push",
       "level": "intermediate",
@@ -17403,6 +18236,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Two-Arm Kettlebell Row",
       "force": "pull",
       "level": "intermediate",
@@ -17422,6 +18256,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Underhand Cable Pulldowns",
       "force": "pull",
       "level": "beginner",
@@ -17446,6 +18281,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Upper Back-Leg Grab",
       "force": "static",
       "level": "beginner",
@@ -17465,6 +18301,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Upper Back Stretch",
       "force": "static",
       "level": "beginner",
@@ -17482,6 +18319,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Upright Barbell Row",
       "force": "pull",
       "level": "beginner",
@@ -17502,6 +18340,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Upright Cable Row",
       "force": "pull",
       "level": "intermediate",
@@ -17522,6 +18361,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Upright Row - With Bands",
       "force": "pull",
       "level": "beginner",
@@ -17542,6 +18382,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Upward Stretch",
       "force": "static",
       "level": "beginner",
@@ -17561,6 +18402,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "V-Bar Pulldown",
       "force": "pull",
       "level": "intermediate",
@@ -17585,6 +18427,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "V-Bar Pullup",
       "force": "pull",
       "level": "beginner",
@@ -17608,6 +18451,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Vertical Swing",
       "force": "pull",
       "level": "beginner",
@@ -17630,6 +18474,7 @@
       "category": "plyometrics"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Walking, Treadmill",
       "force": null,
       "level": "beginner",
@@ -17650,6 +18495,7 @@
       "category": "cardio"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Ball Hyperextension",
       "force": "pull",
       "level": "intermediate",
@@ -17672,6 +18518,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Ball Side Bend",
       "force": "pull",
       "level": "intermediate",
@@ -17693,6 +18540,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Bench Dip",
       "force": "push",
       "level": "intermediate",
@@ -17715,6 +18563,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Crunches",
       "force": "pull",
       "level": "beginner",
@@ -17734,6 +18583,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Jump Squat",
       "force": "push",
       "level": "intermediate",
@@ -17757,6 +18607,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Pull Ups",
       "force": "pull",
       "level": "intermediate",
@@ -17778,6 +18629,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Sissy Squat",
       "force": "push",
       "level": "expert",
@@ -17800,6 +18652,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Sit-Ups - With Bands",
       "force": "pull",
       "level": "intermediate",
@@ -17818,6 +18671,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Weighted Squat",
       "force": "push",
       "level": "intermediate",
@@ -17841,6 +18695,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Barbell Bench Press",
       "force": "push",
       "level": "intermediate",
@@ -17862,6 +18717,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Decline Barbell Bench Press",
       "force": "push",
       "level": "intermediate",
@@ -17883,6 +18739,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Decline Barbell Pullover",
       "force": "pull",
       "level": "intermediate",
@@ -17906,6 +18763,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Lat Pulldown",
       "force": "pull",
       "level": "beginner",
@@ -17930,6 +18788,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Pulldown Behind The Neck",
       "force": "pull",
       "level": "intermediate",
@@ -17954,6 +18813,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Rear Pull-Up",
       "force": "pull",
       "level": "intermediate",
@@ -17977,6 +18837,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide-Grip Standing Barbell Curl",
       "force": "pull",
       "level": "beginner",
@@ -17996,6 +18857,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide Stance Barbell Squat",
       "force": "push",
       "level": "intermediate",
@@ -18021,6 +18883,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wide Stance Stiff Legs",
       "force": "pull",
       "level": "intermediate",
@@ -18041,6 +18904,7 @@
       "category": "olympic weightlifting"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wind Sprints",
       "force": "pull",
       "level": "beginner",
@@ -18059,6 +18923,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Windmills",
       "force": "pull",
       "level": "intermediate",
@@ -18080,6 +18945,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "World's Greatest Stretch",
       "force": "static",
       "level": "intermediate",
@@ -18101,6 +18967,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wrist Circles",
       "force": "pull",
       "level": "beginner",
@@ -18118,6 +18985,7 @@
       "category": "stretching"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wrist Roller",
       "force": "pull",
       "level": "beginner",
@@ -18139,6 +19007,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Wrist Rotations with Straight Bar",
       "force": "pull",
       "level": "beginner",
@@ -18156,6 +19025,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Yoke Walk",
       "force": null,
       "level": "intermediate",
@@ -18181,6 +19051,7 @@
       "category": "strongman"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Zercher Squats",
       "force": "push",
       "level": "expert",
@@ -18205,6 +19076,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Zottman Curl",
       "force": "pull",
       "level": "intermediate",
@@ -18229,6 +19101,7 @@
       "category": "strength"
     },
     {
+      "id": "2f32b74a-5bb6-4f36-b2b7-4a5bb66f368f",
       "name": "Zottman Preacher Curl",
       "force": "pull",
       "level": "intermediate",
