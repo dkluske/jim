@@ -22,6 +22,7 @@ kotlin {
         all {
             languageSettings {
                 optIn("kotlin.uuid.ExperimentalUuidApi")
+                optIn("kotlin.concurrent.atomics.ExperimentalAtomicApi")
             }
         }
         commonMain.dependencies {

@@ -3,6 +3,7 @@ package net.jim.data.models
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import net.jim.data.models.serializer.*
+import net.jim.sqldelight.Json_exercises
 import kotlin.uuid.Uuid
 
 @Serializable
@@ -16,7 +17,21 @@ data class JsonExercise(
     val secondaryMuscles: List<MuscleEnum>,
     val instructions: List<String>,
     val category: CategoryEnum
-) : Entity<Uuid> {
+) : Entity<Uuid, Json_exercises> {
+    override fun toDB(): Json_exercises {
+        return Json_exercises(
+            id = id,
+            name = name,
+            force = force,
+            level = level,
+            mechanic = mechanic,
+            primary_muscles = primaryMuscles,
+            secondary_muscles = secondaryMuscles,
+            instructions = instructions,
+            category = category
+        )
+    }
+
     @Serializable(with = JsonExerciseForceSerializer::class)
     @SerialName("JsonExercise.ForceEnum")
     enum class ForceEnum {
@@ -75,5 +90,21 @@ data class JsonExercise(
         CROSSFIT,
         WEIGHTED_BODYWEIGHT,
         ASSISTED_BODYWEIGHT,
+    }
+
+    companion object : EntityConvertable<Json_exercises, JsonExercise> {
+        override fun fromDB(db: Json_exercises): JsonExercise {
+            return JsonExercise(
+                id = db.id,
+                name = db.name,
+                force = db.force,
+                level = db.level,
+                mechanic = db.mechanic,
+                primaryMuscles = db.primary_muscles,
+                secondaryMuscles = db.secondary_muscles,
+                instructions = db.instructions,
+                category = db.category
+            )
+        }
     }
 }
