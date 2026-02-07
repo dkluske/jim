@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalUuidApi::class)
-
 package net.jim.components
 
 import androidx.compose.foundation.clickable
@@ -15,7 +13,6 @@ import jim.sharedui.generated.resources.showMore
 import net.jim.components.utils.JimCard
 import net.jim.components.utils.JimListWrapper
 import org.jetbrains.compose.resources.stringResource
-import kotlin.uuid.ExperimentalUuidApi
 import kotlin.uuid.Uuid
 
 data class JimWorkoutWidgetPlan(

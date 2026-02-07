@@ -3,6 +3,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import net.jim.App
+import net.jim.data.DatabaseDriverManager
 import java.awt.Dimension
 
 fun main() = application {
@@ -13,7 +14,9 @@ fun main() = application {
     ) {
         window.minimumSize = Dimension(350, 600)
         window.isResizable = false
-        App()
+        App(
+            databaseDriverManager = DatabaseDriverManager()
+        )
     }
 }
 

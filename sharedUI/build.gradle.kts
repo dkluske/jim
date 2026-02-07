@@ -1,4 +1,3 @@
-import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
@@ -20,6 +19,11 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
+        all {
+            languageSettings {
+                optIn("kotlin.uuid.ExperimentalUuidApi")
+            }
+        }
         commonMain.dependencies {
             api(libs.compose.runtime)
             api(libs.compose.ui)
@@ -94,10 +98,8 @@ android {
 
 sqldelight {
     databases {
-        create("MyDatabase") {
-            // Database configuration here.
-            // https://cashapp.github.io/sqldelight
-            packageName.set("net.jim.db")
+        create("JimRuntimeDatabase") {
+            packageName.set("net.jim.sqldelight")
         }
     }
 }

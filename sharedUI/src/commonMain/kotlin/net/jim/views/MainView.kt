@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalUuidApi::class)
-
 package net.jim.views
 
 import androidx.compose.foundation.layout.*
@@ -18,7 +16,6 @@ import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Instant
-import kotlin.uuid.ExperimentalUuidApi
 
 data class MainViewModel(
     override val root: Root

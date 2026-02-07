@@ -1,16 +1,13 @@
-@file:OptIn(ExperimentalUuidApi::class)
-
 package net.jim.data.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import net.jim.data.models.serializer.*
-import kotlin.uuid.ExperimentalUuidApi
 import kotlin.uuid.Uuid
 
 @Serializable
 data class JsonExercise(
-    val id: Uuid,
+    override val id: Uuid,
     val name: String,
     val force: ForceEnum? = null,
     val level: LevelEnum,
@@ -19,7 +16,7 @@ data class JsonExercise(
     val secondaryMuscles: List<MuscleEnum>,
     val instructions: List<String>,
     val category: CategoryEnum
-) {
+) : Entity<Uuid> {
     @Serializable(with = JsonExerciseForceSerializer::class)
     @SerialName("JsonExercise.ForceEnum")
     enum class ForceEnum {
