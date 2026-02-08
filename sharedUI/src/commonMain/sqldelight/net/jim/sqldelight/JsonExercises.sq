@@ -16,7 +16,8 @@ CREATE TABLE json_exercises (
     primary_muscles TEXT AS List<MuscleEnum> NOT NULL,
     secondary_muscles TEXT AS List<MuscleEnum> NOT NULL,
     instructions TEXT AS List<String> NOT NULL,
-    category TEXT AS CategoryEnum NOT NULL
+    category TEXT AS CategoryEnum NOT NULL,
+    revision INTEGER NOT NULL
 );
 
 getAll:
@@ -30,7 +31,7 @@ DELETE FROM json_exercises WHERE id = ?;
 
 insert:
 INSERT INTO json_exercises(
-    id, name, force, level, mechanic, primary_muscles, secondary_muscles, instructions, category
+    id, name, force, level, mechanic, primary_muscles, secondary_muscles, instructions, category, revision
 ) VALUES ?;
 
 updateById:
@@ -43,5 +44,9 @@ UPDATE json_exercises SET
     primary_muscles = ?,
     secondary_muscles = ?,
     instructions = ?,
-    category = ?
+    category = ?,
+    revision = ?
 WHERE id = ?;
+
+getMaxRevision:
+SELECT MAX(revision) FROM json_exercises;

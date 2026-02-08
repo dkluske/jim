@@ -47,6 +47,7 @@ object JsonExerciseTable : Table<Uuid, JsonExercise> {
             instructions = entity.instructions,
             category = entity.category,
             id_ = id,
+            revision = entity.revision
         )
 
         return entity

@@ -16,7 +16,8 @@ data class JsonExercise(
     val primaryMuscles: List<MuscleEnum>,
     val secondaryMuscles: List<MuscleEnum>,
     val instructions: List<String>,
-    val category: CategoryEnum
+    val category: CategoryEnum,
+    val revision: Long = 0L
 ) : Entity<Uuid, Json_exercises> {
     override fun toDB(): Json_exercises {
         return Json_exercises(
@@ -28,7 +29,8 @@ data class JsonExercise(
             primary_muscles = primaryMuscles,
             secondary_muscles = secondaryMuscles,
             instructions = instructions,
-            category = category
+            category = category,
+            revision = revision
         )
     }
 
@@ -103,7 +105,8 @@ data class JsonExercise(
                 primaryMuscles = db.primary_muscles,
                 secondaryMuscles = db.secondary_muscles,
                 instructions = db.instructions,
-                category = db.category
+                category = db.category,
+                revision = db.revision
             )
         }
     }

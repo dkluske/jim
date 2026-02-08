@@ -5,7 +5,7 @@ import net.jim.data.models.Entity
 import net.jim.sqldelight.JimRuntimeDatabase
 import kotlin.concurrent.atomics.AtomicReference
 
-sealed interface Table<ID : Any, E : Entity<ID>> {
+sealed interface Table<ID : Any, E : Entity<ID, *>> {
     val database: AtomicReference<JimRuntimeDatabase?>
 
     fun getById(id: ID): E
