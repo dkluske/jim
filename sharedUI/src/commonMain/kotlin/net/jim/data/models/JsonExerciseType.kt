@@ -1,5 +1,6 @@
 package net.jim.data.models
 
+import kotlinx.serialization.Polymorphic
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import net.jim.data.models.serializer.*
@@ -7,32 +8,13 @@ import net.jim.sqldelight.Json_exercises
 import kotlin.uuid.Uuid
 
 @Serializable
-data class JsonExercise(
-    override val id: Uuid,
-    val name: String,
-    val force: ForceEnum? = null,
-    val level: LevelEnum,
-    val mechanic: MechanicEnum? = null,
-    val primaryMuscles: List<MuscleEnum>,
-    val secondaryMuscles: List<MuscleEnum>,
-    val instructions: List<String>,
-    val category: CategoryEnum,
-    val revision: Long = 0L
-) : Entity<Uuid, Json_exercises> {
-    override fun toDB(): Json_exercises {
-        return Json_exercises(
-            id = id,
-            name = name,
-            force = force,
-            level = level,
-            mechanic = mechanic,
-            primary_muscles = primaryMuscles,
-            secondary_muscles = secondaryMuscles,
-            instructions = instructions,
-            category = category,
-            revision = revision
-        )
-    }
+@Polymorphic
+@SerialName("JsonExerciseType")
+sealed interface JsonExerciseType : Entity<Uuid, Json_exercises> {
+    val name: String
+    val revision: Long
+    val level: LevelEnum
+    val category: CategoryEnum
 
     @Serializable(with = JsonExerciseForceSerializer::class)
     @SerialName("JsonExercise.ForceEnum")
@@ -92,22 +74,5 @@ data class JsonExercise(
         CROSSFIT,
         WEIGHTED_BODYWEIGHT,
         ASSISTED_BODYWEIGHT,
-    }
-
-    companion object : EntityConvertable<Json_exercises, JsonExercise> {
-        override fun fromDB(db: Json_exercises): JsonExercise {
-            return JsonExercise(
-                id = db.id,
-                name = db.name,
-                force = db.force,
-                level = db.level,
-                mechanic = db.mechanic,
-                primaryMuscles = db.primary_muscles,
-                secondaryMuscles = db.secondary_muscles,
-                instructions = db.instructions,
-                category = db.category,
-                revision = db.revision
-            )
-        }
     }
 }

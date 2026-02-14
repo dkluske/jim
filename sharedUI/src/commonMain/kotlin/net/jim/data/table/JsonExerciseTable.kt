@@ -1,28 +1,29 @@
 package net.jim.data.table
 
-import net.jim.data.models.JsonExercise
+import net.jim.data.models.JsonExerciseType
+import net.jim.data.models.PhysicalJsonExercise
 import net.jim.sqldelight.JimRuntimeDatabase
 import kotlin.concurrent.atomics.AtomicReference
 import kotlin.uuid.Uuid
 
-object JsonExerciseTable : Table<Uuid, JsonExercise> {
+object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
     const val MAX_REVISION: Int = 0
 
     override val database: AtomicReference<JimRuntimeDatabase?> = AtomicReference(null)
 
-    override fun getById(id: Uuid): JsonExercise {
-        return JsonExercise.fromDB(
+    override fun getById(id: Uuid): PhysicalJsonExercise {
+        return PhysicalJsonExercise.fromDB(
             getDatabase().jsonExercisesQueries.getById(id = id).executeAsOne()
         )
     }
 
-    override fun getAll(): List<JsonExercise> {
+    override fun getAll(): List<JsonExerciseType> {
         return getDatabase().jsonExercisesQueries.getAll().executeAsList().map {
-            JsonExercise.fromDB(it)
+            PhysicalJsonExercise.fromDB(it)
         }
     }
 
-    override fun save(entity: JsonExercise): JsonExercise {
+    override fun save(entity: JsonExerciseType): JsonExerciseType {
         getDatabase().jsonExercisesQueries.insert(
             json_exercises = entity.toDB()
         )
@@ -36,20 +37,16 @@ object JsonExerciseTable : Table<Uuid, JsonExercise> {
 
     override fun update(
         id: Uuid,
-        entity: JsonExercise
-    ): JsonExercise {
+        entity: JsonExerciseType
+    ): JsonExerciseType {
         getDatabase().jsonExercisesQueries.updateById(
             id = id,
             name = entity.name,
-            force = entity.force,
             level = entity.level,
-            mechanic = entity.mechanic,
-            primary_muscles = entity.primaryMuscles,
-            secondary_muscles = entity.secondaryMuscles,
-            instructions = entity.instructions,
             category = entity.category,
             id_ = id,
-            revision = entity.revision
+            revision = entity.revision,
+            document = entity
         )
 
         return entity

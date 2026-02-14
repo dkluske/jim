@@ -6,20 +6,20 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import net.jim.data.models.JsonExercise
+import net.jim.data.models.JsonExerciseType
 
-object JsonExerciseMechanicSerializer : KSerializer<JsonExercise.MechanicEnum> {
+object JsonExerciseMechanicSerializer : KSerializer<JsonExerciseType.MechanicEnum> {
     override val descriptor: SerialDescriptor =
-        PrimitiveSerialDescriptor("JsonExercise.MechanicEnum", PrimitiveKind.STRING)
+        PrimitiveSerialDescriptor("JsonExerciseType.MechanicEnum", PrimitiveKind.STRING)
 
     override fun serialize(
         encoder: Encoder,
-        value: JsonExercise.MechanicEnum
+        value: JsonExerciseType.MechanicEnum
     ) {
         encoder.encodeString(value.name.lowercase().replace('_', ' '))
     }
 
-    override fun deserialize(decoder: Decoder): JsonExercise.MechanicEnum {
-        return JsonExercise.MechanicEnum.valueOf(decoder.decodeString().uppercase().replace(' ', '_'))
+    override fun deserialize(decoder: Decoder): JsonExerciseType.MechanicEnum {
+        return JsonExerciseType.MechanicEnum.valueOf(decoder.decodeString().uppercase().replace(' ', '_'))
     }
 }

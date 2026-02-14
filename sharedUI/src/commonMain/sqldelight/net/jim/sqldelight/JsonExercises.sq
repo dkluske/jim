@@ -1,22 +1,14 @@
-import kotlin.String;
-import kotlin.collections.List;
 import kotlin.uuid.Uuid;
-import net.jim.data.models.JsonExercise.CategoryEnum;
-import net.jim.data.models.JsonExercise.ForceEnum;
-import net.jim.data.models.JsonExercise.LevelEnum;
-import net.jim.data.models.JsonExercise.MechanicEnum;
-import net.jim.data.models.JsonExercise.MuscleEnum;
+import net.jim.data.models.JsonExerciseType.CategoryEnum;
+import net.jim.data.models.JsonExerciseType.LevelEnum;
+import net.jim.data.models.JsonExerciseType;
 
 CREATE TABLE json_exercises (
     id TEXT AS Uuid NOT NULL PRIMARY KEY,
     name TEXT NOT NULL,
-    force TEXT AS ForceEnum,
     level TEXT AS LevelEnum NOT NULL,
-    mechanic TEXT AS MechanicEnum,
-    primary_muscles TEXT AS List<MuscleEnum> NOT NULL,
-    secondary_muscles TEXT AS List<MuscleEnum> NOT NULL,
-    instructions TEXT AS List<String> NOT NULL,
     category TEXT AS CategoryEnum NOT NULL,
+    document TEXT AS JsonExerciseType,
     revision INTEGER NOT NULL
 );
 
@@ -31,20 +23,16 @@ DELETE FROM json_exercises WHERE id = ?;
 
 insert:
 INSERT INTO json_exercises(
-    id, name, force, level, mechanic, primary_muscles, secondary_muscles, instructions, category, revision
+    id, name, level, category, document, revision
 ) VALUES ?;
 
 updateById:
 UPDATE json_exercises SET
     id = ?,
     name = ?,
-    force = ?,
     level = ?,
-    mechanic = ?,
-    primary_muscles = ?,
-    secondary_muscles = ?,
-    instructions = ?,
     category = ?,
+    document = ?,
     revision = ?
 WHERE id = ?;
 

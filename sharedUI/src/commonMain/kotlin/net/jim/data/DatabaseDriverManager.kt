@@ -3,6 +3,7 @@ package net.jim.data
 import app.cash.sqldelight.db.SqlDriver
 import kotlinx.serialization.json.Json
 import net.jim.data.models.adapter.TableAdapters
+import net.jim.data.models.serializer.jimSerializersModule
 import net.jim.data.table.JsonExerciseTable
 import net.jim.sqldelight.JimRuntimeDatabase
 
@@ -27,6 +28,7 @@ object JimDatabaseManager {
      */
     val json: Json = Json {
         ignoreUnknownKeys = true
+        serializersModule = jimSerializersModule
     }
 
     /**
@@ -46,7 +48,7 @@ object JimDatabaseManager {
         val driver = driverFactory.createDriver("jim-runtime.db")
         return JimRuntimeDatabase(
             driver = driver,
-            json_exercisesAdapter = TableAdapters.jsonExerciseAdapter
+            json_exercisesAdapter = TableAdapters.physicalJsonExerciseAdapter
         )
     }
 }

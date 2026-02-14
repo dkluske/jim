@@ -7,7 +7,8 @@ import jim.sharedui.generated.resources.Res
 import kotlinx.coroutines.launch
 import net.jim.data.DatabaseDriverManager
 import net.jim.data.JimDatabaseManager
-import net.jim.data.models.JsonExercise
+import net.jim.data.models.JsonExerciseType
+import net.jim.data.models.PhysicalJsonExercise
 import net.jim.data.table.JsonExerciseTable
 import net.jim.theme.AppTheme
 import net.jim.views.MainView
@@ -24,9 +25,15 @@ fun App(
     val appCoroutineScope = rememberCoroutineScope()
 
     appCoroutineScope.launch {
-        ((JsonExerciseTable.getMaxStoredRevision() + 1)..JsonExerciseTable.MAX_REVISION).flatMap {
-            val bytes = Res.readBytes("files/exercises/exercises_$it.json")
-            JimDatabaseManager.json.decodeFromString<List<JsonExercise>>(bytes.decodeToString())
+        ((JsonExerciseTable.getMaxStoredRevision() + 1)..JsonExerciseTable.MAX_REVISION).flatMap { revision ->
+            val bytes = Res.readBytes("files/exercises/exercises_$revision.json")
+            JimDatabaseManager.json.decodeFromString<List<JsonExerciseType>>(bytes.decodeToString()).map {
+                when (it) {
+                    is PhysicalJsonExercise -> {
+                        it.copy(revision = revision)
+                    }
+                }
+            }
         }.forEach { exercise ->
             JsonExerciseTable.save(exercise)
         }
