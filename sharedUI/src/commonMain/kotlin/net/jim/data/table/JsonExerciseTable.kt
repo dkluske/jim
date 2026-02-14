@@ -6,6 +6,8 @@ import kotlin.concurrent.atomics.AtomicReference
 import kotlin.uuid.Uuid
 
 object JsonExerciseTable : Table<Uuid, JsonExercise> {
+    const val MAX_REVISION: Int = 0
+
     override val database: AtomicReference<JimRuntimeDatabase?> = AtomicReference(null)
 
     override fun getById(id: Uuid): JsonExercise {
@@ -51,5 +53,9 @@ object JsonExerciseTable : Table<Uuid, JsonExercise> {
         )
 
         return entity
+    }
+
+    fun getMaxStoredRevision(): Long {
+        return getDatabase().jsonExercisesQueries.getMaxRevision().executeAsOne().MAX ?: -1L
     }
 }

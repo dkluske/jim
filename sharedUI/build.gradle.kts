@@ -23,6 +23,7 @@ kotlin {
             languageSettings {
                 optIn("kotlin.uuid.ExperimentalUuidApi")
                 optIn("kotlin.concurrent.atomics.ExperimentalAtomicApi")
+                optIn("kotlinx.serialization.InternalSerializationApi")
             }
         }
         commonMain.dependencies {
