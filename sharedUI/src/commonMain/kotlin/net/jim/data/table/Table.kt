@@ -55,4 +55,12 @@ sealed interface Table<ID : Any, E : Entity<ID, *>> {
     fun getDatabase(): JimRuntimeDatabase {
         return database.load() ?: throw NoDatabaseException()
     }
+
+    /**
+     * Central method to initialize the Table by setting the database
+     * @param database The database instance from SQLDelight to be set to the atomic reference
+     */
+    fun setDatabase(database: JimRuntimeDatabase) {
+        this.database.store(database)
+    }
 }
