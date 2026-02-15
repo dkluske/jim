@@ -12,6 +12,7 @@ import jim.sharedui.generated.resources.latestWorkouts
 import jim.sharedui.generated.resources.readyToWorkQuestion
 import jim.sharedui.generated.resources.yourPlans
 import net.jim.components.*
+import net.jim.data.table.WorkoutPlanTable
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.days
@@ -21,8 +22,12 @@ data class MainViewModel(
     override val root: Root
 ) : JimViewModel {
     fun getWorkoutPlans(): List<JimWorkoutWidgetPlan> {
-        // TODO: fetch from DB
-        return listOf()
+        return WorkoutPlanTable.getAll().map {
+            JimWorkoutWidgetPlan(
+                id = it.id,
+                name = it.name
+            )
+        }
     }
 
     fun getLatestWorkoutsLastMonth(): List<JimWorkoutHistoryWidget> {
