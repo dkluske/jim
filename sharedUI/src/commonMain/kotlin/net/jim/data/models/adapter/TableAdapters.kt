@@ -4,6 +4,7 @@ import app.cash.sqldelight.EnumColumnAdapter
 import net.jim.data.JimDatabaseManager
 import net.jim.data.models.WorkoutPlanExercise
 import net.jim.sqldelight.Json_exercises
+import net.jim.sqldelight.Workout_entries
 import net.jim.sqldelight.Workout_plan_parts
 import net.jim.sqldelight.Workout_plans
 import kotlin.reflect.KClass
@@ -34,5 +35,13 @@ object TableAdapters {
             json = JimDatabaseManager.json,
             clazz = List::class as KClass<List<WorkoutPlanExercise>>,
         )
+    )
+
+    val workoutEntriesAdapter: Workout_entries.Adapter = Workout_entries.Adapter(
+        idAdapter = UuidAdapter(),
+        start_timeAdapter = InstantAdapter(json = JimDatabaseManager.json),
+        finish_timeAdapter = InstantAdapter(json = JimDatabaseManager.json),
+        workout_plan_idAdapter = UuidAdapter(),
+        workout_plan_part_idAdapter = UuidAdapter()
     )
 }

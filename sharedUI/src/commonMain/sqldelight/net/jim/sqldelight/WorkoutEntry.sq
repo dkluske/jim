@@ -1,0 +1,36 @@
+import kotlin.time.Instant;
+import kotlin.uuid.Uuid;
+
+CREATE TABLE workout_entries (
+    id TEXT AS Uuid NOT NULL PRIMARY KEY,
+    start_time TEXT AS Instant NOT NULL,
+    finish_time TEXT AS Instant,
+    workout_plan_id TEXT AS Uuid NOT NULL,
+    workout_plan_part_id TEXT AS Uuid NOT NULL
+);
+
+getAll:
+SELECT * FROM workout_entries;
+
+getById:
+SELECT * FROM workout_entries WHERE id = ?;
+
+getAllNotFinished:
+SELECT * FROM workout_entries WHERE finish_time IS NULL;
+
+insert:
+INSERT INTO workout_entries(
+    id, start_time, finish_time, workout_plan_id, workout_plan_part_id
+) VALUES ?;
+
+updateById:
+UPDATE workout_entries SET
+    id = ?,
+    start_time = ?,
+    finish_time = ?,
+    workout_plan_id = ?,
+    workout_plan_part_id = ?
+WHERE id = ?;
+
+deleteById:
+DELETE FROM workout_entries WHERE id = ?;
