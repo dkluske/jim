@@ -30,5 +30,5 @@ data class WorkoutPlanExercise(
     @SerialName("RepetitionInterval.Repeating")
     data class Repeating(
         val repetitions: Int
-    )
+    ) : RepetitionInterval
 }

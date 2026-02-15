@@ -6,13 +6,23 @@ import kotlinx.serialization.modules.polymorphic
 import kotlinx.serialization.modules.subclass
 import net.jim.data.models.JsonExerciseType
 import net.jim.data.models.PhysicalJsonExercise
+import net.jim.data.models.WorkoutPlanExercise
 
 val jimSerializersModule = SerializersModule {
     fun PolymorphicModuleBuilder<JsonExerciseType>.registerJsonExerciseTypeSubclasses() {
         subclass(PhysicalJsonExercise::class)
     }
 
+    fun PolymorphicModuleBuilder<WorkoutPlanExercise.RepetitionInterval>.registerRepetitionIntervalSubclasses() {
+        subclass(WorkoutPlanExercise.Repeating::class)
+        subclass(WorkoutPlanExercise.Timed::class)
+    }
+
     polymorphic(JsonExerciseType::class) {
         registerJsonExerciseTypeSubclasses()
+    }
+
+    polymorphic(WorkoutPlanExercise.RepetitionInterval::class) {
+        registerRepetitionIntervalSubclasses()
     }
 }
