@@ -1,0 +1,38 @@
+import kotlin.collections.List;
+import kotlin.uuid.Uuid;
+import kotlinx.datetime.DayOfWeek;
+import net.jim.data.models.WorkoutPlanExercise;
+
+CREATE TABLE workout_plan_parts (
+    id TEXT AS Uuid NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    workout_plan_id TEXT AS Uuid NOT NULL,
+    day_of_week TEXT AS DayOfWeek NOT NULL,
+    exercises TEXT AS List<WorkoutPlanExercise> NOT NULL
+);
+
+getAll:
+SELECT * FROM workout_plan_parts;
+
+getById:
+SELECT * FROM workout_plan_parts WHERE id = ?;
+
+getByWorkoutPlanId:
+SELECT * FROM workout_plan_parts WHERE workout_plan_id = ?;
+
+insert:
+INSERT INTO workout_plan_parts(
+    id, name, workout_plan_id, day_of_week, exercises
+) VALUES ?;
+
+updateById:
+UPDATE workout_plan_parts SET
+    id = ?,
+    name = ?,
+    workout_plan_id = ?,
+    day_of_week = ?,
+    exercises = ?
+WHERE id = ?;
+
+deleteById:
+DELETE FROM workout_plan_parts WHERE id = ?;

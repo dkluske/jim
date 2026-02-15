@@ -1,0 +1,33 @@
+import kotlin.Boolean;
+import kotlin.collections.List;
+import kotlin.uuid.Uuid;
+
+CREATE TABLE workout_plans (
+    id TEXT AS Uuid NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    default_plan INTEGER AS Boolean NOT NULL,
+    workout_plan_ids TEXT AS List<Uuid> NOT NULL
+);
+
+getAll:
+SELECT * FROM workout_plans;
+
+getById:
+SELECT * FROM workout_plans WHERE id = ? LIMIT 1;
+
+deleteById:
+DELETE FROM workout_plans WHERE id = ?;
+
+insert:
+INSERT INTO workout_plans(
+    id, name, default_plan, workout_plan_ids
+) VALUES ?;
+
+updateById:
+UPDATE workout_plans SET
+    id = ?,
+    name = ?,
+    default_plan = ?,
+    workout_plan_ids = ?
+WHERE id = ?;
+

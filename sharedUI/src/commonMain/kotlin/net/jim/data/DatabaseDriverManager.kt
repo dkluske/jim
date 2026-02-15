@@ -5,6 +5,8 @@ import kotlinx.serialization.json.Json
 import net.jim.data.models.adapter.TableAdapters
 import net.jim.data.models.serializer.jimSerializersModule
 import net.jim.data.table.JsonExerciseTable
+import net.jim.data.table.WorkoutPlanPartTable
+import net.jim.data.table.WorkoutPlanTable
 import net.jim.sqldelight.JimRuntimeDatabase
 
 /**
@@ -37,6 +39,8 @@ object JimDatabaseManager {
      */
     fun initTables(database: JimRuntimeDatabase) {
         JsonExerciseTable.setDatabase(database)
+        WorkoutPlanTable.setDatabase(database)
+        WorkoutPlanPartTable.setDatabase(database)
     }
 
     /**
@@ -48,7 +52,9 @@ object JimDatabaseManager {
         val driver = driverFactory.createDriver("jim-runtime.db")
         return JimRuntimeDatabase(
             driver = driver,
-            json_exercisesAdapter = TableAdapters.physicalJsonExerciseAdapter
+            json_exercisesAdapter = TableAdapters.physicalJsonExerciseAdapter,
+            workout_plansAdapter = TableAdapters.workoutPlansAdapter,
+            workout_plan_partsAdapter = TableAdapters.workoutPlanPartsAdapter
         )
     }
 }
