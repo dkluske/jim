@@ -3,10 +3,7 @@ package net.jim.data.models.adapter
 import app.cash.sqldelight.EnumColumnAdapter
 import net.jim.data.JimDatabaseManager
 import net.jim.data.models.WorkoutPlanExercise
-import net.jim.sqldelight.Json_exercises
-import net.jim.sqldelight.Workout_entries
-import net.jim.sqldelight.Workout_plan_parts
-import net.jim.sqldelight.Workout_plans
+import net.jim.sqldelight.*
 import kotlin.reflect.KClass
 import kotlin.uuid.Uuid
 
@@ -43,5 +40,12 @@ object TableAdapters {
         finish_timeAdapter = InstantAdapter(json = JimDatabaseManager.json),
         workout_plan_idAdapter = UuidAdapter(),
         workout_plan_part_idAdapter = UuidAdapter()
+    )
+
+    val workoutEntryExercisesAdapter: Workout_entry_exercises.Adapter = Workout_entry_exercises.Adapter(
+        idAdapter = UuidAdapter(),
+        workout_plan_part_idAdapter = UuidAdapter(),
+        workout_entry_idAdapter = UuidAdapter(),
+        executionAdapter = ExerciseExecutionAdapter(json = JimDatabaseManager.json)
     )
 }

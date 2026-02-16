@@ -4,10 +4,7 @@ import app.cash.sqldelight.db.SqlDriver
 import kotlinx.serialization.json.Json
 import net.jim.data.models.adapter.TableAdapters
 import net.jim.data.models.serializer.jimSerializersModule
-import net.jim.data.table.JsonExerciseTable
-import net.jim.data.table.WorkoutEntryTable
-import net.jim.data.table.WorkoutPlanPartTable
-import net.jim.data.table.WorkoutPlanTable
+import net.jim.data.table.*
 import net.jim.sqldelight.JimRuntimeDatabase
 
 /**
@@ -43,6 +40,7 @@ object JimDatabaseManager {
         WorkoutPlanTable.setDatabase(database)
         WorkoutPlanPartTable.setDatabase(database)
         WorkoutEntryTable.setDatabase(database)
+        WorkoutEntryExerciseTable.setDatabase(database)
     }
 
     /**
@@ -58,6 +56,7 @@ object JimDatabaseManager {
             workout_plansAdapter = TableAdapters.workoutPlansAdapter,
             workout_plan_partsAdapter = TableAdapters.workoutPlanPartsAdapter,
             workout_entriesAdapter = TableAdapters.workoutEntriesAdapter,
+            workout_entry_exercisesAdapter = TableAdapters.workoutEntryExercisesAdapter
         )
     }
 }

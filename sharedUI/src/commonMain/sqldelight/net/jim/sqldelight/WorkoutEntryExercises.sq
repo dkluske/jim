@@ -1,0 +1,31 @@
+import kotlin.uuid.Uuid;
+import net.jim.data.models.WorkoutEntryExercise.ExerciseExecution;
+
+CREATE TABLE workout_entry_exercises (
+    id TEXT AS Uuid NOT NULL PRIMARY KEY,
+    workout_plan_part_id TEXT AS Uuid NOT NULL,
+    workout_entry_id TEXT AS Uuid NOT NULL,
+    execution TEXT AS ExerciseExecution NOT NULL
+);
+
+getAll:
+SELECT * FROM workout_entry_exercises;
+
+getById:
+SELECT * FROM workout_entry_exercises WHERE id = ?;
+
+insert:
+INSERT INTO workout_entry_exercises(
+    id, workout_plan_part_id, workout_entry_id, execution
+) VALUES ?;
+
+updateById:
+UPDATE workout_entry_exercises SET
+    id = ?,
+    workout_plan_part_id = ?,
+    workout_entry_id = ?,
+    execution = ?
+WHERE id = ?;
+
+deleteById:
+DELETE FROM workout_entry_exercises WHERE id = ?;
