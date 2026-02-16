@@ -3,6 +3,7 @@ package net.jim.data.table
 import net.jim.data.models.WorkoutEntry
 import net.jim.sqldelight.JimRuntimeDatabase
 import kotlin.concurrent.atomics.AtomicReference
+import kotlin.time.Instant
 import kotlin.uuid.Uuid
 
 object WorkoutEntryTable : Table<Uuid, WorkoutEntry> {
@@ -42,5 +43,17 @@ object WorkoutEntryTable : Table<Uuid, WorkoutEntry> {
             id_ = id
         )
         return entity
+    }
+
+    fun getAllAfter(date: Instant): List<WorkoutEntry> {
+        return getDatabase().workoutEntriesQueries.getAllAfter(date).executeAsList().map {
+            WorkoutEntry(
+                id = it.id,
+                startTime = it.start_time,
+                finishTime = it.finish_time,
+                workoutPlanId = it.workout_plan_id,
+                workoutPlanPartId = it.workout_plan_part_id
+            )
+        }
     }
 }

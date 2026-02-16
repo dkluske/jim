@@ -18,6 +18,9 @@ SELECT * FROM workout_entries WHERE id = ?;
 getAllNotFinished:
 SELECT * FROM workout_entries WHERE finish_time IS NULL;
 
+getAllAfter:
+SELECT * FROM workout_entries WHERE finish_time IS NOT NULL AND finish_time >= ?;
+
 insert:
 INSERT INTO workout_entries(
     id, start_time, finish_time, workout_plan_id, workout_plan_part_id
