@@ -1,7 +1,7 @@
 package net.jim.data.table
 
-import net.jim.data.NoDatabaseException
 import net.jim.data.models.Entity
+import net.jim.data.models.exception.NoDatabaseException
 import net.jim.sqldelight.JimRuntimeDatabase
 import kotlin.concurrent.atomics.AtomicReference
 
@@ -53,7 +53,7 @@ sealed interface Table<ID : Any, E : Entity<ID, *>> {
      * @return [JimRuntimeDatabase]
      */
     fun getDatabase(): JimRuntimeDatabase {
-        return database.load() ?: throw NoDatabaseException()
+        return database.load() ?: throw NoDatabaseException(clazz = this::class)
     }
 
     /**
