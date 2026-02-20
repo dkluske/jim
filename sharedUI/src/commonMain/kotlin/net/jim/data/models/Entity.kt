@@ -1,6 +1,13 @@
 package net.jim.data.models
 
-interface Entity<ID : Any, DB : Any> {
+import kotlinx.serialization.Polymorphic
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+@Polymorphic
+@SerialName("Entity")
+sealed interface Entity<ID : Any, DB : Any> {
     val id: ID
 
     fun toDB(): DB

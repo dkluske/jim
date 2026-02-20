@@ -10,7 +10,7 @@ import net.jim.data.models.JsonExerciseType
 
 object JsonExerciseLevelSerializer : KSerializer<JsonExerciseType.LevelEnum> {
     override val descriptor: SerialDescriptor =
-        PrimitiveSerialDescriptor("JsonExerciseType.LevelEnum", PrimitiveKind.STRING)
+        PrimitiveSerialDescriptor("JsonExercise.LevelEnum", PrimitiveKind.STRING)
 
     override fun serialize(
         encoder: Encoder,

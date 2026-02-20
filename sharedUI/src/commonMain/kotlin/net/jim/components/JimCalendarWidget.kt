@@ -4,18 +4,18 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import jim.sharedui.generated.resources.*
 import kotlinx.datetime.DayOfWeek
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
-import net.jim.components.utils.JimCard
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Instant
 
@@ -28,14 +28,12 @@ data class JimCalendarWidgetEntry(
 fun JimCalendarWidget(
     dates: List<JimCalendarWidgetEntry>
 ) {
-    JimCard {
-        LazyRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            items(dates) { date ->
-                JimCalendarWidgetEntry(value = date)
-            }
+    LazyRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        items(dates) { date ->
+            JimCalendarWidgetEntry(value = date)
         }
     }
 }
@@ -48,28 +46,21 @@ private fun JimCalendarWidgetEntry(
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.background(
+            color = if (value.hasWorkedOut) {
+                MaterialTheme.colorScheme.primary
+            } else {
+                Color.Transparent
+            },
+            shape = RoundedCornerShape(8.dp)
+        ).padding(8.dp)
     ) {
         Row(
             modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
         ) {
             Text(
                 text = date.dayOfWeek.toAbbreviatedString(),
-                style = MaterialTheme.typography.displaySmall,
-                color = MaterialTheme.colorScheme.onSecondary
-            )
-        }
-        Row(
-            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
-        ) {
-            Box(
-                modifier = Modifier.background(
-                    color = if (value.hasWorkedOut) {
-                        MaterialTheme.colorScheme.primary
-                    } else {
-                        MaterialTheme.colorScheme.primaryContainer
-                    },
-                    shape = CircleShape
-                ).size(12.dp)
+                style = MaterialTheme.typography.displaySmall
             )
         }
         Row(

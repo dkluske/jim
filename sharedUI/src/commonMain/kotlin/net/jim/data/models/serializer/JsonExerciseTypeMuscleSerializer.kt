@@ -10,7 +10,7 @@ import net.jim.data.models.JsonExerciseType
 
 object JsonExerciseMuscleSerializer : KSerializer<JsonExerciseType.MuscleEnum> {
     override val descriptor: SerialDescriptor =
-        PrimitiveSerialDescriptor("JsonExerciseType.MuscleEnum", PrimitiveKind.STRING)
+        PrimitiveSerialDescriptor("JsonExercise.MuscleEnum", PrimitiveKind.STRING)
 
     override fun serialize(
         encoder: Encoder,

@@ -14,7 +14,7 @@ val JetbrainsMono
     @Composable get() = FontFamily(
         Font(
             resource = Res.font.JetBrainsMono_VariableFont_wght,
-            weight = FontWeight.Normal,
+            weight = FontWeight.Bold,
         ),
         Font(
             resource = Res.font.JetBrainsMono_VariableFont_wght,
@@ -26,17 +26,17 @@ val typography: Typography
     @Composable get() = Typography(
         bodyLarge = TextStyle(
             fontFamily = JetbrainsMono,
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Bold,
             fontSize = 20.sp
         ),
         bodyMedium = TextStyle(
             fontFamily = JetbrainsMono,
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Bold,
             fontSize = 16.sp
         ),
         bodySmall = TextStyle(
             fontFamily = JetbrainsMono,
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Bold,
             fontSize = 12.sp
         ),
         headlineLarge = TextStyle(
@@ -56,17 +56,17 @@ val typography: Typography
         ),
         displayLarge = TextStyle(
             fontFamily = JetbrainsMono,
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Bold,
             fontSize = 20.sp
         ),
         displayMedium = TextStyle(
             fontFamily = JetbrainsMono,
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Bold,
             fontSize = 16.sp
         ),
         displaySmall = TextStyle(
             fontFamily = JetbrainsMono,
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Bold,
             fontSize = 12.sp
         )
     )

@@ -1,10 +1,12 @@
 package net.jim.data.models
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import net.jim.sqldelight.Json_exercises
 import kotlin.uuid.Uuid
 
 @Serializable
+@SerialName("PhysicalJsonExercise")
 data class PhysicalJsonExercise(
     override val id: Uuid,
     override val name: String,
