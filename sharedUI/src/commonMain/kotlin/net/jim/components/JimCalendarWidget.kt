@@ -53,22 +53,32 @@ private fun JimCalendarWidgetEntry(
                 Color.Transparent
             },
             shape = RoundedCornerShape(8.dp)
-        ).padding(8.dp)
+        ).padding(start = 12.dp, end = 12.dp)
     ) {
         Row(
-            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
+            modifier = Modifier.padding(top = 0.dp, bottom = 8.dp),
         ) {
             Text(
                 text = date.dayOfWeek.toAbbreviatedString(),
-                style = MaterialTheme.typography.displaySmall
+                style = MaterialTheme.typography.displaySmall,
+                color = if (value.hasWorkedOut) {
+                    MaterialTheme.colorScheme.onPrimary
+                } else {
+                    MaterialTheme.colorScheme.onBackground
+                }
             )
         }
         Row(
-            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp),
+            modifier = Modifier.padding(top = 8.dp, bottom = 0.dp),
         ) {
             Text(
                 text = date.day.toString(),
-                style = MaterialTheme.typography.displaySmall
+                style = MaterialTheme.typography.displaySmall,
+                color = if (value.hasWorkedOut) {
+                    MaterialTheme.colorScheme.onPrimary
+                } else {
+                    MaterialTheme.colorScheme.onBackground
+                }
             )
         }
     }

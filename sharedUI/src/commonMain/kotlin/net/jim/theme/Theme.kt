@@ -11,7 +11,7 @@ import net.jim.components.JimBottomBar
 
 private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFF0FE22F),
-    onPrimary = OnPrimaryDark,
+    onPrimary = Color(0xFF242424),
     primaryContainer = Color(0xFF313131),
     onPrimaryContainer = OnPrimaryContainerDark,
     secondary = SecondaryDark,
@@ -27,7 +27,7 @@ private val DarkColorScheme = darkColorScheme(
     errorContainer = ErrorContainerDark,
     onErrorContainer = OnErrorContainerDark,
     background = Color(0xFF242424),
-    onBackground = OnBackgroundDark,
+    onBackground = Color(0xFFFFFFFF),
     surface = SurfaceDark,
     onSurface = OnSurfaceDark,
     surfaceVariant = SurfaceVariantDark,
@@ -58,7 +58,10 @@ internal fun AppTheme(
             content = {
                 Scaffold(
                     content = {
-                        Surface(content = content)
+                        Surface(
+                            content = content,
+                            color = MaterialTheme.colorScheme.background
+                        )
                     },
                     bottomBar = {
                         JimBottomBar()
