@@ -12,12 +12,14 @@ import jim.sharedui.generated.resources.latestWorkouts
 import jim.sharedui.generated.resources.readyToWorkQuestion
 import jim.sharedui.generated.resources.yourPlans
 import net.jim.components.*
+import net.jim.data.models.JsonExerciseType
 import net.jim.data.table.WorkoutEntryTable
 import net.jim.data.table.WorkoutPlanTable
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Instant
+import kotlin.uuid.Uuid
 
 data class MainViewModel(
     override val root: Root
@@ -26,7 +28,22 @@ data class MainViewModel(
         return WorkoutPlanTable.getAll().map {
             JimWorkoutWidgetPlan(
                 id = it.id,
-                name = it.name
+                name = it.name,
+                isDefault = it.default,
+                primaryMuscles = listOf() // TODO: resolve
+            )
+        }.ifEmpty {
+            listOf( // TODO: only mockup data for testing the layout
+                JimWorkoutWidgetPlan(
+                    id = Uuid.random(),
+                    name = "Full Body",
+                    isDefault = true,
+                    primaryMuscles = listOf(
+                        JsonExerciseType.MuscleEnum.BICEPS,
+                        JsonExerciseType.MuscleEnum.CHEST,
+                        JsonExerciseType.MuscleEnum.ABDOMINALS
+                    )
+                )
             )
         }
     }

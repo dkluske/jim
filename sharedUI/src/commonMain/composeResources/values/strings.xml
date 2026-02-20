@@ -15,4 +15,6 @@
     <string name="fridayAbbreviated">Fri</string>
     <string name="saturdayAbbreviated">Sat</string>
     <string name="sundayAbbreviated">Sun</string>
+    <string name="defaultTag">• Default</string>
+    <string name="startButton">> Start</string>
 </resources>
