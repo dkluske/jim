@@ -24,6 +24,7 @@ kotlin {
                 optIn("kotlin.uuid.ExperimentalUuidApi")
                 optIn("kotlin.concurrent.atomics.ExperimentalAtomicApi")
                 optIn("kotlinx.serialization.InternalSerializationApi")
+                optIn("androidx.compose.material3.ExperimentalMaterial3Api")
             }
         }
         commonMain.dependencies {

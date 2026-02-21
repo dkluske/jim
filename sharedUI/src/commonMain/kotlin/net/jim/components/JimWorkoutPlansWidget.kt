@@ -139,7 +139,8 @@ fun JimWorkoutPlansWidget(
                         },
                         colors = ListItemDefaults.colors(
                             containerColor = MaterialTheme.colorScheme.primaryContainer
-                        )
+                        ),
+                        modifier = Modifier.fillMaxWidth(0.7f)
                     )
                 }
             }

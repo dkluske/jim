@@ -20,6 +20,12 @@ object WorkoutPlanPartTable : Table<Uuid, WorkoutPlanPart> {
         }
     }
 
+    fun getByWorkoutPlanId(workoutPlanId: Uuid): List<WorkoutPlanPart> {
+        return getDatabase().workoutPlanPartsQueries.getByWorkoutPlanId(workout_plan_id = workoutPlanId).executeAsList().map {
+            WorkoutPlanPart.fromDB(it)
+        }
+    }
+
     override fun save(entity: WorkoutPlanPart): WorkoutPlanPart {
         getDatabase().workoutPlanPartsQueries.insert(
             entity.toDB()

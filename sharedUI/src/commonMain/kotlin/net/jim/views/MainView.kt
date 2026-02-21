@@ -43,6 +43,14 @@ data class MainViewModel(
                         JsonExerciseType.MuscleEnum.CHEST,
                         JsonExerciseType.MuscleEnum.ABDOMINALS
                     )
+                ),
+                JimWorkoutWidgetPlan(
+                    id = Uuid.random(),
+                    name = "Cardio",
+                    isDefault = false,
+                    primaryMuscles = listOf(
+                        JsonExerciseType.MuscleEnum.HAMSTRINGS,
+                    )
                 )
             )
         }
@@ -96,15 +104,14 @@ fun MainView(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .windowInsetsPadding(WindowInsets.safeDrawing)
-            .padding(16.dp),
+            .windowInsetsPadding(WindowInsets.safeDrawing),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         /**
          * Heading
          */
         Row(
-            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            modifier = Modifier.fillMaxWidth().padding(8.dp),
             horizontalArrangement = Arrangement.Start
         ) {
             Text(
@@ -116,7 +123,7 @@ fun MainView(
          * Calendar Part
          */
         Row(
-            modifier = Modifier.fillMaxWidth().padding(4.dp),
+            modifier = Modifier.fillMaxWidth().padding(8.dp),
         ) {
             JimCalendarWidget(
                 dates = vm.getCalendarEntries(
