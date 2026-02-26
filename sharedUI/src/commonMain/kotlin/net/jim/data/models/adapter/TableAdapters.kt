@@ -5,7 +5,6 @@ import net.jim.data.JimDatabaseManager
 import net.jim.data.models.WorkoutPlanExercise
 import net.jim.sqldelight.*
 import kotlin.reflect.KClass
-import kotlin.uuid.Uuid
 
 @Suppress("UNCHECKED_CAST")
 object TableAdapters {
@@ -17,11 +16,7 @@ object TableAdapters {
     )
 
     val workoutPlansAdapter: Workout_plans.Adapter = Workout_plans.Adapter(
-        idAdapter = UuidAdapter(),
-        workout_plan_idsAdapter = SerializableListAdapter(
-            json = JimDatabaseManager.json,
-            clazz = List::class as KClass<List<Uuid>>,
-        )
+        idAdapter = UuidAdapter()
     )
 
     val workoutPlanPartsAdapter: Workout_plan_parts.Adapter = Workout_plan_parts.Adapter(

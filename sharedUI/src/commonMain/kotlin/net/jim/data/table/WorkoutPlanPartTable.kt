@@ -45,9 +45,9 @@ object WorkoutPlanPartTable : Table<Uuid, WorkoutPlanPart> {
             id = id,
             name = entity.name,
             workout_plan_id = entity.workoutPlanId,
-            day_of_week = entity.dayOfWeek,
             exercises = entity.exercises,
-            id_ = id
+            id_ = id,
+            quantity = entity.quantity.toLong()
         )
         return entity
     }
