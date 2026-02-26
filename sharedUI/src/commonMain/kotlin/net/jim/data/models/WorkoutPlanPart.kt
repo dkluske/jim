@@ -1,6 +1,5 @@
 package net.jim.data.models
 
-import kotlinx.datetime.DayOfWeek
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import net.jim.sqldelight.Workout_plan_parts
@@ -12,7 +11,7 @@ data class WorkoutPlanPart(
     override val id: Uuid,
     val workoutPlanId: Uuid,
     val name: String,
-    val dayOfWeek: DayOfWeek,
+    val quantity: Int,
     val exercises: List<WorkoutPlanExercise>
 ) : Entity<Uuid, Workout_plan_parts> {
     override fun toDB(): Workout_plan_parts {
@@ -20,7 +19,7 @@ data class WorkoutPlanPart(
             id = id,
             name = name,
             workout_plan_id = workoutPlanId,
-            day_of_week = dayOfWeek,
+            quantity = quantity.toLong(),
             exercises = exercises
         )
     }
@@ -31,7 +30,7 @@ data class WorkoutPlanPart(
                 id = db.id,
                 workoutPlanId = db.workout_plan_id,
                 name = db.name,
-                dayOfWeek = db.day_of_week,
+                quantity = db.quantity.toInt(),
                 exercises = db.exercises
             )
         }

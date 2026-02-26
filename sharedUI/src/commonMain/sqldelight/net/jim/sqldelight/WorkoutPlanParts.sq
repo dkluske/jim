@@ -7,7 +7,7 @@ CREATE TABLE workout_plan_parts (
     id TEXT AS Uuid NOT NULL PRIMARY KEY,
     name TEXT NOT NULL,
     workout_plan_id TEXT AS Uuid NOT NULL,
-    day_of_week TEXT AS DayOfWeek NOT NULL,
+    quantity INTEGER NOT NULL,
     exercises TEXT AS List<WorkoutPlanExercise> NOT NULL
 );
 
@@ -22,7 +22,7 @@ SELECT * FROM workout_plan_parts WHERE workout_plan_id = ?;
 
 insert:
 INSERT INTO workout_plan_parts(
-    id, name, workout_plan_id, day_of_week, exercises
+    id, name, workout_plan_id, quantity, exercises
 ) VALUES ?;
 
 updateById:
@@ -30,7 +30,7 @@ UPDATE workout_plan_parts SET
     id = ?,
     name = ?,
     workout_plan_id = ?,
-    day_of_week = ?,
+    quantity = ?,
     exercises = ?
 WHERE id = ?;
 

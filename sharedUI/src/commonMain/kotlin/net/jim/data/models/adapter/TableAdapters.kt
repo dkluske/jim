@@ -27,7 +27,6 @@ object TableAdapters {
     val workoutPlanPartsAdapter: Workout_plan_parts.Adapter = Workout_plan_parts.Adapter(
         idAdapter = UuidAdapter(),
         workout_plan_idAdapter = UuidAdapter(),
-        day_of_weekAdapter = EnumColumnAdapter(),
         exercisesAdapter = SerializableListAdapter(
             json = JimDatabaseManager.json,
             clazz = List::class as KClass<List<WorkoutPlanExercise>>,

@@ -26,12 +26,15 @@ data class WorkoutEntryExercise(
     @Serializable
     @Polymorphic
     @SerialName("WorkoutEntryExercise.ExerciseExecution")
-    sealed interface ExerciseExecution
+    sealed interface ExerciseExecution {
+        val intensity: Int
+    }
 
     @Serializable
     @SerialName("WorkoutEntryExercise.WeighedRepetitionExerciseExecution")
     data class WeighedRepetitionExerciseExecution(
-        val sets: Map<Int, Int> // Map<Repetitions, Weight>
+        val sets: Map<Int, Int>, // Map<Repetitions, Weight>
+        override val intensity: Int
     ) : ExerciseExecution
 
     companion object : EntityConvertable<Workout_entry_exercises, WorkoutEntryExercise> {
