@@ -38,3 +38,6 @@ WHERE id = ?;
 
 getMaxRevision:
 SELECT MAX(revision) FROM json_exercises;
+
+searchByNamePaged:
+SELECT * FROM json_exercises WHERE name LIKE ? LIMIT ? OFFSET ?;

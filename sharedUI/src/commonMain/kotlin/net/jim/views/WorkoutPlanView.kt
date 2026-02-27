@@ -7,16 +7,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Done
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import jim.sharedui.generated.resources.Res
-import jim.sharedui.generated.resources.addWorkoutPlanPart
-import jim.sharedui.generated.resources.newWorkoutPlan
-import jim.sharedui.generated.resources.save
+import jim.sharedui.generated.resources.*
+import net.jim.components.JimEditableHeader
+import net.jim.components.JimWorkoutPlanPartModalBottomSheet
+import net.jim.components.JimWorkoutPlanPartModalBottomSheetViewModel
 import net.jim.components.utils.JimCard
 import net.jim.data.models.WorkoutPlan
 import net.jim.data.models.WorkoutPlanPart
@@ -49,9 +48,9 @@ data class WorkoutPlanViewModel(
 fun WorkoutPlanView(
     vm: WorkoutPlanViewModel
 ) {
-    var editWorkoutName by remember { mutableStateOf(false) }
     var workout by remember { mutableStateOf<WorkoutPlan?>(null) }
     val planParts = remember { mutableStateListOf<WorkoutPlanPart>() }
+    val bottomSheetState = remember { mutableStateOf(JimWorkoutPlanPartModalBottomSheetViewModel()) }
 
     LaunchedEffect(Unit) {
         vm.workoutId?.let {
@@ -60,6 +59,8 @@ fun WorkoutPlanView(
             planParts.addAll(vm.loadWorkoutPlanParts(it))
         }
     }
+
+    JimWorkoutPlanPartModalBottomSheet(vm = bottomSheetState.value)
 
     Column(
         modifier = Modifier
@@ -76,42 +77,22 @@ fun WorkoutPlanView(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             IconButton(
-                onClick = { /* navigate back */ }
+                onClick = { /* TODO: navigate back */ }
             ) {
                 Text(
                     text = "<"
                 )
             }
-            if (editWorkoutName) {
-                TextField(
-                    value = workout?.name ?: stringResource(Res.string.newWorkoutPlan),
-                    onValueChange = {
-                        workout = workout ?: WorkoutPlan(
-                            id = Uuid.random(),
-                            name = it,
-                            default = false
-                        )
-                    }
-                )
-            } else {
-                Text(
-                    text = workout?.name ?: stringResource(Res.string.newWorkoutPlan),
-                )
-            }
-            IconButton(
-                onClick = {
-                    editWorkoutName = !editWorkoutName
+            JimEditableHeader(
+                value = workout?.name ?: stringResource(Res.string.newWorkoutPlan),
+                onValueChange = {
+                    workout = workout?.copy(name = it) ?: WorkoutPlan(
+                        id = Uuid.random(),
+                        name = it,
+                        default = false
+                    )
                 }
-            ) {
-                Icon(
-                    imageVector = if (editWorkoutName) {
-                        Icons.Filled.Edit
-                    } else {
-                        Icons.Filled.Done
-                    },
-                    contentDescription = "rename workout plan"
-                )
-            }
+            )
         }
 
         /**
@@ -170,13 +151,29 @@ fun WorkoutPlanView(
                                         )
                                     }
                                 }
+                            },
+                            supportingContent = {
+                                Button(
+                                    onClick = {
+                                        bottomSheetState.value = JimWorkoutPlanPartModalBottomSheetViewModel(
+                                            expanded = true,
+                                            workoutPlanPart = planParts[index]
+                                        )
+                                    }
+                                ) {
+                                    Text(
+                                        text = stringResource(Res.string.edit)
+                                    )
+                                }
                             }
                         )
                     }
                     item {
                         Button(
                             onClick = {
-                                // TODO: open add workout plan part
+                                bottomSheetState.value = JimWorkoutPlanPartModalBottomSheetViewModel(
+                                    expanded = true
+                                )
                             }
                         ) {
                             Icon(Icons.Filled.AddCircle, "add workout plan part")

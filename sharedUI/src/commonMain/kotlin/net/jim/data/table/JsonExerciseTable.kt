@@ -7,6 +7,7 @@ import kotlin.concurrent.atomics.AtomicReference
 import kotlin.uuid.Uuid
 
 object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
+    // TODO: add mapping for JsonExerciseType Interface instead of straight PhysicalJsonExercise
     const val MAX_REVISION: Int = 0
 
     override val database: AtomicReference<JimRuntimeDatabase?> = AtomicReference(null)
@@ -54,5 +55,19 @@ object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
 
     fun getMaxStoredRevision(): Long {
         return getDatabase().jsonExercisesQueries.getMaxRevision().executeAsOne().MAX ?: -1L
+    }
+
+    fun searchByNamePaged(
+        name: String,
+        pageSize: Int,
+        offset: Int,
+    ): List<JsonExerciseType> {
+        return getDatabase().jsonExercisesQueries.searchByNamePaged(
+            name = name,
+            value_ = pageSize.toLong(),
+            value__ = offset.toLong()
+        ).executeAsList().map {
+            PhysicalJsonExercise.fromDB(it)
+        }
     }
 }

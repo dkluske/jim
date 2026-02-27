@@ -19,5 +19,9 @@
     <string name="startButton">> Start</string>
     <string name="newWorkoutPlan">New Workout Plan</string>
     <string name="addWorkoutPlanPart">Add Part</string>
+    <string name="newWorkoutPlanPart">New Part</string>
     <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
 </resources>

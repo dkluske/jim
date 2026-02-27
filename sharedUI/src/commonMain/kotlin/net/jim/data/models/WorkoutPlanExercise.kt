@@ -12,7 +12,6 @@ data class WorkoutPlanExercise(
     val id: Uuid,
     val index: Int,
     val jsonExerciseId: Uuid,
-    val sets: Int,
     val repetitionInterval: RepetitionInterval
 ) {
     @Serializable
