@@ -39,7 +39,6 @@ object WorkoutPlanTable : Table<Uuid, WorkoutPlan> {
             id = id,
             name = entity.name,
             default_plan = entity.default,
-            workout_plan_ids = entity.workoutPlanPartIds,
             id_ = id
         )
         return entity
