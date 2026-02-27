@@ -18,4 +18,6 @@
     <string name="defaultTag">• Default</string>
     <string name="startButton">> Start</string>
     <string name="newWorkoutPlan">New Workout Plan</string>
+    <string name="addWorkoutPlanPart">Add Part</string>
+    <string name="save">Save</string>
 </resources>
