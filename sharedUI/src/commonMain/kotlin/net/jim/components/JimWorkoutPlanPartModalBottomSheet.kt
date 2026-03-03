@@ -147,13 +147,13 @@ fun JimWorkoutPlanPartModalBottomSheet(
 
                                                     when (exerciseList[index].repetitionInterval) {
                                                         is WorkoutPlanExercise.Repeating -> {
-                                                            JimWorkoutRepeatingInputField { newValue ->
+                                                            JimWorkoutRepeatingRepetitionInputField { newValue ->
                                                                 onValueChange(newValue)
                                                             }
                                                         }
 
                                                         is WorkoutPlanExercise.Timed -> {
-                                                            JimWorkoutTimedInputField { newValue ->
+                                                            JimWorkoutTimedRepetitionInputField { newValue ->
                                                                 onValueChange(newValue)
                                                             }
                                                         }
@@ -199,14 +199,14 @@ fun JimWorkoutPlanPartModalBottomSheet(
 }
 
 @Composable
-private fun JimWorkoutRepeatingInputField(
+private fun JimWorkoutRepeatingRepetitionInputField(
     onValueChange: (WorkoutPlanExercise.RepetitionInterval) -> Unit
 ) {
 
 }
 
 @Composable
-private fun JimWorkoutTimedInputField(
+private fun JimWorkoutTimedRepetitionInputField(
     onValueChange: (WorkoutPlanExercise.RepetitionInterval) -> Unit
 ) {
 
