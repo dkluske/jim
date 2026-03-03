@@ -1,6 +1,7 @@
 package net.jim.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,15 +10,15 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import jim.sharedui.generated.resources.Res
-import jim.sharedui.generated.resources.add
 import jim.sharedui.generated.resources.newWorkoutPlanPart
 import jim.sharedui.generated.resources.search
+import jim.sharedui.generated.resources.searchExercises
 import kotlinx.coroutines.launch
 import net.jim.components.utils.JimCard
 import net.jim.data.models.JsonExerciseType
@@ -63,6 +64,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
             initialPage = BottomSheetViewState.PARTS_EDIT.ordinal,
             pageCount = { BottomSheetViewState.entries.size })
         val jsonExerciseMap = remember { mutableStateMapOf<Uuid, JsonExerciseType>() }
+        val extendedPart = remember { mutableStateOf<WorkoutPlanExercise?>(null) }
         val coroutineScope = rememberCoroutineScope()
         ModalBottomSheet(
             sheetState = sheetState,
@@ -119,6 +121,13 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                     ?: vm.resolveJsonExercise(exerciseList[index].id).also {
                                                         jsonExerciseMap[exerciseList[index].jsonExerciseId] = it
                                                     }).name,
+                                                modifier = Modifier.clickable {
+                                                    if (extendedPart.value == exerciseList[index]) {
+                                                        extendedPart.value = null
+                                                    } else {
+                                                        extendedPart.value = exerciseList[index]
+                                                    }
+                                                }
                                             )
                                         },
                                         trailingContent = {
@@ -126,9 +135,30 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                         },
                                         supportingContent = {
                                             // TODO: repetition interval
-                                            when (exerciseList[index].repetitionInterval) {
-                                                is WorkoutPlanExercise.Repeating -> {}
-                                                is WorkoutPlanExercise.Timed -> {}
+                                            if (extendedPart.value == exerciseList[index]) {
+                                                Row(
+                                                    modifier = Modifier.fillMaxWidth()
+                                                ) {
+                                                    fun onValueChange(repetitionInterval: WorkoutPlanExercise.RepetitionInterval) {
+                                                        exerciseList[index] = exerciseList[index].copy(
+                                                            repetitionInterval = repetitionInterval
+                                                        )
+                                                    }
+
+                                                    when (exerciseList[index].repetitionInterval) {
+                                                        is WorkoutPlanExercise.Repeating -> {
+                                                            JimWorkoutRepeatingInputField { newValue ->
+                                                                onValueChange(newValue)
+                                                            }
+                                                        }
+
+                                                        is WorkoutPlanExercise.Timed -> {
+                                                            JimWorkoutTimedInputField { newValue ->
+                                                                onValueChange(newValue)
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     )
@@ -141,9 +171,9 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                             }
                                         }
                                     ) {
-                                        Icon(Icons.Filled.AddCircle, contentDescription = "Add Exercise")
+                                        Icon(Icons.Filled.Search, contentDescription = "Search Exercises")
                                         Text(
-                                            text = stringResource(Res.string.add)
+                                            text = stringResource(Res.string.searchExercises)
                                         )
                                     }
                                 }
@@ -166,4 +196,18 @@ fun JimWorkoutPlanPartModalBottomSheet(
             }
         }
     }
+}
+
+@Composable
+private fun JimWorkoutRepeatingInputField(
+    onValueChange: (WorkoutPlanExercise.RepetitionInterval) -> Unit
+) {
+
+}
+
+@Composable
+private fun JimWorkoutTimedInputField(
+    onValueChange: (WorkoutPlanExercise.RepetitionInterval) -> Unit
+) {
+
 }

@@ -29,6 +29,13 @@ data class WorkoutPlanExercise(
     @SerialName("RepetitionInterval.Repeating")
     data class Repeating(
         val sets: Int,
-        val repetitions: Int
-    ) : RepetitionInterval
+        val repetitions: List<Repetition>
+    ) : RepetitionInterval {
+        @Serializable
+        @SerialName("RepetitionInterval.Repeating.Repetition")
+        data class Repetition(
+            val repetitions: Int,
+            val weight: Double?
+        )
+    }
 }
