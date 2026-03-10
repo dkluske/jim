@@ -2,9 +2,7 @@ package net.jim.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
@@ -20,12 +18,14 @@ import jim.sharedui.generated.resources.newWorkoutPlanPart
 import jim.sharedui.generated.resources.search
 import jim.sharedui.generated.resources.searchExercises
 import kotlinx.coroutines.launch
+import kotlinx.datetime.toDateTimePeriod
 import net.jim.components.utils.JimCard
 import net.jim.data.models.JsonExerciseType
 import net.jim.data.models.WorkoutPlanExercise
 import net.jim.data.models.WorkoutPlanPart
 import net.jim.data.table.JsonExerciseTable
 import org.jetbrains.compose.resources.stringResource
+import kotlin.time.Duration
 import kotlin.uuid.Uuid
 
 data class JimWorkoutPlanPartModalBottomSheetViewModel(
@@ -145,16 +145,33 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                         )
                                                     }
 
-                                                    when (exerciseList[index].repetitionInterval) {
-                                                        is WorkoutPlanExercise.Repeating -> {
-                                                            JimWorkoutRepeatingRepetitionInputField { newValue ->
-                                                                onValueChange(newValue)
+                                                    Column(
+                                                        modifier = Modifier.fillMaxWidth()
+                                                    ) {
+                                                        when (exerciseList[index].repetitionInterval) {
+                                                            is WorkoutPlanExercise.Repeating -> {
+                                                                JimWorkoutRepeatingRepetitionInputField(
+                                                                    value = WorkoutPlanExercise.Repeating(
+                                                                        repetitions = listOf(
+                                                                            WorkoutPlanExercise.Repeating.Repetition(
+                                                                                repetitions = 12,
+                                                                                weight = null
+                                                                            )
+                                                                        )
+                                                                    )
+                                                                ) { newValue ->
+                                                                    onValueChange(newValue)
+                                                                }
                                                             }
-                                                        }
 
-                                                        is WorkoutPlanExercise.Timed -> {
-                                                            JimWorkoutTimedRepetitionInputField { newValue ->
-                                                                onValueChange(newValue)
+                                                            is WorkoutPlanExercise.Timed -> {
+                                                                JimWorkoutTimedRepetitionInputField(
+                                                                    value = WorkoutPlanExercise.Timed(
+                                                                        duration = Duration.ZERO
+                                                                    )
+                                                                ) { newValue ->
+                                                                    onValueChange(newValue)
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -199,15 +216,83 @@ fun JimWorkoutPlanPartModalBottomSheet(
 }
 
 @Composable
-private fun JimWorkoutRepeatingRepetitionInputField(
+private fun ColumnScope.JimWorkoutRepeatingRepetitionInputField(
+    value: WorkoutPlanExercise.Repeating,
     onValueChange: (WorkoutPlanExercise.RepetitionInterval) -> Unit
 ) {
-
+    LazyColumn {
+        items(value.repetitions.size) { index ->
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                // Repetitions
+                Column {
+                    Button(
+                        onClick = { /* TODO: open number dialog */ }
+                    ) {
+                        Text(
+                            text = value.repetitions[index].repetitions.toString()
+                        )
+                    }
+                }
+                //Multiplicator
+                Column {
+                    Text(
+                        text = "x"
+                    )
+                }
+                // Weight
+                Column {
+                    Button(
+                        onClick = { /* TODO: open number dialog */ }
+                    ) {
+                        Text(
+                            text = value.repetitions[index].weight?.toString() ?: "-"
+                        )
+                    }
+                }
+            }
+        }
+        item {
+            Row(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Button(
+                    onClick = { /* TODO: add repetition */ }
+                ) {
+                    onValueChange(
+                        value.copy(
+                            repetitions = value.repetitions.plus(
+                                WorkoutPlanExercise.Repeating.Repetition(
+                                    repetitions = value.repetitions.lastOrNull()?.repetitions ?: 12,
+                                    weight = value.repetitions.lastOrNull()?.weight
+                                )
+                            )
+                        )
+                    )
+                }
+            }
+        }
+    }
 }
 
 @Composable
-private fun JimWorkoutTimedRepetitionInputField(
+private fun ColumnScope.JimWorkoutTimedRepetitionInputField(
+    value: WorkoutPlanExercise.Timed,
     onValueChange: (WorkoutPlanExercise.RepetitionInterval) -> Unit
 ) {
 
+    Row(
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Button(
+            onClick = { /* open duration spinner */ }
+        ) {
+            Text(
+                text = value.duration.toDateTimePeriod().let { "${it.hours}:${it.minutes}:${it.seconds}" }
+            )
+        }
+    }
 }
