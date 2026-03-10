@@ -43,4 +43,10 @@ object WorkoutPlanTable : Table<Uuid, WorkoutPlan> {
         )
         return entity
     }
+
+    fun getDefaultPlan(): WorkoutPlan {
+        return getDatabase().workoutPlansQueries.getDefault().executeAsOne().let {
+            WorkoutPlan.fromDB(it)
+        }
+    }
 }

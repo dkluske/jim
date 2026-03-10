@@ -13,7 +13,10 @@ import jim.sharedui.generated.resources.readyToWorkQuestion
 import jim.sharedui.generated.resources.yourPlans
 import net.jim.components.*
 import net.jim.data.models.JsonExerciseType
+import net.jim.data.models.WorkoutPlan
+import net.jim.data.models.WorkoutPlanPart
 import net.jim.data.table.WorkoutEntryTable
+import net.jim.data.table.WorkoutPlanPartTable
 import net.jim.data.table.WorkoutPlanTable
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Clock
@@ -54,6 +57,14 @@ data class MainViewModel(
                 )
             )
         }
+    }
+
+    fun getDefaultWorkoutPlan(): WorkoutPlan {
+        return WorkoutPlanTable.getDefaultPlan()
+    }
+
+    fun getPartsForPlan(planId: Uuid): List<WorkoutPlanPart> {
+        return WorkoutPlanPartTable.getByWorkoutPlanId(workoutPlanId = planId)
     }
 
     fun getLatestWorkoutsLastMonth(): List<JimWorkoutHistoryWidget> {
