@@ -11,6 +11,9 @@ import jim.sharedui.generated.resources.Res
 import jim.sharedui.generated.resources.latestWorkouts
 import jim.sharedui.generated.resources.readyToWorkQuestion
 import jim.sharedui.generated.resources.yourPlans
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.atTime
+import kotlinx.datetime.toLocalDateTime
 import net.jim.components.*
 import net.jim.data.models.JsonExerciseType
 import net.jim.data.models.WorkoutPlan
@@ -78,31 +81,35 @@ data class MainViewModel(
     }
 
     fun getCalendarEntries(now: Instant): List<JimCalendarWidgetEntry> {
-        return getDaysBeforeAndAfter(
-            now = now,
-            days = 6
-        ).mapIndexed { index, instant -> // TODO: add real logic whether user has worked out on that day
-            JimCalendarWidgetEntry(
-                date = instant,
-                hasWorkedOut = if (index % 2 == 0) {
-                    true
-                } else {
-                    false
-                }
-            )
-        }
-    }
+        val after = now.minus(6.days)
 
-    private fun getDaysBeforeAndAfter(now: Instant, days: Int): List<Instant> {
-        val sanitizedDays = if (days < 0) {
-            1
-        } else {
-            days
-        }
+        val workouts = WorkoutEntryTable.getAllAfter(after)
         return buildList {
-            add(now)
-            for (i in sanitizedDays downTo 1) {
-                add(now.minus(i.days))
+            for (i in 6 downTo 0) {
+                val startOfDay = now.minus(i.days)
+                    .toLocalDateTime(TimeZone.currentSystemDefault())
+                    .date
+                    .atTime(hour = 0, minute = 0, second = 0)
+                val endOfDay = now.minus(i.days)
+                    .toLocalDateTime(TimeZone.currentSystemDefault())
+                    .date
+                    .atTime(hour = 23, minute = 59, second = 59)
+
+                add(
+                    workouts.firstOrNull {
+                        it.finishTime?.let { finishTime ->
+                            finishTime.toLocalDateTime(TimeZone.currentSystemDefault()) in startOfDay..endOfDay
+                        } ?: false
+                    }?.let {
+                        JimCalendarWidgetEntry(
+                            date = it.finishTime!!,
+                            hasWorkedOut = true
+                        )
+                    } ?: JimCalendarWidgetEntry(
+                        date = now.minus(i.days),
+                        hasWorkedOut = false
+                    )
+                )
             }
         }
     }
