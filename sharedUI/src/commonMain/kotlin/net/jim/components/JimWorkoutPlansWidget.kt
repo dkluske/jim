@@ -98,15 +98,6 @@ fun JimWorkoutPlansWidget(
                                             style = MaterialTheme.typography.displaySmall
                                         )
                                     }
-                                    Column {
-                                        if (plans[index].isDefault) {
-                                            Text(
-                                                text = stringResource(Res.string.defaultTag),
-                                                color = MaterialTheme.colorScheme.primary,
-                                                style = MaterialTheme.typography.displaySmall
-                                            )
-                                        }
-                                    }
                                 }
                                 Row {
                                     Text(
@@ -115,25 +106,40 @@ fun JimWorkoutPlansWidget(
                                         style = MaterialTheme.typography.displaySmall
                                     )
                                 }
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.End,
+                            }
+                        },
+                        trailingContent = {
+                            if (plans[index].isDefault) {
+                                Column(
+                                    verticalArrangement = Arrangement.Top
                                 ) {
-                                    Button(
-                                        onClick = { /* TODO: Start the Workout */ },
-                                        colors = ButtonDefaults.textButtonColors(
-                                            contentColor = MaterialTheme.colorScheme.onPrimary,
-                                            containerColor = MaterialTheme.colorScheme.primary
-                                        ),
-                                        modifier = Modifier.padding(8.dp),
-                                        shape = RoundedCornerShape(8.dp)
-                                    ) {
-                                        Text(
-                                            text = stringResource(Res.string.startButton),
-                                            color = MaterialTheme.colorScheme.onPrimary,
-                                            style = MaterialTheme.typography.displaySmall
-                                        )
-                                    }
+                                    Text(
+                                        text = stringResource(Res.string.defaultTag),
+                                        color = MaterialTheme.colorScheme.primary,
+                                        style = MaterialTheme.typography.displaySmall
+                                    )
+                                }
+                            }
+                        },
+                        supportingContent = {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.End,
+                            ) {
+                                Button(
+                                    onClick = { /* TODO: Start the Workout */ },
+                                    colors = ButtonDefaults.textButtonColors(
+                                        contentColor = MaterialTheme.colorScheme.onPrimary,
+                                        containerColor = MaterialTheme.colorScheme.primary
+                                    ),
+                                    modifier = Modifier.padding(8.dp),
+                                    shape = RoundedCornerShape(8.dp)
+                                ) {
+                                    Text(
+                                        text = stringResource(Res.string.startButton),
+                                        color = MaterialTheme.colorScheme.onPrimary,
+                                        style = MaterialTheme.typography.displaySmall
+                                    )
                                 }
                             }
                         },
