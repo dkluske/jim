@@ -8,15 +8,13 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import jim.sharedui.generated.resources.Res
-import jim.sharedui.generated.resources.newWorkoutPlanPart
-import jim.sharedui.generated.resources.search
-import jim.sharedui.generated.resources.searchExercises
+import jim.sharedui.generated.resources.*
 import kotlinx.coroutines.launch
 import kotlinx.datetime.toDateTimePeriod
 import net.jim.components.utils.JimCard
@@ -260,17 +258,22 @@ private fun ColumnScope.JimWorkoutRepeatingRepetitionInputField(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Button(
-                    onClick = { /* TODO: add repetition */ }
-                ) {
-                    onValueChange(
-                        value.copy(
-                            repetitions = value.repetitions.plus(
-                                WorkoutPlanExercise.Repeating.Repetition(
-                                    repetitions = value.repetitions.lastOrNull()?.repetitions ?: 12,
-                                    weight = value.repetitions.lastOrNull()?.weight
+                    onClick = {
+                        onValueChange(
+                            value.copy(
+                                repetitions = value.repetitions.plus(
+                                    WorkoutPlanExercise.Repeating.Repetition(
+                                        repetitions = value.repetitions.lastOrNull()?.repetitions ?: 12,
+                                        weight = value.repetitions.lastOrNull()?.weight
+                                    )
                                 )
                             )
                         )
+                    }
+                ) {
+                    Icon(Icons.Filled.AddCircle, contentDescription = "Add Repetitions")
+                    Text(
+                        text = stringResource(Res.string.add)
                     )
                 }
             }
