@@ -5,14 +5,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import jim.sharedui.generated.resources.Res
 import kotlinx.coroutines.launch
+import net.jim.components.navigation.NavigationRoot
 import net.jim.data.DatabaseDriverManager
 import net.jim.data.JimDatabaseManager
 import net.jim.data.models.JsonExerciseType
 import net.jim.data.models.PhysicalJsonExercise
 import net.jim.data.table.JsonExerciseTable
 import net.jim.theme.AppTheme
-import net.jim.views.MainView
-import net.jim.views.MainViewModel
 import net.jim.views.Root
 
 @Composable
@@ -40,9 +39,12 @@ fun App(
     }
 
     val root = remember { Root() }
-    MainView(
+    NavigationRoot(
+        root = root
+    )
+    /*MainView(
         vm = MainViewModel(
             root = root
         )
-    )
+    )*/
 }

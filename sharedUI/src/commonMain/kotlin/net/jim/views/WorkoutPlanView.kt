@@ -26,7 +26,8 @@ import kotlin.uuid.Uuid
 
 data class WorkoutPlanViewModel(
     override val root: Root,
-    val workoutId: Uuid?
+    val workoutId: Uuid?,
+    val onNavigateBack: () -> Unit
 ): JimViewModel {
     fun loadWorkout(id: Uuid): WorkoutPlan {
         return WorkoutPlanTable.getById(id)
@@ -77,7 +78,7 @@ fun WorkoutPlanView(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             IconButton(
-                onClick = { /* TODO: navigate back */ }
+                onClick = { vm.onNavigateBack() }
             ) {
                 Text(
                     text = "<"

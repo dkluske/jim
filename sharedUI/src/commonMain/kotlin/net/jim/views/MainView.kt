@@ -28,7 +28,8 @@ import kotlin.time.Instant
 import kotlin.uuid.Uuid
 
 data class MainViewModel(
-    override val root: Root
+    override val root: Root,
+    val onNavigateToWorkoutPlan: (Uuid?) -> Unit
 ) : JimViewModel {
     fun getWorkoutPlans(): List<JimWorkoutWidgetPlan> {
         return WorkoutPlanTable.getAll().map {
@@ -168,7 +169,7 @@ fun MainView(
                     JimWorkoutPlansWidget(
                         plans = vm.getWorkoutPlans(),
                         onClick = { planId ->
-                            // TODO: navigate to plan overview bottom sheet for each id
+                            vm.onNavigateToWorkoutPlan(planId)
                         },
                         onStart = { planId ->
                             // TODO: navigate to plan run view
