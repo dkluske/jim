@@ -95,7 +95,10 @@ fun JimWorkoutPlansWidget(
                                         Text(
                                             text = plans[index].name,
                                             color = MaterialTheme.colorScheme.onBackground,
-                                            style = MaterialTheme.typography.displaySmall
+                                            style = MaterialTheme.typography.displaySmall,
+                                            modifier = Modifier.clickable {
+                                                onClick(plans[index].id)
+                                            }
                                         )
                                     }
                                 }

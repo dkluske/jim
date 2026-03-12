@@ -2,6 +2,7 @@ package net.jim.components.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation3.runtime.NavEntry
+import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import androidx.savedstate.serialization.SavedStateConfiguration
@@ -15,6 +16,11 @@ fun NavigationRoot(root: Root) {
     val backStack = rememberNavBackStack(
         configuration = SavedStateConfiguration {
             serializersModule = SerializersModule {
+                polymorphic(NavKey::class) {
+                    subclass(NavRoute::class)
+                    subclass(NavRoute.MainRoute::class)
+                    subclass(NavRoute.WorkoutPlanRoute::class)
+                }
                 polymorphic(NavRoute::class) {
                     subclass(NavRoute.MainRoute::class)
                     subclass(NavRoute.WorkoutPlanRoute::class)

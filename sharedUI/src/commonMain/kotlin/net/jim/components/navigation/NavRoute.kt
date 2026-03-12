@@ -10,9 +10,9 @@ import kotlin.uuid.Uuid
 sealed interface NavRoute : NavKey {
 
     @Serializable
-    data object MainRoute : NavRoute
+    data object MainRoute : NavRoute, NavKey
 
     @Serializable
-    data class WorkoutPlanRoute(val workoutPlanId: Uuid?) : NavRoute
+    data class WorkoutPlanRoute(val workoutPlanId: Uuid?) : NavRoute, NavKey
 
 }
