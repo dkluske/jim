@@ -19,7 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun JimBottomBar() {
+fun JimBottomBar(
+    onAddWorkoutPlan: () -> Unit,
+) {
     Row(
         modifier = Modifier.fillMaxWidth()
             .padding(8.dp),
@@ -68,7 +70,7 @@ fun JimBottomBar() {
         ) {
             IconButton(
                 onClick = {
-                    // TODO: navigate to edit workout plan with no id
+                    onAddWorkoutPlan()
                 },
                 colors = IconButtonDefaults.iconButtonColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer

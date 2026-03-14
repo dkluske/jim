@@ -1,13 +1,10 @@
 package net.jim.theme
 
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
-import net.jim.components.JimBottomBar
 
 private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFF0FE22F),
@@ -55,19 +52,7 @@ internal fun AppTheme(
         MaterialTheme(
             colorScheme = DarkColorScheme,
             typography = typography,
-            content = {
-                Scaffold(
-                    content = {
-                        Surface(
-                            content = content,
-                            color = MaterialTheme.colorScheme.background
-                        )
-                    },
-                    bottomBar = {
-                        JimBottomBar()
-                    }
-                )
-            }
+            content = content
         )
     }
 }

@@ -9,8 +9,10 @@ import kotlin.uuid.Uuid
 @Polymorphic
 sealed interface NavRoute : NavKey {
 
+    sealed interface RootRoute : NavRoute, NavKey
+
     @Serializable
-    data object MainRoute : NavRoute, NavKey
+    data object MainRoute : RootRoute, NavKey
 
     @Serializable
     data class WorkoutPlanRoute(val workoutPlanId: Uuid?) : NavRoute, NavKey
