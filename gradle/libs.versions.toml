@@ -14,6 +14,8 @@ kotlinx-datetime = "0.7.1"
 sqlDelight = "2.2.1"
 kstore = "1.0.0"
 jetbrains-androidx-icons = "1.7.3"
+paging = "3.4.1"
+cashapp-paging = "3.3.0-alpha02-0.5.1"
 
 [libraries]
 
@@ -43,6 +45,8 @@ kstore = { module = "io.github.xxfast:kstore", version.ref = "kstore" }
 kstore-file = { module = "io.github.xxfast:kstore-file", version.ref = "kstore" }
 kstore-storage = { module = "io.github.xxfast:kstore-storage", version.ref = "kstore" }
 jetbrains-androidx-icons-core = { module = "org.jetbrains.compose.material:material-icons-core", version.ref = "jetbrains-androidx-icons" }
+androidx-paging-common = { group = "app.cash.paging", name = "paging-common", version.ref = "cashapp-paging" }
+cashapp-paging-compose = { group = "app.cash.paging", name = "paging-compose-common", version.ref = "cashapp-paging" }
 
 [plugins]
 
@@ -55,3 +59,6 @@ android-kmp-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+
+[bundles]
+androidx-paging = ["androidx-paging-common", "cashapp-paging-compose"]

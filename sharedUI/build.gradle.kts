@@ -43,6 +43,7 @@ kotlin {
             implementation(libs.kotlinx.datetime)
             implementation(libs.kstore)
             implementation(libs.jetbrains.androidx.icons.core)
+            implementation(libs.bundles.androidx.paging)
         }
 
         commonTest.dependencies {

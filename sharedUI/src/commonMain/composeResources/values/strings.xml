@@ -25,4 +25,6 @@
     <string name="add">Add</string>
     <string name="search">Search</string>
     <string name="searchExercises">Search Exercises</string>
+    <string name="editExercises">Edit Exercises</string>
+    <string name="noExercisesYesPleaseAddOne">There are no exercises planned yet. Add one now.</string>
 </resources>

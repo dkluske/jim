@@ -2,6 +2,7 @@ package net.jim.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material.icons.filled.Edit
@@ -26,27 +27,29 @@ fun JimEditableHeader(
         horizontalArrangement = Arrangement.Start,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-
-    }
-    if (editEnabled.value) {
-        TextField(
-            value = value,
-            onValueChange = onValueChange
-        )
-    } else {
-        Text(
-            text = value
-        )
-    }
-    IconButton(
-        onClick = {
-            editEnabled.value = !editEnabled.value
-        }
-    ) {
         if (editEnabled.value) {
-            Icon(Icons.Filled.Done, contentDescription = "Done")
+            TextField(
+                value = value,
+                onValueChange = onValueChange,
+                singleLine = true,
+                trailingIcon = {
+                    IconButton(onClick = { editEnabled.value = false }) {
+                        Icon(Icons.Filled.Done, contentDescription = "Done")
+                    }
+                },
+                modifier = Modifier.fillMaxWidth()
+            )
         } else {
-            Icon(Icons.Filled.Edit, contentDescription = "Edit")
+            Text(
+                text = value
+            )
+            IconButton(
+                onClick = {
+                    editEnabled.value = !editEnabled.value
+                }
+            ) {
+                Icon(Icons.Filled.Edit, contentDescription = "Edit")
+            }
         }
     }
 }
