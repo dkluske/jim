@@ -4,63 +4,46 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.navigation3.runtime.NavEntry
-import androidx.navigation3.runtime.NavKey
-import androidx.navigation3.runtime.rememberNavBackStack
+import androidx.navigation3.scene.DialogSceneStrategy
 import androidx.navigation3.ui.NavDisplay
-import androidx.savedstate.serialization.SavedStateConfiguration
-import kotlinx.serialization.modules.SerializersModule
-import kotlinx.serialization.modules.polymorphic
-import kotlinx.serialization.modules.subclass
 import net.jim.components.JimBottomBar
+import net.jim.components.JimWorkoutPlanPartModalBottomSheet
+import net.jim.components.JimWorkoutPlanPartModalBottomSheetViewModel
+import net.jim.components.navigation.BottomSheetSceneStrategy.Companion.bottomSheet
+import net.jim.components.navigation.NavRoute.*
 import net.jim.views.*
 
 @Composable
 fun NavigationRoot(root: Root) {
-    val backStack = rememberNavBackStack(
-        configuration = SavedStateConfiguration {
-            serializersModule = SerializersModule {
-                polymorphic(NavKey::class) {
-                    subclass(NavRoute::class)
-                    subclass(NavRoute.RootRoute::class)
-                    subclass(NavRoute.MainRoute::class)
-                    subclass(NavRoute.WorkoutPlanRoute::class)
-                }
-                polymorphic(NavRoute::class) {
-                    subclass(NavRoute.RootRoute::class)
-                    subclass(NavRoute.MainRoute::class)
-                    subclass(NavRoute.WorkoutPlanRoute::class)
-                }
-                polymorphic(NavRoute.RootRoute::class) {
-                    subclass(NavRoute.MainRoute::class)
-                }
-            }
-        },
-        NavRoute.MainRoute
-    )
+    val dialogSceneStrategy = remember { DialogSceneStrategy<NavRoute>() }
+    val bottomSheetSceneStrategy = remember { BottomSheetSceneStrategy<NavRoute>() }
+    val backStack = remember { NavStack<NavRoute>(MainRoute) }
 
     Scaffold(
         content = {
             Surface(
                 content = {
                     NavDisplay(
-                        backStack = backStack
+                        backStack = backStack,
+                        sceneStrategy = dialogSceneStrategy.then(bottomSheetSceneStrategy)
                     ) { key ->
                         when (key) {
-                            is NavRoute.MainRoute -> {
+                            is MainRoute -> {
                                 NavEntry(key) {
                                     MainView(
                                         vm = MainViewModel(
                                             root = root,
                                             onNavigateToWorkoutPlan = { workoutPlanId ->
-                                                backStack.add(NavRoute.WorkoutPlanRoute(workoutPlanId))
+                                                backStack += WorkoutPlanRoute(workoutPlanId)
                                             }
                                         )
                                     )
                                 }
                             }
 
-                            is NavRoute.WorkoutPlanRoute -> {
+                            is WorkoutPlanRoute -> {
                                 NavEntry(key) {
                                     WorkoutPlanView(
                                         vm = WorkoutPlanViewModel(
@@ -70,14 +53,31 @@ fun NavigationRoot(root: Root) {
                                                 if (backStack.size > 1) {
                                                     backStack.removeLast()
                                                 }
+                                            },
+                                            onOpenPlanPart = {
+                                                backStack += BottomSheet.JimWorkoutPlanPartModalBottomSheet(
+                                                    workoutPlanPart = it
+                                                )
                                             }
                                         )
                                     )
                                 }
                             }
 
-                            else -> {
-                                throw IllegalStateException("Unknown key $key")
+                            is BottomSheet.JimWorkoutPlanPartModalBottomSheet -> {
+                                NavEntry(
+                                    key = key,
+                                    metadata = bottomSheet()
+                                ) {
+                                    JimWorkoutPlanPartModalBottomSheet(
+                                        vm = JimWorkoutPlanPartModalBottomSheetViewModel(
+                                            workoutPlanPart = key.workoutPlanPart,
+                                            onDismissRequest = {
+                                                backStack.remove(key)
+                                            }
+                                        )
+                                    )
+                                }
                             }
                         }
                     }
@@ -87,13 +87,15 @@ fun NavigationRoot(root: Root) {
         },
         bottomBar = {
             when (backStack.lastOrNull()) {
-                is NavRoute.RootRoute -> {
+                is RootRoute -> {
                     JimBottomBar(
                         onAddWorkoutPlan = {
-                            backStack.add(NavRoute.WorkoutPlanRoute(null))
+                            backStack += WorkoutPlanRoute(null)
                         }
                     )
                 }
+
+                else -> {}
             }
         }
     )

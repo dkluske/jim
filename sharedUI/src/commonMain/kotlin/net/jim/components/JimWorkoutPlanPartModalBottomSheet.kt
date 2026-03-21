@@ -27,8 +27,8 @@ import kotlin.time.Duration
 import kotlin.uuid.Uuid
 
 data class JimWorkoutPlanPartModalBottomSheetViewModel(
-    val expanded: Boolean = false,
     val workoutPlanPart: WorkoutPlanPart? = null,
+    val onDismissRequest: () -> Unit
 ) {
     fun resolveJsonExercise(id: Uuid): JsonExerciseType {
         return JsonExerciseTable.getById(id)
@@ -52,160 +52,156 @@ private enum class BottomSheetViewState {
 fun JimWorkoutPlanPartModalBottomSheet(
     vm: JimWorkoutPlanPartModalBottomSheetViewModel
 ) {
-    if (vm.expanded) {
-        val sheetState = rememberModalBottomSheetState(
-            skipPartiallyExpanded = true
+    val sheetState = rememberModalBottomSheetState(
+        skipPartiallyExpanded = true
+    )
+    val name = remember { mutableStateOf(vm.workoutPlanPart?.name) }
+    val exerciseList = remember { mutableListOf<WorkoutPlanExercise>() }
+    val pagerViewState = rememberPagerState(
+        initialPage = BottomSheetViewState.PARTS_EDIT.ordinal,
+        pageCount = { BottomSheetViewState.entries.size })
+    val jsonExerciseMap = remember { mutableStateMapOf<Uuid, JsonExerciseType>() }
+    val extendedPart = remember { mutableStateOf<WorkoutPlanExercise?>(null) }
+    val coroutineScope = rememberCoroutineScope()
+    ModalBottomSheet(
+        sheetState = sheetState,
+        onDismissRequest = {
+            vm.onDismissRequest()
+        }
+    ) {
+        JimEditableHeader(
+            value = name.value ?: stringResource(Res.string.newWorkoutPlanPart),
+            onValueChange = { name.value = it },
         )
-        val name = remember { mutableStateOf(vm.workoutPlanPart?.name) }
-        val exerciseList = remember { mutableListOf<WorkoutPlanExercise>() }
-        val pagerViewState = rememberPagerState(
-            initialPage = BottomSheetViewState.PARTS_EDIT.ordinal,
-            pageCount = { BottomSheetViewState.entries.size })
-        val jsonExerciseMap = remember { mutableStateMapOf<Uuid, JsonExerciseType>() }
-        val extendedPart = remember { mutableStateOf<WorkoutPlanExercise?>(null) }
-        val coroutineScope = rememberCoroutineScope()
-        ModalBottomSheet(
-            sheetState = sheetState,
-            onDismissRequest = {
-                coroutineScope.launch {
-                    sheetState.hide()
-                }
-            }
-        ) {
-            JimEditableHeader(
-                value = name.value ?: stringResource(Res.string.newWorkoutPlanPart),
-                onValueChange = { name.value = it },
-            )
-            JimCard {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    BottomSheetViewState.entries.forEach {
-                        Button(
-                            onClick = {
-                                coroutineScope.launch {
-                                    pagerViewState.animateScrollToPage(it.ordinal)
-                                }
-                            },
-                            modifier = if (pagerViewState.currentPage == it.ordinal) {
-                                Modifier.background(color = MaterialTheme.colorScheme.primary)
-                            } else {
-                                Modifier
+        JimCard {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                BottomSheetViewState.entries.forEach {
+                    Button(
+                        onClick = {
+                            coroutineScope.launch {
+                                pagerViewState.animateScrollToPage(it.ordinal)
                             }
-                        ) {
-                            Text(
-                                text = it.name
-                            )
+                        },
+                        modifier = if (pagerViewState.currentPage == it.ordinal) {
+                            Modifier.background(color = MaterialTheme.colorScheme.primary)
+                        } else {
+                            Modifier
                         }
+                    ) {
+                        Text(
+                            text = it.name
+                        )
                     }
                 }
-                HorizontalPager(
-                    state = pagerViewState
-                ) { page ->
-                    val pageValue = BottomSheetViewState.entries[page]
-                    when (pageValue) {
-                        BottomSheetViewState.PARTS_EDIT -> {
-                            val lazyListState = rememberLazyListState()
-                            LazyColumn(
-                                state = lazyListState
-                            ) {
-                                items(exerciseList.size) { index ->
-                                    ListItem(
-                                        headlineContent = {
-                                            Text(
-                                                text = (jsonExerciseMap[exerciseList[index].jsonExerciseId]
-                                                    ?: vm.resolveJsonExercise(exerciseList[index].id).also {
-                                                        jsonExerciseMap[exerciseList[index].jsonExerciseId] = it
-                                                    }).name,
-                                                modifier = Modifier.clickable {
-                                                    if (extendedPart.value == exerciseList[index]) {
-                                                        extendedPart.value = null
-                                                    } else {
-                                                        extendedPart.value = exerciseList[index]
-                                                    }
+            }
+            HorizontalPager(
+                state = pagerViewState
+            ) { page ->
+                val pageValue = BottomSheetViewState.entries[page]
+                when (pageValue) {
+                    BottomSheetViewState.PARTS_EDIT -> {
+                        val lazyListState = rememberLazyListState()
+                        LazyColumn(
+                            state = lazyListState
+                        ) {
+                            items(exerciseList.size) { index ->
+                                ListItem(
+                                    headlineContent = {
+                                        Text(
+                                            text = (jsonExerciseMap[exerciseList[index].jsonExerciseId]
+                                                ?: vm.resolveJsonExercise(exerciseList[index].id).also {
+                                                    jsonExerciseMap[exerciseList[index].jsonExerciseId] = it
+                                                }).name,
+                                            modifier = Modifier.clickable {
+                                                if (extendedPart.value == exerciseList[index]) {
+                                                    extendedPart.value = null
+                                                } else {
+                                                    extendedPart.value = exerciseList[index]
                                                 }
-                                            )
-                                        },
-                                        trailingContent = {
-                                            // TODO: delete / drag and drop
-                                        },
-                                        supportingContent = {
-                                            // TODO: repetition interval
-                                            if (extendedPart.value == exerciseList[index]) {
-                                                Row(
+                                            }
+                                        )
+                                    },
+                                    trailingContent = {
+                                        // TODO: delete / drag and drop
+                                    },
+                                    supportingContent = {
+                                        // TODO: repetition interval
+                                        if (extendedPart.value == exerciseList[index]) {
+                                            Row(
+                                                modifier = Modifier.fillMaxWidth()
+                                            ) {
+                                                fun onValueChange(repetitionInterval: WorkoutPlanExercise.RepetitionInterval) {
+                                                    exerciseList[index] = exerciseList[index].copy(
+                                                        repetitionInterval = repetitionInterval
+                                                    )
+                                                }
+
+                                                Column(
                                                     modifier = Modifier.fillMaxWidth()
                                                 ) {
-                                                    fun onValueChange(repetitionInterval: WorkoutPlanExercise.RepetitionInterval) {
-                                                        exerciseList[index] = exerciseList[index].copy(
-                                                            repetitionInterval = repetitionInterval
-                                                        )
-                                                    }
-
-                                                    Column(
-                                                        modifier = Modifier.fillMaxWidth()
-                                                    ) {
-                                                        when (exerciseList[index].repetitionInterval) {
-                                                            is WorkoutPlanExercise.Repeating -> {
-                                                                JimWorkoutRepeatingRepetitionInputField(
-                                                                    value = WorkoutPlanExercise.Repeating(
-                                                                        repetitions = listOf(
-                                                                            WorkoutPlanExercise.Repeating.Repetition(
-                                                                                repetitions = 12,
-                                                                                weight = null
-                                                                            )
+                                                    when (exerciseList[index].repetitionInterval) {
+                                                        is WorkoutPlanExercise.Repeating -> {
+                                                            JimWorkoutRepeatingRepetitionInputField(
+                                                                value = WorkoutPlanExercise.Repeating(
+                                                                    repetitions = listOf(
+                                                                        WorkoutPlanExercise.Repeating.Repetition(
+                                                                            repetitions = 12,
+                                                                            weight = null
                                                                         )
                                                                     )
-                                                                ) { newValue ->
-                                                                    onValueChange(newValue)
-                                                                }
+                                                                )
+                                                            ) { newValue ->
+                                                                onValueChange(newValue)
                                                             }
+                                                        }
 
-                                                            is WorkoutPlanExercise.Timed -> {
-                                                                JimWorkoutTimedRepetitionInputField(
-                                                                    value = WorkoutPlanExercise.Timed(
-                                                                        duration = Duration.ZERO
-                                                                    )
-                                                                ) { newValue ->
-                                                                    onValueChange(newValue)
-                                                                }
+                                                        is WorkoutPlanExercise.Timed -> {
+                                                            JimWorkoutTimedRepetitionInputField(
+                                                                value = WorkoutPlanExercise.Timed(
+                                                                    duration = Duration.ZERO
+                                                                )
+                                                            ) { newValue ->
+                                                                onValueChange(newValue)
                                                             }
                                                         }
                                                     }
                                                 }
                                             }
                                         }
-                                    )
-                                }
-                                item {
-                                    Button(
-                                        onClick = {
-                                            coroutineScope.launch {
-                                                pagerViewState.animateScrollToPage(BottomSheetViewState.EXERCISE_SEARCH.ordinal)
-                                            }
-                                        }
-                                    ) {
-                                        Icon(Icons.Filled.Search, contentDescription = "Search Exercises")
-                                        Text(
-                                            text = stringResource(Res.string.searchExercises)
-                                        )
                                     }
+                                )
+                            }
+                            item {
+                                Button(
+                                    onClick = {
+                                        coroutineScope.launch {
+                                            pagerViewState.animateScrollToPage(BottomSheetViewState.EXERCISE_SEARCH.ordinal)
+                                        }
+                                    }
+                                ) {
+                                    Icon(Icons.Filled.Search, contentDescription = "Search Exercises")
+                                    Text(
+                                        text = stringResource(Res.string.searchExercises)
+                                    )
                                 }
                             }
                         }
+                    }
 
-                        BottomSheetViewState.EXERCISE_SEARCH -> {
-                            val textSearch = remember { mutableStateOf("") }
-                            TextField(
-                                value = textSearch.value,
-                                onValueChange = { textSearch.value = it },
-                                placeholder = {
-                                    Text(text = stringResource(Res.string.search))
-                                }
-                            )
-                            // TODO: vertical pager using vm.searchByName ...
-                        }
+                    BottomSheetViewState.EXERCISE_SEARCH -> {
+                        val textSearch = remember { mutableStateOf("") }
+                        TextField(
+                            value = textSearch.value,
+                            onValueChange = { textSearch.value = it },
+                            placeholder = {
+                                Text(text = stringResource(Res.string.search))
+                            }
+                        )
+                        // TODO: vertical pager using vm.searchByName ...
                     }
                 }
             }

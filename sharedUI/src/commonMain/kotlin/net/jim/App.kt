@@ -42,9 +42,4 @@ fun App(
     NavigationRoot(
         root = root
     )
-    /*MainView(
-        vm = MainViewModel(
-            root = root
-        )
-    )*/
 }

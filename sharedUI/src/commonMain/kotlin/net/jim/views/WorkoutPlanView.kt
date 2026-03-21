@@ -14,8 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import jim.sharedui.generated.resources.*
 import net.jim.components.JimEditableHeader
-import net.jim.components.JimWorkoutPlanPartModalBottomSheet
-import net.jim.components.JimWorkoutPlanPartModalBottomSheetViewModel
 import net.jim.components.utils.JimCard
 import net.jim.data.models.WorkoutPlan
 import net.jim.data.models.WorkoutPlanPart
@@ -27,6 +25,7 @@ import kotlin.uuid.Uuid
 data class WorkoutPlanViewModel(
     override val root: Root,
     val workoutId: Uuid?,
+    val onOpenPlanPart: (WorkoutPlanPart?) -> Unit,
     val onNavigateBack: () -> Unit
 ): JimViewModel {
     fun loadWorkout(id: Uuid): WorkoutPlan {
@@ -51,7 +50,6 @@ fun WorkoutPlanView(
 ) {
     var workout by remember { mutableStateOf<WorkoutPlan?>(null) }
     val planParts = remember { mutableStateListOf<WorkoutPlanPart>() }
-    val bottomSheetState = remember { mutableStateOf(JimWorkoutPlanPartModalBottomSheetViewModel()) }
 
     LaunchedEffect(Unit) {
         vm.workoutId?.let {
@@ -60,8 +58,6 @@ fun WorkoutPlanView(
             planParts.addAll(vm.loadWorkoutPlanParts(it))
         }
     }
-
-    JimWorkoutPlanPartModalBottomSheet(vm = bottomSheetState.value)
 
     Column(
         modifier = Modifier
@@ -156,10 +152,7 @@ fun WorkoutPlanView(
                             supportingContent = {
                                 Button(
                                     onClick = {
-                                        bottomSheetState.value = JimWorkoutPlanPartModalBottomSheetViewModel(
-                                            expanded = true,
-                                            workoutPlanPart = planParts[index]
-                                        )
+                                        vm.onOpenPlanPart(planParts[index])
                                     }
                                 ) {
                                     Text(
@@ -172,9 +165,7 @@ fun WorkoutPlanView(
                     item {
                         Button(
                             onClick = {
-                                bottomSheetState.value = JimWorkoutPlanPartModalBottomSheetViewModel(
-                                    expanded = true
-                                )
+                                vm.onOpenPlanPart(null)
                             }
                         ) {
                             Icon(Icons.Filled.AddCircle, "add workout plan part")

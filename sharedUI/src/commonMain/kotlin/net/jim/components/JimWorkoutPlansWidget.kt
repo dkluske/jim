@@ -32,7 +32,6 @@ fun JimWorkoutPlansWidget(
     onStart: (Uuid) -> Unit
 ) {
     if (plans.isEmpty()) {
-
         JimCard {
             JimListWrapper(
                 list = plans,
@@ -83,74 +82,78 @@ fun JimWorkoutPlansWidget(
             state = scrollState
         ) {
             items(plans.size) { index ->
-                JimCard {
-                    ListItem(
-                        headlineContent = {
-                            Column(modifier = Modifier.fillMaxWidth()) {
-                                Row(
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    modifier = Modifier.fillMaxWidth()
-                                ) {
-                                    Column {
+                Column(
+                    modifier = Modifier.padding(8.dp)
+                ) {
+                    JimCard {
+                        ListItem(
+                            headlineContent = {
+                                Column(modifier = Modifier.fillMaxWidth()) {
+                                    Row(
+                                        horizontalArrangement = Arrangement.SpaceBetween,
+                                        modifier = Modifier.fillMaxWidth()
+                                    ) {
+                                        Column {
+                                            Text(
+                                                text = plans[index].name,
+                                                color = MaterialTheme.colorScheme.onBackground,
+                                                style = MaterialTheme.typography.displaySmall,
+                                                modifier = Modifier.clickable {
+                                                    onClick(plans[index].id)
+                                                }
+                                            )
+                                        }
+                                    }
+                                    Row {
                                         Text(
-                                            text = plans[index].name,
-                                            color = MaterialTheme.colorScheme.onBackground,
-                                            style = MaterialTheme.typography.displaySmall,
-                                            modifier = Modifier.clickable {
-                                                onClick(plans[index].id)
-                                            }
+                                            text = plans[index].primaryMuscles.joinToString(),
+                                            color = MaterialTheme.colorScheme.onSecondary,
+                                            style = MaterialTheme.typography.displaySmall
                                         )
                                     }
                                 }
-                                Row {
-                                    Text(
-                                        text = plans[index].primaryMuscles.joinToString(),
-                                        color = MaterialTheme.colorScheme.onSecondary,
-                                        style = MaterialTheme.typography.displaySmall
-                                    )
+                            },
+                            trailingContent = {
+                                if (plans[index].isDefault) {
+                                    Column(
+                                        verticalArrangement = Arrangement.Top
+                                    ) {
+                                        Text(
+                                            text = stringResource(Res.string.defaultTag),
+                                            color = MaterialTheme.colorScheme.primary,
+                                            style = MaterialTheme.typography.displaySmall
+                                        )
+                                    }
                                 }
-                            }
-                        },
-                        trailingContent = {
-                            if (plans[index].isDefault) {
-                                Column(
-                                    verticalArrangement = Arrangement.Top
+                            },
+                            supportingContent = {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.End,
                                 ) {
-                                    Text(
-                                        text = stringResource(Res.string.defaultTag),
-                                        color = MaterialTheme.colorScheme.primary,
-                                        style = MaterialTheme.typography.displaySmall
-                                    )
+                                    Button(
+                                        onClick = { /* TODO: Start the Workout */ },
+                                        colors = ButtonDefaults.textButtonColors(
+                                            contentColor = MaterialTheme.colorScheme.onPrimary,
+                                            containerColor = MaterialTheme.colorScheme.primary
+                                        ),
+                                        modifier = Modifier.padding(8.dp),
+                                        shape = RoundedCornerShape(8.dp)
+                                    ) {
+                                        Text(
+                                            text = stringResource(Res.string.startButton),
+                                            color = MaterialTheme.colorScheme.onPrimary,
+                                            style = MaterialTheme.typography.displaySmall
+                                        )
+                                    }
                                 }
-                            }
-                        },
-                        supportingContent = {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.End,
-                            ) {
-                                Button(
-                                    onClick = { /* TODO: Start the Workout */ },
-                                    colors = ButtonDefaults.textButtonColors(
-                                        contentColor = MaterialTheme.colorScheme.onPrimary,
-                                        containerColor = MaterialTheme.colorScheme.primary
-                                    ),
-                                    modifier = Modifier.padding(8.dp),
-                                    shape = RoundedCornerShape(8.dp)
-                                ) {
-                                    Text(
-                                        text = stringResource(Res.string.startButton),
-                                        color = MaterialTheme.colorScheme.onPrimary,
-                                        style = MaterialTheme.typography.displaySmall
-                                    )
-                                }
-                            }
-                        },
-                        colors = ListItemDefaults.colors(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer
-                        ),
-                        modifier = Modifier.fillMaxWidth(0.7f)
-                    )
+                            },
+                            colors = ListItemDefaults.colors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                            ),
+                            modifier = Modifier.fillMaxWidth(0.7f)
+                        )
+                    }
                 }
             }
         }
