@@ -1,5 +1,6 @@
 package net.jim.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -26,7 +27,9 @@ import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import app.cash.paging.compose.collectAsLazyPagingItems
 import jim.sharedui.generated.resources.*
-import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import kotlinx.datetime.toDateTimePeriod
 import net.jim.components.utils.JimCard
@@ -62,6 +65,7 @@ private enum class BottomSheetViewState {
     EXERCISE_SEARCH
 }
 
+@OptIn(FlowPreview::class)
 @Composable
 fun JimWorkoutPlanPartModalBottomSheet(
     vm: JimWorkoutPlanPartModalBottomSheetViewModel
@@ -70,7 +74,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
         skipPartiallyExpanded = true
     )
     val name = remember { mutableStateOf(vm.workoutPlanPart?.name) }
-    val exerciseList = remember { mutableListOf<WorkoutPlanExercise>() }
+    val exerciseList = remember { mutableStateListOf<WorkoutPlanExercise>() }
     val pagerViewState = rememberPagerState(
         initialPage = BottomSheetViewState.PARTS_EDIT.ordinal,
         pageCount = { BottomSheetViewState.entries.size })
@@ -129,7 +133,9 @@ fun JimWorkoutPlanPartModalBottomSheet(
                     }
                 }
                 HorizontalPager(
-                    state = pagerViewState
+                    state = pagerViewState,
+                    modifier = Modifier.fillMaxWidth()
+                        .weight(1f)
                 ) { page ->
                     val pageValue = BottomSheetViewState.entries[page]
                     when (pageValue) {
@@ -144,7 +150,8 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                             headlineContent = {
                                                 Text(
                                                     text = (jsonExerciseMap[exerciseList[index].jsonExerciseId]
-                                                        ?: vm.resolveJsonExercise(exerciseList[index].id).also {
+                                                        ?: vm.resolveJsonExercise(exerciseList[index].jsonExerciseId)
+                                                            .also {
                                                             jsonExerciseMap[exerciseList[index].jsonExerciseId] = it
                                                         }).name,
                                                     modifier = Modifier.clickable {
@@ -160,7 +167,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                 // TODO: delete / drag and drop
                                             },
                                             supportingContent = {
-                                                // TODO: repetition interval
+                                                // TODO: fix expansion
                                                 if (extendedPart.value == exerciseList[index]) {
                                                     Row(
                                                         modifier = Modifier.fillMaxWidth()
@@ -226,107 +233,136 @@ fun JimWorkoutPlanPartModalBottomSheet(
                         BottomSheetViewState.EXERCISE_SEARCH -> {
                             val textFieldState = rememberTextFieldState()
                             val loadResultListState = rememberLazyListState()
-                            val pager = Pager(PagingConfig(pageSize = 20, initialLoadSize = 20)) {
-                                JsonExercisePagingSource(textFieldState.text.toString())
-                            }.flow.cachedIn(MainScope())
-                            Row(
-                                modifier = Modifier.fillMaxWidth().padding(8.dp)
-                            ) {
-                                TextField(
-                                    state = textFieldState,
-                                    placeholder = {
-                                        Text(
-                                            text = stringResource(Res.string.search),
-                                            style = MaterialTheme.typography.displaySmall
-                                        )
-                                    },
-                                    trailingIcon = {
-                                        IconButton(
-                                            onClick = {
-                                                textFieldState.clearText()
-                                            },
-                                            modifier = Modifier.size(24.dp)
-                                        ) {
-                                            Icon(
-                                                imageVector = Icons.Default.Clear,
-                                                contentDescription = "clear search"
-                                            )
-                                        }
-                                    },
-                                    contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
-                                        top = 12.dp,
-                                        bottom = 12.dp,
-                                        start = 8.dp,
-                                        end = 8.dp,
-                                    ),
+                            var currentSource by remember { mutableStateOf<JsonExercisePagingSource?>(null) }
 
-                                    colors = TextFieldDefaults.colors(
-                                        focusedIndicatorColor = Color.Transparent,
-                                        unfocusedIndicatorColor = Color.Transparent,
-                                        disabledIndicatorColor = Color.Transparent,
-                                        errorIndicatorColor = Color.Transparent
-                                    ),
-                                    shape = RoundedCornerShape(8.dp),
-                                    textStyle = MaterialTheme.typography.displaySmall,
-                                    modifier = Modifier.fillMaxWidth()
-                                        .border(
-                                            width = 1.dp,
-                                            color = MaterialTheme.colorScheme.outline,
-                                            shape = RoundedCornerShape(8.dp)
-                                        ).heightIn(min = 20.dp)
-                                )
+                            val pager = remember {
+                                Pager(PagingConfig(pageSize = 20, initialLoadSize = 20)) {
+                                    JsonExercisePagingSource(textFieldState.text.toString()).also {
+                                        currentSource = it
+                                    }
+                                }.flow.cachedIn(coroutineScope)
                             }
-                            HorizontalDivider(
-                                modifier = Modifier.padding(8.dp),
-                                color = MaterialTheme.colorScheme.outline,
-                                thickness = 1.dp
-                            )
-                            Row(
-                                modifier = Modifier.fillMaxWidth().padding(8.dp)
+
+                            LaunchedEffect(Unit) {
+                                snapshotFlow { textFieldState.text.toString() }
+                                    .distinctUntilChanged()
+                                    .debounce(300)
+                                    .collect { currentSource?.invalidate() }
+                            }
+                            val searchResults = pager.collectAsLazyPagingItems()
+                            Column(
+                                modifier = Modifier.fillMaxSize()
                             ) {
-                                // TODO: vertical pager using vm.searchByName ...
-                                val searchResults = pager.collectAsLazyPagingItems()
-                                LazyColumn(
-                                    state = loadResultListState
+                                Row(
+                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
                                 ) {
-                                    items(searchResults.itemCount) { index ->
-                                        searchResults[index]?.let { resultItem ->
-                                            Card {
-                                                ListItem(
-                                                    headlineContent = {
-                                                        Text(
-                                                            text = resultItem.name
-                                                        )
-                                                    },
-                                                    trailingContent = {
-                                                        IconButton(
-                                                            onClick = {
-                                                                exerciseList.add(
-                                                                    WorkoutPlanExercise(
-                                                                        id = Uuid.random(),
-                                                                        index = exerciseList.size,
-                                                                        jsonExerciseId = resultItem.id,
-                                                                        repetitionInterval = when (resultItem) {
-                                                                            is PhysicalJsonExercise -> WorkoutPlanExercise.Repeating(
-                                                                                repetitions = listOf(
-                                                                                    WorkoutPlanExercise.Repeating.Repetition(
-                                                                                        repetitions = 12,
-                                                                                        weight = null
-                                                                                    )
-                                                                                )
-                                                                            )
-                                                                        }
-                                                                    )
-                                                                )
-                                                            }
-                                                        ) {
-                                                            Icon(
-                                                                imageVector = Icons.Default.Add,
-                                                                contentDescription = "add exercise"
-                                                            )
-                                                        }
-                                                    }
+                                    TextField(
+                                        state = textFieldState,
+                                        placeholder = {
+                                            Text(
+                                                text = stringResource(Res.string.search),
+                                                style = MaterialTheme.typography.displaySmall
+                                            )
+                                        },
+                                        trailingIcon = {
+                                            IconButton(
+                                                onClick = {
+                                                    textFieldState.clearText()
+                                                },
+                                                modifier = Modifier.size(24.dp)
+                                            ) {
+                                                Icon(
+                                                    imageVector = Icons.Default.Clear,
+                                                    contentDescription = "clear search"
                                                 )
+                                            }
+                                        },
+                                        contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
+                                            top = 12.dp,
+                                            bottom = 12.dp,
+                                            start = 8.dp,
+                                            end = 8.dp,
+                                        ),
+
+                                        colors = TextFieldDefaults.colors(
+                                            focusedIndicatorColor = Color.Transparent,
+                                            unfocusedIndicatorColor = Color.Transparent,
+                                            disabledIndicatorColor = Color.Transparent,
+                                            errorIndicatorColor = Color.Transparent
+                                        ),
+                                        shape = RoundedCornerShape(8.dp),
+                                        textStyle = MaterialTheme.typography.displaySmall,
+                                        modifier = Modifier.fillMaxWidth()
+                                            .border(
+                                                width = 1.dp,
+                                                color = MaterialTheme.colorScheme.outline,
+                                                shape = RoundedCornerShape(8.dp)
+                                            ).heightIn(min = 20.dp)
+                                    )
+                                }
+                                HorizontalDivider(
+                                    modifier = Modifier.padding(8.dp),
+                                    color = MaterialTheme.colorScheme.outline,
+                                    thickness = 1.dp
+                                )
+                                Row(
+                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                ) {
+                                    LazyColumn(
+                                        state = loadResultListState
+                                    ) {
+                                        items(searchResults.itemCount) { index ->
+                                            searchResults[index]?.let { resultItem ->
+                                                Row(
+                                                    modifier = Modifier.fillMaxWidth().padding(4.dp)
+                                                ) {
+                                                    Card(
+                                                        border = BorderStroke(
+                                                            width = 1.dp,
+                                                            color = MaterialTheme.colorScheme.outline
+                                                        )
+                                                    ) {
+                                                        ListItem(
+                                                            colors = ListItemDefaults.colors().copy(
+                                                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                                                            ),
+                                                            headlineContent = {
+                                                                Text(
+                                                                    text = resultItem.name,
+                                                                    style = MaterialTheme.typography.bodySmall
+                                                                )
+                                                            },
+                                                            trailingContent = {
+                                                                IconButton(
+                                                                    onClick = {
+                                                                        exerciseList.add(
+                                                                            WorkoutPlanExercise(
+                                                                                id = Uuid.random(),
+                                                                                index = exerciseList.size,
+                                                                                jsonExerciseId = resultItem.id,
+                                                                                repetitionInterval = when (resultItem) {
+                                                                                    is PhysicalJsonExercise -> WorkoutPlanExercise.Repeating(
+                                                                                        repetitions = listOf(
+                                                                                            WorkoutPlanExercise.Repeating.Repetition(
+                                                                                                repetitions = 12,
+                                                                                                weight = null
+                                                                                            )
+                                                                                        )
+                                                                                    )
+                                                                                }
+                                                                            )
+                                                                        )
+                                                                    }
+                                                                ) {
+                                                                    Icon(
+                                                                        imageVector = Icons.Default.Add,
+                                                                        contentDescription = "add exercise"
+                                                                    )
+                                                                }
+                                                            }
+                                                        )
+                                                    }
+                                                }
                                             }
                                         }
                                     }

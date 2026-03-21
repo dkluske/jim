@@ -14,7 +14,7 @@ class JsonExercisePagingSource(
             val offset = page * params.loadSize
 
             val result = JsonExerciseTable.searchByNamePaged(
-                name = searchQuery,
+                name = "%$searchQuery%",
                 pageSize = params.loadSize,
                 offset = offset
             )

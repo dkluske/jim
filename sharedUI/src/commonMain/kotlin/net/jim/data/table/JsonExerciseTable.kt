@@ -64,8 +64,8 @@ object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
     ): List<JsonExerciseType> {
         return getDatabase().jsonExercisesQueries.searchByNamePaged(
             name = name,
-            value_ = pageSize.toLong(),
-            value__ = offset.toLong()
+            limit = pageSize.toLong(),
+            offset = offset.toLong()
         ).executeAsList().map {
             PhysicalJsonExercise.fromDB(it)
         }
