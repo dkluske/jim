@@ -7,6 +7,6 @@ import net.jim.data.models.WorkoutPlanPart
 sealed interface BottomSheet : NavRoute, NavKey {
     @Serializable
     data class JimWorkoutPlanPartModalBottomSheet(
-        val workoutPlanPart: WorkoutPlanPart?
+        val workoutPlanPart: WorkoutPlanPart?,
     ) : BottomSheet, NavKey
 }

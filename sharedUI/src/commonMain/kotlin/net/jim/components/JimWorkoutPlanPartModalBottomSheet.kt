@@ -1,6 +1,7 @@
 package net.jim.components
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -44,6 +45,7 @@ import kotlin.uuid.Uuid
 
 data class JimWorkoutPlanPartModalBottomSheetViewModel(
     val workoutPlanPart: WorkoutPlanPart? = null,
+    /*val onConfirm: (WorkoutPlanPart) -> Unit,*/
     val onDismissRequest: () -> Unit
 ) {
     fun resolveJsonExercise(id: Uuid): JsonExerciseType {
@@ -86,84 +88,110 @@ fun JimWorkoutPlanPartModalBottomSheet(
             vm.onDismissRequest()
         }
     ) {
-        Column(
-            modifier = Modifier.padding(8.dp)
-                .fillMaxSize()
-        ) {
-            JimEditableHeader(
-                value = name.value ?: stringResource(Res.string.newWorkoutPlanPart),
-                onValueChange = { name.value = it },
-            )
-            JimCard {
-                PrimaryTabRow(
-                    selectedTabIndex = pagerViewState.currentPage,
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    divider = {}
+        Scaffold(
+            bottomBar = {
+                Row(
+                    modifier = Modifier.fillMaxWidth().clickable {
+                        /*vm.onConfirm(
+                            WorkoutPlanPart(
+                                id = vm.workoutPlanPart?.id ?: Uuid.random(),
+                                workoutPlanId = vm.workoutPlanId,
+                                name = name.value ?: "",
+                                exercises = exerciseList,
+                                quantity = vm.workoutPlanPart?.quantity ?: 1
+                            )
+                        )*/
+                    }.background(
+                        color = MaterialTheme.colorScheme.primary,
+                        shape = RoundedCornerShape(8.dp)
+                    ),
+                    horizontalArrangement = Arrangement.Center
                 ) {
-                    Tab(
-                        selected = pagerViewState.currentPage == BottomSheetViewState.PARTS_EDIT.ordinal,
-                        onClick = {
-                            coroutineScope.launch {
-                                pagerViewState.animateScrollToPage(BottomSheetViewState.PARTS_EDIT.ordinal)
-                            }
-                        },
-                        modifier = Modifier.clip(RoundedCornerShape(6.dp))
-                    ) {
-                        Text(
-                            text = stringResource(Res.string.editExercises),
-                            modifier = Modifier.padding(8.dp),
-                            style = MaterialTheme.typography.displayMedium
-                        )
-                    }
-                    Tab(
-                        selected = pagerViewState.currentPage == BottomSheetViewState.EXERCISE_SEARCH.ordinal,
-                        onClick = {
-                            coroutineScope.launch {
-                                pagerViewState.animateScrollToPage(BottomSheetViewState.EXERCISE_SEARCH.ordinal)
-                            }
-                        },
-                        modifier = Modifier.clip(RoundedCornerShape(6.dp))
-                    ) {
-                        Text(
-                            text = stringResource(Res.string.searchExercises),
-                            modifier = Modifier.padding(8.dp),
-                            style = MaterialTheme.typography.displayMedium
-                        )
-                    }
+                    Text(
+                        text = stringResource(Res.string.save)
+                    )
                 }
-                HorizontalPager(
-                    state = pagerViewState,
-                    modifier = Modifier.fillMaxWidth()
-                        .weight(1f)
-                ) { page ->
-                    val pageValue = BottomSheetViewState.entries[page]
-                    when (pageValue) {
-                        BottomSheetViewState.PARTS_EDIT -> {
-                            val lazyListState = rememberLazyListState()
-                            Column(
-                                modifier = Modifier.fillMaxSize()
-                            ) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth()
+            }
+        ) {
+            Column(
+                modifier = Modifier.padding(8.dp)
+                    .fillMaxSize()
+            ) {
+                JimEditableHeader(
+                    value = name.value ?: stringResource(Res.string.newWorkoutPlanPart),
+                    onValueChange = { name.value = it },
+                )
+                JimCard {
+                    PrimaryTabRow(
+                        selectedTabIndex = pagerViewState.currentPage,
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        divider = {}
+                    ) {
+                        Tab(
+                            selected = pagerViewState.currentPage == BottomSheetViewState.PARTS_EDIT.ordinal,
+                            onClick = {
+                                coroutineScope.launch {
+                                    pagerViewState.animateScrollToPage(BottomSheetViewState.PARTS_EDIT.ordinal)
+                                }
+                            },
+                            modifier = Modifier.clip(RoundedCornerShape(6.dp))
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.editExercises),
+                                modifier = Modifier.padding(8.dp),
+                                style = MaterialTheme.typography.displayMedium
+                            )
+                        }
+                        Tab(
+                            selected = pagerViewState.currentPage == BottomSheetViewState.EXERCISE_SEARCH.ordinal,
+                            onClick = {
+                                coroutineScope.launch {
+                                    pagerViewState.animateScrollToPage(BottomSheetViewState.EXERCISE_SEARCH.ordinal)
+                                }
+                            },
+                            modifier = Modifier.clip(RoundedCornerShape(6.dp))
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.searchExercises),
+                                modifier = Modifier.padding(8.dp),
+                                style = MaterialTheme.typography.displayMedium
+                            )
+                        }
+                    }
+                    HorizontalPager(
+                        state = pagerViewState,
+                        modifier = Modifier.fillMaxWidth()
+                            .weight(1f)
+                    ) { page ->
+                        val pageValue = BottomSheetViewState.entries[page]
+                        when (pageValue) {
+                            BottomSheetViewState.PARTS_EDIT -> {
+                                val lazyListState = rememberLazyListState()
+                                Column(
+                                    modifier = Modifier.fillMaxSize()
                                 ) {
-                                    LazyColumn(
-                                        state = lazyListState
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth()
                                     ) {
-                                        if (exerciseList.isNotEmpty()) {
-                                            exerciseList.forEachIndexed { exerciseIndex, exercise ->
-                                                item(key = "exercise_${exercise.id}") {
-                                                    val isExpanded = extendedPart.value == exercise.id
+                                        LazyColumn(
+                                            state = lazyListState
+                                        ) {
+                                            if (exerciseList.isNotEmpty()) {
+                                                exerciseList.forEachIndexed { exerciseIndex, exercise ->
+                                                    item(key = "exercise_${exercise.id}") {
+                                                        val isExpanded = extendedPart.value == exercise.id
 
-                                                    Card(
-                                                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
-                                                        modifier = Modifier.fillMaxWidth().padding(8.dp)
-                                                    ) {
-                                                        // Header
-                                                        ListItem(
-                                                            colors = ListItemDefaults.colors(
-                                                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                                                        Card(
+                                                            border = BorderStroke(
+                                                                1.dp,
+                                                                MaterialTheme.colorScheme.outline
                                                             ),
-                                                            headlineContent = {
+                                                            modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                                        ) {
+                                                            // Header
+                                                            Row(
+                                                                modifier = Modifier.fillMaxWidth()
+                                                            ) {
                                                                 Text(
                                                                     text = (jsonExerciseMap[exercise.jsonExerciseId]
                                                                         ?: vm.resolveJsonExercise(exercise.jsonExerciseId)
@@ -177,244 +205,241 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                                     },
                                                                     style = MaterialTheme.typography.bodySmall
                                                                 )
-                                                            },
-                                                            trailingContent = { /* TODO: delete / drag and drop */ }
-                                                        )
+                                                            }
 
-                                                        // Repetitions direkt darunter in derselben Card
-                                                        if (isExpanded) {
-                                                            HorizontalDivider(
-                                                                thickness = 1.dp,
-                                                                color = MaterialTheme.colorScheme.outline,
-                                                                modifier = Modifier.padding(horizontal = 8.dp)
-                                                            )
+                                                            if (isExpanded) {
+                                                                HorizontalDivider(
+                                                                    thickness = 1.dp,
+                                                                    color = MaterialTheme.colorScheme.outline,
+                                                                    modifier = Modifier.padding(horizontal = 8.dp)
+                                                                )
 
-                                                            when (val repetitionInterval =
-                                                                exercise.repetitionInterval) {
-                                                                is WorkoutPlanExercise.Repeating -> {
-                                                                    fun onValueChange(
-                                                                        repetition: WorkoutPlanExercise.Repeating.Repetition,
-                                                                        repetitionIndex: Int
-                                                                    ) {
-                                                                        exerciseList[exerciseIndex] =
-                                                                            exerciseList[exerciseIndex].copy(
-                                                                                repetitionInterval = repetitionInterval.copy(
-                                                                                    repetitions = repetitionInterval.repetitions
-                                                                                        .toMutableList()
-                                                                                        .also {
-                                                                                            if (repetitionIndex >= it.size) it.add(
-                                                                                                repetition
-                                                                                            )
-                                                                                            else it[repetitionIndex] =
-                                                                                                repetition
-                                                                                        }
-                                                                                )
-                                                                            )
-                                                                    }
-
-                                                                    // ✅ Normale Column statt LazyColumn-items
-                                                                    Column {
-                                                                        repetitionInterval.repetitions.forEachIndexed { repetitionIndex, repetition ->
-                                                                            JimWorkoutRepeatingRepetitionInputFieldLine(
-                                                                                repetition = repetition,
-                                                                                onValueChange = {
-                                                                                    onValueChange(
-                                                                                        it,
-                                                                                        repetitionIndex
+                                                                when (val repetitionInterval =
+                                                                    exercise.repetitionInterval) {
+                                                                    is WorkoutPlanExercise.Repeating -> {
+                                                                        fun onValueChange(
+                                                                            repetition: WorkoutPlanExercise.Repeating.Repetition,
+                                                                            repetitionIndex: Int
+                                                                        ) {
+                                                                            exerciseList[exerciseIndex] =
+                                                                                exerciseList[exerciseIndex].copy(
+                                                                                    repetitionInterval = repetitionInterval.copy(
+                                                                                        repetitions = repetitionInterval.repetitions
+                                                                                            .toMutableList()
+                                                                                            .also {
+                                                                                                if (repetitionIndex >= it.size) it.add(
+                                                                                                    repetition
+                                                                                                )
+                                                                                                else it[repetitionIndex] =
+                                                                                                    repetition
+                                                                                            }
                                                                                     )
-                                                                                }
-                                                                            )
+                                                                                )
                                                                         }
 
-                                                                        Row(
-                                                                            modifier = Modifier.fillMaxWidth(),
-                                                                            horizontalArrangement = Arrangement.Center
-                                                                        ) {
-                                                                            Button(onClick = {
-                                                                                onValueChange(
-                                                                                    WorkoutPlanExercise.Repeating.Repetition(
-                                                                                        repetitions = repetitionInterval.repetitions.lastOrNull()?.repetitions
-                                                                                            ?: 12,
-                                                                                        weight = repetitionInterval.repetitions.lastOrNull()?.weight
-                                                                                    ),
-                                                                                    repetitionInterval.repetitions.size
+                                                                        Column {
+                                                                            repetitionInterval.repetitions.forEachIndexed { repetitionIndex, repetition ->
+                                                                                JimWorkoutRepeatingRepetitionInputFieldLine(
+                                                                                    repetition = repetition,
+                                                                                    onValueChange = {
+                                                                                        onValueChange(
+                                                                                            it,
+                                                                                            repetitionIndex
+                                                                                        )
+                                                                                    }
                                                                                 )
-                                                                            }) {
-                                                                                Icon(
-                                                                                    Icons.Filled.AddCircle,
-                                                                                    contentDescription = null
-                                                                                )
-                                                                                Text(stringResource(Res.string.addRepetitions))
+                                                                            }
+
+                                                                            Row(
+                                                                                modifier = Modifier.fillMaxWidth(),
+                                                                                horizontalArrangement = Arrangement.Center
+                                                                            ) {
+                                                                                Button(onClick = {
+                                                                                    onValueChange(
+                                                                                        WorkoutPlanExercise.Repeating.Repetition(
+                                                                                            repetitions = repetitionInterval.repetitions.lastOrNull()?.repetitions
+                                                                                                ?: 12,
+                                                                                            weight = repetitionInterval.repetitions.lastOrNull()?.weight
+                                                                                        ),
+                                                                                        repetitionInterval.repetitions.size
+                                                                                    )
+                                                                                }) {
+                                                                                    Icon(
+                                                                                        Icons.Filled.AddCircle,
+                                                                                        contentDescription = null
+                                                                                    )
+                                                                                    Text(stringResource(Res.string.addRepetitions))
+                                                                                }
                                                                             }
                                                                         }
                                                                     }
-                                                                }
 
-                                                                is WorkoutPlanExercise.Timed -> {
-                                                                    JimWorkoutTimedRepetitionInputField(
-                                                                        value = repetitionInterval
-                                                                    ) { newValue ->
-                                                                        exerciseList[exerciseIndex] =
-                                                                            exerciseList[exerciseIndex].copy(
-                                                                                repetitionInterval = newValue
-                                                                            )
+                                                                    is WorkoutPlanExercise.Timed -> {
+                                                                        JimWorkoutTimedRepetitionInputField(
+                                                                            value = repetitionInterval
+                                                                        ) { newValue ->
+                                                                            exerciseList[exerciseIndex] =
+                                                                                exerciseList[exerciseIndex].copy(
+                                                                                    repetitionInterval = newValue
+                                                                                )
+                                                                        }
                                                                     }
                                                                 }
                                                             }
                                                         }
                                                     }
                                                 }
-                                            }
-                                        } else {
-                                            item {
-                                                Row(
-                                                    modifier = Modifier.fillMaxWidth()
-                                                        .padding(8.dp),
-                                                    horizontalArrangement = Arrangement.Center,
-                                                ) {
-                                                    Text(
-                                                        text = stringResource(Res.string.noExercisesYesPleaseAddOne),
-                                                        style = MaterialTheme.typography.displaySmall
-                                                    )
+                                            } else {
+                                                item {
+                                                    Row(
+                                                        modifier = Modifier.fillMaxWidth()
+                                                            .padding(8.dp),
+                                                        horizontalArrangement = Arrangement.Center,
+                                                    ) {
+                                                        Text(
+                                                            text = stringResource(Res.string.noExercisesYesPleaseAddOne),
+                                                            style = MaterialTheme.typography.displaySmall
+                                                        )
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                        }
 
-                        BottomSheetViewState.EXERCISE_SEARCH -> {
-                            val textFieldState = rememberTextFieldState()
-                            val loadResultListState = rememberLazyListState()
-                            var currentSource by remember { mutableStateOf<JsonExercisePagingSource?>(null) }
+                            BottomSheetViewState.EXERCISE_SEARCH -> {
+                                val textFieldState = rememberTextFieldState()
+                                val loadResultListState = rememberLazyListState()
+                                var currentSource by remember { mutableStateOf<JsonExercisePagingSource?>(null) }
 
-                            val pager = remember {
-                                Pager(PagingConfig(pageSize = 20, initialLoadSize = 20)) {
-                                    JsonExercisePagingSource(textFieldState.text.toString()).also {
-                                        currentSource = it
-                                    }
-                                }.flow.cachedIn(coroutineScope)
-                            }
-
-                            LaunchedEffect(Unit) {
-                                snapshotFlow { textFieldState.text.toString() }
-                                    .distinctUntilChanged()
-                                    .debounce(300)
-                                    .collect { currentSource?.invalidate() }
-                            }
-                            val searchResults = pager.collectAsLazyPagingItems()
-                            Column(
-                                modifier = Modifier.fillMaxSize()
-                            ) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
-                                ) {
-                                    TextField(
-                                        state = textFieldState,
-                                        placeholder = {
-                                            Text(
-                                                text = stringResource(Res.string.search),
-                                                style = MaterialTheme.typography.displaySmall
-                                            )
-                                        },
-                                        trailingIcon = {
-                                            IconButton(
-                                                onClick = {
-                                                    textFieldState.clearText()
-                                                },
-                                                modifier = Modifier.size(24.dp)
-                                            ) {
-                                                Icon(
-                                                    imageVector = Icons.Default.Clear,
-                                                    contentDescription = "clear search"
-                                                )
-                                            }
-                                        },
-                                        contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
-                                            top = 12.dp,
-                                            bottom = 12.dp,
-                                            start = 8.dp,
-                                            end = 8.dp,
-                                        ),
-
-                                        colors = TextFieldDefaults.colors(
-                                            focusedIndicatorColor = Color.Transparent,
-                                            unfocusedIndicatorColor = Color.Transparent,
-                                            disabledIndicatorColor = Color.Transparent,
-                                            errorIndicatorColor = Color.Transparent
-                                        ),
-                                        shape = RoundedCornerShape(8.dp),
-                                        textStyle = MaterialTheme.typography.displaySmall,
-                                        modifier = Modifier.fillMaxWidth()
-                                            .border(
-                                                width = 1.dp,
-                                                color = MaterialTheme.colorScheme.outline,
-                                                shape = RoundedCornerShape(8.dp)
-                                            ).heightIn(min = 20.dp)
-                                    )
+                                val pager = remember {
+                                    Pager(PagingConfig(pageSize = 20, initialLoadSize = 20)) {
+                                        JsonExercisePagingSource(textFieldState.text.toString()).also {
+                                            currentSource = it
+                                        }
+                                    }.flow.cachedIn(coroutineScope)
                                 }
-                                HorizontalDivider(
-                                    modifier = Modifier.padding(8.dp),
-                                    color = MaterialTheme.colorScheme.outline,
-                                    thickness = 1.dp
-                                )
-                                Row(
-                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+
+                                LaunchedEffect(Unit) {
+                                    snapshotFlow { textFieldState.text.toString() }
+                                        .distinctUntilChanged()
+                                        .debounce(300)
+                                        .collect { currentSource?.invalidate() }
+                                }
+                                val searchResults = pager.collectAsLazyPagingItems()
+                                Column(
+                                    modifier = Modifier.fillMaxSize()
                                 ) {
-                                    LazyColumn(
-                                        state = loadResultListState
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth().padding(8.dp)
                                     ) {
-                                        items(searchResults.itemCount) { index ->
-                                            searchResults[index]?.let { resultItem ->
-                                                Row(
-                                                    modifier = Modifier.fillMaxWidth().padding(4.dp)
+                                        TextField(
+                                            state = textFieldState,
+                                            placeholder = {
+                                                Text(
+                                                    text = stringResource(Res.string.search),
+                                                    style = MaterialTheme.typography.displaySmall
+                                                )
+                                            },
+                                            trailingIcon = {
+                                                IconButton(
+                                                    onClick = {
+                                                        textFieldState.clearText()
+                                                    },
+                                                    modifier = Modifier.size(24.dp)
                                                 ) {
-                                                    Card(
-                                                        border = BorderStroke(
-                                                            width = 1.dp,
-                                                            color = MaterialTheme.colorScheme.outline
-                                                        )
+                                                    Icon(
+                                                        imageVector = Icons.Default.Clear,
+                                                        contentDescription = "clear search"
+                                                    )
+                                                }
+                                            },
+                                            contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
+                                                top = 12.dp,
+                                                bottom = 12.dp,
+                                                start = 8.dp,
+                                                end = 8.dp,
+                                            ),
+
+                                            colors = TextFieldDefaults.colors(
+                                                focusedIndicatorColor = Color.Transparent,
+                                                unfocusedIndicatorColor = Color.Transparent,
+                                                disabledIndicatorColor = Color.Transparent,
+                                                errorIndicatorColor = Color.Transparent
+                                            ),
+                                            shape = RoundedCornerShape(8.dp),
+                                            textStyle = MaterialTheme.typography.displaySmall,
+                                            modifier = Modifier.fillMaxWidth()
+                                                .border(
+                                                    width = 1.dp,
+                                                    color = MaterialTheme.colorScheme.outline,
+                                                    shape = RoundedCornerShape(8.dp)
+                                                ).heightIn(min = 20.dp)
+                                        )
+                                    }
+                                    HorizontalDivider(
+                                        modifier = Modifier.padding(8.dp),
+                                        color = MaterialTheme.colorScheme.outline,
+                                        thickness = 1.dp
+                                    )
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                    ) {
+                                        LazyColumn(
+                                            state = loadResultListState
+                                        ) {
+                                            items(searchResults.itemCount) { index ->
+                                                searchResults[index]?.let { resultItem ->
+                                                    Row(
+                                                        modifier = Modifier.fillMaxWidth().padding(4.dp)
                                                     ) {
-                                                        ListItem(
-                                                            colors = ListItemDefaults.colors().copy(
-                                                                containerColor = MaterialTheme.colorScheme.primaryContainer
-                                                            ),
-                                                            headlineContent = {
-                                                                Text(
-                                                                    text = resultItem.name,
-                                                                    style = MaterialTheme.typography.bodySmall
-                                                                )
-                                                            },
-                                                            trailingContent = {
-                                                                IconButton(
-                                                                    onClick = {
-                                                                        exerciseList.add(
-                                                                            WorkoutPlanExercise(
-                                                                                id = Uuid.random(),
-                                                                                index = exerciseList.size,
-                                                                                jsonExerciseId = resultItem.id,
-                                                                                repetitionInterval = when (resultItem) {
-                                                                                    is PhysicalJsonExercise -> WorkoutPlanExercise.Repeating(
-                                                                                        repetitions = listOf(
-                                                                                            WorkoutPlanExercise.Repeating.Repetition(
-                                                                                                repetitions = 12,
-                                                                                                weight = null
+                                                        Card(
+                                                            border = BorderStroke(
+                                                                width = 1.dp,
+                                                                color = MaterialTheme.colorScheme.outline
+                                                            )
+                                                        ) {
+                                                            ListItem(
+                                                                colors = ListItemDefaults.colors().copy(
+                                                                    containerColor = MaterialTheme.colorScheme.primaryContainer
+                                                                ),
+                                                                headlineContent = {
+                                                                    Text(
+                                                                        text = resultItem.name,
+                                                                        style = MaterialTheme.typography.bodySmall
+                                                                    )
+                                                                },
+                                                                trailingContent = {
+                                                                    IconButton(
+                                                                        onClick = {
+                                                                            exerciseList.add(
+                                                                                WorkoutPlanExercise(
+                                                                                    id = Uuid.random(),
+                                                                                    index = exerciseList.size,
+                                                                                    jsonExerciseId = resultItem.id,
+                                                                                    repetitionInterval = when (resultItem) {
+                                                                                        is PhysicalJsonExercise -> WorkoutPlanExercise.Repeating(
+                                                                                            repetitions = listOf(
+                                                                                                WorkoutPlanExercise.Repeating.Repetition(
+                                                                                                    repetitions = 12,
+                                                                                                    weight = null
+                                                                                                )
                                                                                             )
                                                                                         )
-                                                                                    )
-                                                                                }
+                                                                                    }
+                                                                                )
                                                                             )
+                                                                        }
+                                                                    ) {
+                                                                        Icon(
+                                                                            imageVector = Icons.Default.Add,
+                                                                            contentDescription = "add exercise"
                                                                         )
                                                                     }
-                                                                ) {
-                                                                    Icon(
-                                                                        imageVector = Icons.Default.Add,
-                                                                        contentDescription = "add exercise"
-                                                                    )
                                                                 }
-                                                            }
-                                                        )
+                                                            )
+                                                        }
                                                     }
                                                 }
                                             }
