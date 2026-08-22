@@ -177,11 +177,14 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                                 1.dp,
                                                                 MaterialTheme.colorScheme.outline
                                                             ),
-                                                            modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                                            modifier = Modifier.fillMaxWidth().padding(2.dp)
                                                         ) {
                                                             // Header
                                                             Row(
-                                                                modifier = Modifier.fillMaxWidth()
+                                                                modifier = Modifier.fillMaxWidth().clickable {
+                                                                    extendedPart.value =
+                                                                        if (isExpanded) null else exercise.id
+                                                                }
                                                             ) {
                                                                 Text(
                                                                     text = (jsonExerciseMap[exercise.jsonExerciseId]
@@ -190,10 +193,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                                                 jsonExerciseMap[exercise.jsonExerciseId] =
                                                                                     it
                                                                             }).name,
-                                                                    modifier = Modifier.clickable {
-                                                                        extendedPart.value =
-                                                                            if (isExpanded) null else exercise.id
-                                                                    },
+                                                                    modifier = Modifier.padding(8.dp),
                                                                     style = MaterialTheme.typography.bodySmall
                                                                 )
                                                             }
@@ -204,78 +204,82 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                                                     color = MaterialTheme.colorScheme.outline,
                                                                     modifier = Modifier.padding(horizontal = 8.dp)
                                                                 )
-
-                                                                when (val repetitionInterval =
-                                                                    exercise.repetitionInterval) {
-                                                                    is WorkoutPlanExercise.Repeating -> {
-                                                                        fun onValueChange(
-                                                                            repetition: WorkoutPlanExercise.Repeating.Repetition,
-                                                                            repetitionIndex: Int
-                                                                        ) {
-                                                                            exerciseList[exerciseIndex] =
-                                                                                exerciseList[exerciseIndex].copy(
-                                                                                    repetitionInterval = repetitionInterval.copy(
-                                                                                        repetitions = repetitionInterval.repetitions
-                                                                                            .toMutableList()
-                                                                                            .also {
-                                                                                                if (repetitionIndex >= it.size) it.add(
-                                                                                                    repetition
-                                                                                                )
-                                                                                                else it[repetitionIndex] =
-                                                                                                    repetition
-                                                                                            }
-                                                                                    )
-                                                                                )
-                                                                        }
-
-                                                                        Column {
-                                                                            repetitionInterval.repetitions.forEachIndexed { repetitionIndex, repetition ->
-                                                                                JimWorkoutRepeatingRepetitionInputFieldLine(
-                                                                                    repetition = repetition,
-                                                                                    onValueChange = {
-                                                                                        onValueChange(
-                                                                                            it,
-                                                                                            repetitionIndex
+                                                                Row(
+                                                                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                                                                ) {
+                                                                    when (val repetitionInterval =
+                                                                        exercise.repetitionInterval) {
+                                                                        is WorkoutPlanExercise.Repeating -> {
+                                                                            fun onValueChange(
+                                                                                repetition: WorkoutPlanExercise.Repeating.Repetition,
+                                                                                repetitionIndex: Int
+                                                                            ) {
+                                                                                exerciseList[exerciseIndex] =
+                                                                                    exerciseList[exerciseIndex].copy(
+                                                                                        repetitionInterval = repetitionInterval.copy(
+                                                                                            repetitions = repetitionInterval.repetitions
+                                                                                                .toMutableList()
+                                                                                                .also {
+                                                                                                    if (repetitionIndex >= it.size) it.add(
+                                                                                                        repetition
+                                                                                                    )
+                                                                                                    else it[repetitionIndex] =
+                                                                                                        repetition
+                                                                                                }
                                                                                         )
-                                                                                    }
-                                                                                )
+                                                                                    )
                                                                             }
 
-                                                                            Row(
-                                                                                modifier = Modifier.fillMaxWidth(),
-                                                                                horizontalArrangement = Arrangement.Center
-                                                                            ) {
-                                                                                Button(onClick = {
-                                                                                    onValueChange(
-                                                                                        WorkoutPlanExercise.Repeating.Repetition(
-                                                                                            repetitions = repetitionInterval.repetitions.lastOrNull()?.repetitions
-                                                                                                ?: 12,
-                                                                                            weight = repetitionInterval.repetitions.lastOrNull()?.weight
-                                                                                        ),
-                                                                                        repetitionInterval.repetitions.size
+                                                                            Column {
+                                                                                repetitionInterval.repetitions.forEachIndexed { repetitionIndex, repetition ->
+                                                                                    JimWorkoutRepeatingRepetitionInputFieldLine(
+                                                                                        repetition = repetition,
+                                                                                        onValueChange = {
+                                                                                            onValueChange(
+                                                                                                it,
+                                                                                                repetitionIndex
+                                                                                            )
+                                                                                        }
                                                                                     )
-                                                                                }) {
-                                                                                    Icon(
-                                                                                        Icons.Filled.AddCircle,
-                                                                                        contentDescription = null
-                                                                                    )
-                                                                                    Text(stringResource(Res.string.addRepetitions))
+                                                                                }
+
+                                                                                Row(
+                                                                                    modifier = Modifier.fillMaxWidth(),
+                                                                                    horizontalArrangement = Arrangement.Center
+                                                                                ) {
+                                                                                    Button(onClick = {
+                                                                                        onValueChange(
+                                                                                            WorkoutPlanExercise.Repeating.Repetition(
+                                                                                                repetitions = repetitionInterval.repetitions.lastOrNull()?.repetitions
+                                                                                                    ?: 12,
+                                                                                                weight = repetitionInterval.repetitions.lastOrNull()?.weight
+                                                                                            ),
+                                                                                            repetitionInterval.repetitions.size
+                                                                                        )
+                                                                                    }) {
+                                                                                        Icon(
+                                                                                            Icons.Filled.AddCircle,
+                                                                                            contentDescription = null
+                                                                                        )
+                                                                                        Text(stringResource(Res.string.addRepetitions))
+                                                                                    }
                                                                                 }
                                                                             }
                                                                         }
-                                                                    }
 
-                                                                    is WorkoutPlanExercise.Timed -> {
-                                                                        JimWorkoutTimedRepetitionInputField(
-                                                                            value = repetitionInterval
-                                                                        ) { newValue ->
-                                                                            exerciseList[exerciseIndex] =
-                                                                                exerciseList[exerciseIndex].copy(
-                                                                                    repetitionInterval = newValue
-                                                                                )
+                                                                        is WorkoutPlanExercise.Timed -> {
+                                                                            JimWorkoutTimedRepetitionInputField(
+                                                                                value = repetitionInterval
+                                                                            ) { newValue ->
+                                                                                exerciseList[exerciseIndex] =
+                                                                                    exerciseList[exerciseIndex].copy(
+                                                                                        repetitionInterval = newValue
+                                                                                    )
+                                                                            }
                                                                         }
                                                                     }
                                                                 }
+
                                                             }
                                                         }
                                                     }

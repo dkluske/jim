@@ -1,6 +1,7 @@
 package net.jim.components
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Done
@@ -15,6 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -36,12 +40,17 @@ fun JimEditableHeader(
     ) {
         if (editEnabled.value) {
             val textFieldState = rememberTextFieldState(value)
+            fun onDone() {
+                onValueChange(textFieldState.text.toList().joinToString(""))
+                editEnabled.value = false
+            }
+
             TextField(
                 state = textFieldState,
+                lineLimits = TextFieldLineLimits.SingleLine,
                 trailingIcon = {
                     IconButton(onClick = {
-                        onValueChange(textFieldState.text.toList().joinToString(""))
-                        editEnabled.value = false
+                        onDone()
                     }) {
                         Icon(Icons.Filled.Done, contentDescription = "Done")
                     }
@@ -64,6 +73,14 @@ fun JimEditableHeader(
                 ),
                 textStyle = MaterialTheme.typography.headlineLarge,
                 modifier = Modifier.fillMaxWidth().focusRequester(focusRequester).heightIn(min = 20.dp)
+                    .onKeyEvent { event ->
+                        if (event.key == Key.Enter) {
+                            onDone()
+                            true
+                        } else {
+                            false
+                        }
+                    }
             )
         } else {
             Row(
