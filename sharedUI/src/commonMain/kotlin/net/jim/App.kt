@@ -12,8 +12,7 @@ import net.jim.components.navigation.NavStack
 import net.jim.components.navigation.NavigationRoot
 import net.jim.data.DatabaseDriverManager
 import net.jim.data.JimDatabaseManager
-import net.jim.data.models.JsonExerciseType
-import net.jim.data.models.PhysicalJsonExercise
+import net.jim.data.models.JsonExerciseChangeset
 import net.jim.data.table.JsonExerciseTable
 import net.jim.theme.AppTheme
 import net.jim.views.Root
@@ -28,17 +27,21 @@ fun App(
     val appCoroutineScope = rememberCoroutineScope()
 
     appCoroutineScope.launch {
-        ((JsonExerciseTable.getMaxStoredRevision() + 1)..JsonExerciseTable.MAX_REVISION).flatMap { revision ->
+        ((JsonExerciseTable.getMaxStoredRevision() + 1)..JsonExerciseTable.MAX_REVISION).forEach { revision ->
             val bytes = Res.readBytes("files/exercises/exercises_$revision.json")
-            JimDatabaseManager.json.decodeFromString<List<JsonExerciseType>>(bytes.decodeToString()).map {
-                when (it) {
-                    is PhysicalJsonExercise -> {
-                        it.copy(revision = revision)
+            JimDatabaseManager.json.decodeFromString<JsonExerciseChangeset>(bytes.decodeToString()).let {
+                it.jsonExercises.forEach { exercise ->
+                    when (it.dbOperationType) {
+                        JsonExerciseChangeset.DBOperationType.INSERT -> JsonExerciseTable.save(entity = exercise)
+                        JsonExerciseChangeset.DBOperationType.UPDATE -> JsonExerciseTable.update(
+                            id = exercise.id,
+                            entity = exercise
+                        )
+
+                        JsonExerciseChangeset.DBOperationType.DELETE -> JsonExerciseTable.delete(id = exercise.id)
                     }
                 }
             }
-        }.forEach { exercise ->
-            JsonExerciseTable.save(exercise)
         }
     }
     val backStack = remember { mutableStateOf(NavStack<NavRoute>(MainRoute)) }

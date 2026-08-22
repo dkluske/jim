@@ -17,9 +17,9 @@ import kotlinx.datetime.atTime
 import kotlinx.datetime.toLocalDateTime
 import net.jim.components.*
 import net.jim.components.navigation.NavRoute
-import net.jim.data.models.JsonExerciseType
 import net.jim.data.models.WorkoutPlan
 import net.jim.data.models.WorkoutPlanPart
+import net.jim.data.table.JsonExerciseTable
 import net.jim.data.table.WorkoutEntryTable
 import net.jim.data.table.WorkoutPlanPartTable
 import net.jim.data.table.WorkoutPlanTable
@@ -34,33 +34,17 @@ data class MainViewModel(
     val onNavigateToWorkoutPlan: (Uuid?) -> Unit
 ) : JimViewModel {
     fun getWorkoutPlans(): List<JimWorkoutWidgetPlan> {
-        return WorkoutPlanTable.getAll().map {
+        return WorkoutPlanTable.getAll().map { plan ->
+            val primaryMuscles = WorkoutPlanPartTable.getByWorkoutPlanId(plan.id).flatMap { planPart ->
+                planPart.exercises
+            }.flatMap { exercise ->
+                JsonExerciseTable.getById(exercise.jsonExerciseId).primaryMuscles
+            }.groupingBy { it }.eachCount().entries.sortedByDescending { it.value }.take(2).map { it.key }
             JimWorkoutWidgetPlan(
-                id = it.id,
-                name = it.name,
-                isDefault = it.default,
-                primaryMuscles = listOf() // TODO: resolve
-            )
-        }.ifEmpty {
-            listOf( // TODO: only mockup data for testing the layout
-                JimWorkoutWidgetPlan(
-                    id = Uuid.random(),
-                    name = "Full Body",
-                    isDefault = true,
-                    primaryMuscles = listOf(
-                        JsonExerciseType.MuscleEnum.BICEPS,
-                        JsonExerciseType.MuscleEnum.CHEST,
-                        JsonExerciseType.MuscleEnum.ABDOMINALS
-                    )
-                ),
-                JimWorkoutWidgetPlan(
-                    id = Uuid.random(),
-                    name = "Cardio",
-                    isDefault = false,
-                    primaryMuscles = listOf(
-                        JsonExerciseType.MuscleEnum.HAMSTRINGS,
-                    )
-                )
+                id = plan.id,
+                name = plan.name,
+                isDefault = plan.default,
+                primaryMuscles = primaryMuscles
             )
         }
     }
