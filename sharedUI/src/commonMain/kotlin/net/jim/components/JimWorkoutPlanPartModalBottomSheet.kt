@@ -1,7 +1,6 @@
 package net.jim.components
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -86,13 +85,13 @@ fun JimWorkoutPlanPartModalBottomSheet(
         sheetState = sheetState,
         onDismissRequest = {
             vm.onDismissRequest()
-        }
+        },
+        containerColor = MaterialTheme.colorScheme.background
     ) {
         Scaffold(
             bottomBar = {
-                Row(
-                    modifier = Modifier.fillMaxWidth().clickable {
-                        /*vm.onConfirm(
+                JimBottomBarSaveButton {
+                    /*vm.onConfirm(
                             WorkoutPlanPart(
                                 id = vm.workoutPlanPart?.id ?: Uuid.random(),
                                 workoutPlanId = vm.workoutPlanId,
@@ -101,15 +100,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                 quantity = vm.workoutPlanPart?.quantity ?: 1
                             )
                         )*/
-                    }.background(
-                        color = MaterialTheme.colorScheme.primary,
-                        shape = RoundedCornerShape(8.dp)
-                    ),
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    Text(
-                        text = stringResource(Res.string.save)
-                    )
+                    vm.onDismissRequest()
                 }
             }
         ) {
