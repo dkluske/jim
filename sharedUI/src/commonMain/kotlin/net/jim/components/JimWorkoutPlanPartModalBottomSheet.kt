@@ -74,7 +74,8 @@ fun JimWorkoutPlanPartModalBottomSheet(
     val sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = true
     )
-    val name = remember { mutableStateOf(vm.workoutPlanPart?.name) }
+    val defaultPartName = stringResource(Res.string.newWorkoutPlanPart)
+    val name = remember { mutableStateOf(vm.workoutPlanPart?.name ?: defaultPartName) }
     val exerciseList = remember { mutableStateListOf<WorkoutPlanExercise>() }
     val pagerViewState = rememberPagerState(
         initialPage = BottomSheetViewState.PARTS_EDIT.ordinal,
@@ -93,13 +94,13 @@ fun JimWorkoutPlanPartModalBottomSheet(
             bottomBar = {
                 JimBottomBarSaveButton {
                     vm.onConfirm(
-                            WorkoutPlanPart(
-                                id = vm.workoutPlanPart?.id ?: Uuid.random(),
-                                workoutPlanId = vm.workoutPlanId,
-                                name = name.value ?: "",
-                                exercises = exerciseList,
-                                quantity = vm.workoutPlanPart?.quantity ?: 1
-                            )
+                        WorkoutPlanPart(
+                            id = vm.workoutPlanPart?.id ?: Uuid.random(),
+                            workoutPlanId = vm.workoutPlanId,
+                            name = name.value,
+                            exercises = exerciseList,
+                            quantity = vm.workoutPlanPart?.quantity ?: 1
+                        )
                     )
                     vm.onDismissRequest()
                 }

@@ -54,7 +54,6 @@ private suspend fun loadMissingRevisions() {
                         id = exercise.id,
                         entity = exercise
                     )
-
                     JsonExerciseChangeset.DBOperationType.DELETE -> JsonExerciseTable.delete(id = exercise.id)
                 }
             }

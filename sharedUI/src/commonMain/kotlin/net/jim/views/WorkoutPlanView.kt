@@ -1,8 +1,10 @@
 package net.jim.views
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Delete
@@ -109,6 +111,14 @@ fun WorkoutPlanView(
                         ) {
                             items(vm.planParts.size) { index ->
                                 ListItem(
+                                    colors = ListItemDefaults.colors(
+                                        containerColor = MaterialTheme.colorScheme.primaryContainer
+                                    ),
+                                    modifier = Modifier.border(
+                                        width = 1.dp,
+                                        color = MaterialTheme.colorScheme.outline,
+                                        shape = RoundedCornerShape(8.dp)
+                                    ),
                                     headlineContent = {
                                         // Plan name
                                         Text(
@@ -199,9 +209,16 @@ fun WorkoutPlanView(
             }
         },
         bottomBar = {
+            val defaultPlanName = stringResource(Res.string.newWorkoutPlan)
             JimBottomBarSaveButton {
-                // TODO: save workout plan logic
-                workout?.let { vm.saveWorkoutPlan(workoutPlan = it, parts = vm.planParts) }
+                vm.saveWorkoutPlan(
+                    workoutPlan = workout ?: WorkoutPlan(
+                        id = Uuid.random(),
+                        name = defaultPlanName,
+                        default = true
+                    ),
+                    parts = vm.planParts
+                )
                 vm.root.navStack.value.removeLastOrNull()
             }
         }
