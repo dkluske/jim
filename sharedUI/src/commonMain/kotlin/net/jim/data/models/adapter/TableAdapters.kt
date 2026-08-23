@@ -4,7 +4,6 @@ import app.cash.sqldelight.EnumColumnAdapter
 import net.jim.data.JimDatabaseManager
 import net.jim.data.models.WorkoutPlanExercise
 import net.jim.sqldelight.*
-import kotlin.reflect.KClass
 
 @Suppress("UNCHECKED_CAST")
 object TableAdapters {
@@ -24,7 +23,7 @@ object TableAdapters {
         workout_plan_idAdapter = UuidAdapter(),
         exercisesAdapter = SerializableListAdapter(
             json = JimDatabaseManager.json,
-            clazz = List::class as KClass<List<WorkoutPlanExercise>>,
+            serializer = WorkoutPlanExercise.serializer()
         )
     )
 

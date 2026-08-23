@@ -43,8 +43,9 @@ import org.jetbrains.compose.resources.stringResource
 import kotlin.uuid.Uuid
 
 data class JimWorkoutPlanPartModalBottomSheetViewModel(
+    val workoutPlanId: Uuid,
     val workoutPlanPart: WorkoutPlanPart? = null,
-    /*val onConfirm: (WorkoutPlanPart) -> Unit,*/
+    val onConfirm: (WorkoutPlanPart) -> Unit,
     val onDismissRequest: () -> Unit
 ) {
     fun resolveJsonExercise(id: Uuid): JsonExerciseType {
@@ -91,7 +92,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
         Scaffold(
             bottomBar = {
                 JimBottomBarSaveButton {
-                    /*vm.onConfirm(
+                    vm.onConfirm(
                             WorkoutPlanPart(
                                 id = vm.workoutPlanPart?.id ?: Uuid.random(),
                                 workoutPlanId = vm.workoutPlanId,
@@ -99,7 +100,7 @@ fun JimWorkoutPlanPartModalBottomSheet(
                                 exercises = exerciseList,
                                 quantity = vm.workoutPlanPart?.quantity ?: 1
                             )
-                        )*/
+                    )
                     vm.onDismissRequest()
                 }
             }

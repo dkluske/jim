@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -27,6 +28,7 @@ data class WorkoutPlanViewModel(
     override val root: Root,
     val workoutId: Uuid?,
     val onOpenPlanPart: (WorkoutPlanPart?) -> Unit,
+    val planParts: SnapshotStateList<WorkoutPlanPart>,
     val onNavigateBack: () -> Unit
 ): JimViewModel {
     fun loadWorkout(id: Uuid): WorkoutPlan {
@@ -50,13 +52,12 @@ fun WorkoutPlanView(
     vm: WorkoutPlanViewModel
 ) {
     var workout by remember { mutableStateOf<WorkoutPlan?>(null) }
-    val planParts = remember { mutableStateListOf<WorkoutPlanPart>() }
 
     LaunchedEffect(Unit) {
         vm.workoutId?.let {
             workout = vm.loadWorkout(it)
-            planParts.clear()
-            planParts.addAll(vm.loadWorkoutPlanParts(it))
+            vm.planParts.clear()
+            vm.planParts.addAll(vm.loadWorkoutPlanParts(it))
         }
     }
 
@@ -106,12 +107,12 @@ fun WorkoutPlanView(
                         LazyColumn(
                             state = lazyListState
                         ) {
-                            items(planParts.size) { index ->
+                            items(vm.planParts.size) { index ->
                                 ListItem(
                                     headlineContent = {
                                         // Plan name
                                         Text(
-                                            text = planParts[index].name
+                                            text = vm.planParts[index].name
                                         )
                                     },
                                     trailingContent = {
@@ -119,17 +120,17 @@ fun WorkoutPlanView(
                                         Row(
                                             verticalAlignment = Alignment.CenterVertically,
                                         ) {
-                                            if (planParts[index].quantity == 1) {
+                                            if (vm.planParts[index].quantity == 1) {
                                                 IconButton(
-                                                    onClick = { planParts.removeAt(index) }
+                                                    onClick = { vm.planParts.removeAt(index) }
                                                 ) {
                                                     Icon(Icons.Filled.Delete, "delete part")
                                                 }
                                             } else {
                                                 IconButton(
                                                     onClick = {
-                                                        planParts[index] =
-                                                            planParts[index].copy(quantity = planParts[index].quantity - 1)
+                                                        vm.planParts[index] =
+                                                            vm.planParts[index].copy(quantity = vm.planParts[index].quantity - 1)
                                                     }
                                                 ) {
                                                     Text(
@@ -138,12 +139,12 @@ fun WorkoutPlanView(
                                                 }
                                             }
                                             Text(
-                                                text = planParts[index].quantity.toString(),
+                                                text = vm.planParts[index].quantity.toString(),
                                             )
                                             IconButton(
                                                 onClick = {
-                                                    planParts[index] =
-                                                        planParts[index].copy(quantity = planParts[index].quantity + 1)
+                                                    vm.planParts[index] =
+                                                        vm.planParts[index].copy(quantity = vm.planParts[index].quantity + 1)
                                                 }
                                             ) {
                                                 Text(
@@ -155,7 +156,7 @@ fun WorkoutPlanView(
                                     supportingContent = {
                                         Button(
                                             onClick = {
-                                                vm.onOpenPlanPart(planParts[index])
+                                                vm.onOpenPlanPart(vm.planParts[index])
                                             }
                                         ) {
                                             Text(
@@ -183,7 +184,10 @@ fun WorkoutPlanView(
                         modifier = Modifier.fillMaxWidth().padding(8.dp),
                     ) {
                         Button(
-                            onClick = { workout?.let { vm.saveWorkoutPlan(workoutPlan = it, parts = planParts) } },
+                            onClick = {
+                                workout?.let { vm.saveWorkoutPlan(workoutPlan = it, parts = vm.planParts) }
+                                vm.root.navStack.value.removeLastOrNull()
+                            },
                         ) {
                             Icon(Icons.Filled.Done, "save plan")
                             Text(
@@ -197,6 +201,8 @@ fun WorkoutPlanView(
         bottomBar = {
             JimBottomBarSaveButton {
                 // TODO: save workout plan logic
+                workout?.let { vm.saveWorkoutPlan(workoutPlan = it, parts = vm.planParts) }
+                vm.root.navStack.value.removeLastOrNull()
             }
         }
     )

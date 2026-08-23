@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 @SerialName("JsonExerciseChangeset")
 data class JsonExerciseChangeset(
-    val jsonExercises: List<JsonExerciseType>,
+    val exercises: List<JsonExerciseType>,
     val dbOperationType: DBOperationType
 ) {
     @Serializable
