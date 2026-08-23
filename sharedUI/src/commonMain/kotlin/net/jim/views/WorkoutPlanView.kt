@@ -1,10 +1,8 @@
 package net.jim.views
 
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Delete
@@ -104,20 +102,15 @@ fun WorkoutPlanView(
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(8.dp)
                 ) {
-                    JimCard {
-                        val lazyListState = rememberLazyListState()
-                        LazyColumn(
-                            state = lazyListState
-                        ) {
-                            items(vm.planParts.size) { index ->
+                    val lazyListState = rememberLazyListState()
+                    LazyColumn(
+                        state = lazyListState
+                    ) {
+                        items(vm.planParts.size) { index ->
+                            JimCard {
                                 ListItem(
-                                    colors = ListItemDefaults.colors(
-                                        containerColor = MaterialTheme.colorScheme.primaryContainer
-                                    ),
-                                    modifier = Modifier.border(
-                                        width = 1.dp,
-                                        color = MaterialTheme.colorScheme.outline,
-                                        shape = RoundedCornerShape(8.dp)
+                                    colors = ListItemDefaults.colors().copy(
+                                        containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                     ),
                                     headlineContent = {
                                         // Plan name
@@ -176,7 +169,9 @@ fun WorkoutPlanView(
                                     }
                                 )
                             }
-                            item {
+                        }
+                        item {
+                            JimCard {
                                 Button(
                                     onClick = {
                                         vm.onOpenPlanPart(null)

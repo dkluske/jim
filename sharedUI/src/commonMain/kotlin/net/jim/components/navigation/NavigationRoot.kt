@@ -60,7 +60,14 @@ fun NavigationRoot(root: Root) {
                                             workoutPlanId = key.workoutPlanId ?: Uuid.random(),
                                             workoutPlanPart = it
                                         ) { planPart ->
-                                            planParts.add(planPart)
+                                            planParts.indexOfFirst { it.id == planPart.id }.let { index ->
+                                                if (index != -1) {
+                                                    planParts.removeAt(index)
+                                                    planParts.add(index, planPart)
+                                                } else {
+                                                    planParts.add(planPart)
+                                                }
+                                            }
                                         }
                                     }
                                 )

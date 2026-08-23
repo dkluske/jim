@@ -56,6 +56,9 @@ fun JimWorkoutPlansWidget(
                 }
             ) { plan ->
                 ListItem(
+                    colors = ListItemDefaults.colors().copy(
+                        containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                    ),
                     headlineContent = {
                         Text(
                             text = plan.name,
@@ -149,7 +152,7 @@ fun JimWorkoutPlansWidget(
                                 }
                             },
                             colors = ListItemDefaults.colors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer
+                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             ),
                             modifier = Modifier.fillMaxWidth(0.7f)
                         )
