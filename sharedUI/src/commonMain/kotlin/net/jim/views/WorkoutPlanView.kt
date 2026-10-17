@@ -1,18 +1,22 @@
 package net.jim.views
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import jim.sharedui.generated.resources.*
+import net.jim.components.JimBottomBarSaveButton
 import net.jim.components.JimEditableHeader
 import net.jim.components.utils.JimCard
 import net.jim.data.models.WorkoutPlan
@@ -26,6 +30,7 @@ data class WorkoutPlanViewModel(
     override val root: Root,
     val workoutId: Uuid?,
     val onOpenPlanPart: (WorkoutPlanPart?) -> Unit,
+    val planParts: SnapshotStateList<WorkoutPlanPart>,
     val onNavigateBack: () -> Unit
 ): JimViewModel {
     fun loadWorkout(id: Uuid): WorkoutPlan {
@@ -49,145 +54,173 @@ fun WorkoutPlanView(
     vm: WorkoutPlanViewModel
 ) {
     var workout by remember { mutableStateOf<WorkoutPlan?>(null) }
-    val planParts = remember { mutableStateListOf<WorkoutPlanPart>() }
 
     LaunchedEffect(Unit) {
         vm.workoutId?.let {
             workout = vm.loadWorkout(it)
-            planParts.clear()
-            planParts.addAll(vm.loadWorkoutPlanParts(it))
+            vm.planParts.clear()
+            vm.planParts.addAll(vm.loadWorkoutPlanParts(it))
         }
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .windowInsetsPadding(WindowInsets.safeDrawing),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        /**
-         * Heading
-         */
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            horizontalArrangement = Arrangement.Start,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            IconButton(
-                onClick = { vm.onNavigateBack() }
+    Scaffold(
+        content = {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .windowInsetsPadding(WindowInsets.safeDrawing),
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Text(
-                    text = "<"
-                )
-            }
-            JimEditableHeader(
-                value = workout?.name ?: stringResource(Res.string.newWorkoutPlan),
-                onValueChange = {
-                    workout = workout?.copy(name = it) ?: WorkoutPlan(
-                        id = Uuid.random(),
-                        name = it,
-                        default = false
+                /**
+                 * Heading
+                 */
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    horizontalArrangement = Arrangement.Start,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    IconButton(
+                        onClick = { vm.onNavigateBack() }
+                    ) {
+                        Text(
+                            text = "<"
+                        )
+                    }
+                    JimEditableHeader(
+                        value = workout?.name ?: stringResource(Res.string.newWorkoutPlan),
+                        onValueChange = {
+                            workout = workout?.copy(name = it) ?: WorkoutPlan(
+                                id = Uuid.random(),
+                                name = it,
+                                default = false
+                            )
+                        }
                     )
                 }
-            )
-        }
 
-        /**
-         * Workout Plan Parts
-         */
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp)
-        ) {
-            JimCard {
-                val lazyListState = rememberLazyListState()
-                LazyColumn(
-                    state = lazyListState
+                /**
+                 * Workout Plan Parts
+                 */
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(8.dp)
                 ) {
-                    items(planParts.size) { index ->
-                        ListItem(
-                            headlineContent = {
-                                // Plan name
-                                Text(
-                                    text = planParts[index].name
-                                )
-                            },
-                            trailingContent = {
-                                // Quantity Spinner
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                ) {
-                                    if (planParts[index].quantity == 1) {
-                                        IconButton(
-                                            onClick = { planParts.removeAt(index) }
+                    JimCard {
+                        val lazyListState = rememberLazyListState()
+                        LazyColumn(
+                            state = lazyListState
+                        ) {
+                            items(vm.planParts.size) { index ->
+                                ListItem(
+                                    colors = ListItemDefaults.colors(
+                                        containerColor = MaterialTheme.colorScheme.primaryContainer
+                                    ),
+                                    modifier = Modifier.border(
+                                        width = 1.dp,
+                                        color = MaterialTheme.colorScheme.outline,
+                                        shape = RoundedCornerShape(8.dp)
+                                    ),
+                                    headlineContent = {
+                                        // Plan name
+                                        Text(
+                                            text = vm.planParts[index].name
+                                        )
+                                    },
+                                    trailingContent = {
+                                        // Quantity Spinner
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
                                         ) {
-                                            Icon(Icons.Filled.Delete, "delete part")
+                                            if (vm.planParts[index].quantity == 1) {
+                                                IconButton(
+                                                    onClick = { vm.planParts.removeAt(index) }
+                                                ) {
+                                                    Icon(Icons.Filled.Delete, "delete part")
+                                                }
+                                            } else {
+                                                IconButton(
+                                                    onClick = {
+                                                        vm.planParts[index] =
+                                                            vm.planParts[index].copy(quantity = vm.planParts[index].quantity - 1)
+                                                    }
+                                                ) {
+                                                    Text(
+                                                        text = "-"
+                                                    )
+                                                }
+                                            }
+                                            Text(
+                                                text = vm.planParts[index].quantity.toString(),
+                                            )
+                                            IconButton(
+                                                onClick = {
+                                                    vm.planParts[index] =
+                                                        vm.planParts[index].copy(quantity = vm.planParts[index].quantity + 1)
+                                                }
+                                            ) {
+                                                Text(
+                                                    text = "+"
+                                                )
+                                            }
                                         }
-                                    } else {
-                                        IconButton(
+                                    },
+                                    supportingContent = {
+                                        Button(
                                             onClick = {
-                                                planParts[index] =
-                                                    planParts[index].copy(quantity = planParts[index].quantity - 1)
+                                                vm.onOpenPlanPart(vm.planParts[index])
                                             }
                                         ) {
                                             Text(
-                                                text = "-"
+                                                text = stringResource(Res.string.edit)
                                             )
                                         }
                                     }
-                                    Text(
-                                        text = planParts[index].quantity.toString(),
-                                    )
-                                    IconButton(
-                                        onClick = {
-                                            planParts[index] =
-                                                planParts[index].copy(quantity = planParts[index].quantity + 1)
-                                        }
-                                    ) {
-                                        Text(
-                                            text = "+"
-                                        )
-                                    }
-                                }
-                            },
-                            supportingContent = {
+                                )
+                            }
+                            item {
                                 Button(
                                     onClick = {
-                                        vm.onOpenPlanPart(planParts[index])
+                                        vm.onOpenPlanPart(null)
                                     }
                                 ) {
+                                    Icon(Icons.Filled.AddCircle, "add workout plan part")
                                     Text(
-                                        text = stringResource(Res.string.edit)
+                                        text = stringResource(Res.string.addWorkoutPlanPart)
                                     )
                                 }
                             }
-                        )
+                        }
                     }
-                    item {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    ) {
                         Button(
                             onClick = {
-                                vm.onOpenPlanPart(null)
-                            }
+                                workout?.let { vm.saveWorkoutPlan(workoutPlan = it, parts = vm.planParts) }
+                                vm.root.navStack.value.removeLastOrNull()
+                            },
                         ) {
-                            Icon(Icons.Filled.AddCircle, "add workout plan part")
+                            Icon(Icons.Filled.Done, "save plan")
                             Text(
-                                text = stringResource(Res.string.addWorkoutPlanPart)
+                                text = stringResource(Res.string.save)
                             )
                         }
                     }
                 }
             }
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(8.dp),
-            ) {
-                Button(
-                    onClick = { workout?.let { vm.saveWorkoutPlan(workoutPlan = it, parts = planParts) } },
-                ) {
-                    Icon(Icons.Filled.Done, "save plan")
-                    Text(
-                        text = stringResource(Res.string.save)
-                    )
-                }
+        },
+        bottomBar = {
+            val defaultPlanName = stringResource(Res.string.newWorkoutPlan)
+            JimBottomBarSaveButton {
+                vm.saveWorkoutPlan(
+                    workoutPlan = workout ?: WorkoutPlan(
+                        id = Uuid.random(),
+                        name = defaultPlanName,
+                        default = true
+                    ),
+                    parts = vm.planParts
+                )
+                vm.root.navStack.value.removeLastOrNull()
             }
         }
-    }
+    )
 }

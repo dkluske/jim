@@ -2,6 +2,7 @@ package net.jim.views
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,9 +16,10 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.atTime
 import kotlinx.datetime.toLocalDateTime
 import net.jim.components.*
-import net.jim.data.models.JsonExerciseType
+import net.jim.components.navigation.NavRoute
 import net.jim.data.models.WorkoutPlan
 import net.jim.data.models.WorkoutPlanPart
+import net.jim.data.table.JsonExerciseTable
 import net.jim.data.table.WorkoutEntryTable
 import net.jim.data.table.WorkoutPlanPartTable
 import net.jim.data.table.WorkoutPlanTable
@@ -32,33 +34,17 @@ data class MainViewModel(
     val onNavigateToWorkoutPlan: (Uuid?) -> Unit
 ) : JimViewModel {
     fun getWorkoutPlans(): List<JimWorkoutWidgetPlan> {
-        return WorkoutPlanTable.getAll().map {
+        return WorkoutPlanTable.getAll().map { plan ->
+            val primaryMuscles = WorkoutPlanPartTable.getByWorkoutPlanId(plan.id).flatMap { planPart ->
+                planPart.exercises
+            }.flatMap { exercise ->
+                JsonExerciseTable.getById(exercise.jsonExerciseId).primaryMuscles
+            }.groupingBy { it }.eachCount().entries.sortedByDescending { it.value }.take(2).map { it.key }
             JimWorkoutWidgetPlan(
-                id = it.id,
-                name = it.name,
-                isDefault = it.default,
-                primaryMuscles = listOf() // TODO: resolve
-            )
-        }.ifEmpty {
-            listOf( // TODO: only mockup data for testing the layout
-                JimWorkoutWidgetPlan(
-                    id = Uuid.random(),
-                    name = "Full Body",
-                    isDefault = true,
-                    primaryMuscles = listOf(
-                        JsonExerciseType.MuscleEnum.BICEPS,
-                        JsonExerciseType.MuscleEnum.CHEST,
-                        JsonExerciseType.MuscleEnum.ABDOMINALS
-                    )
-                ),
-                JimWorkoutWidgetPlan(
-                    id = Uuid.random(),
-                    name = "Cardio",
-                    isDefault = false,
-                    primaryMuscles = listOf(
-                        JsonExerciseType.MuscleEnum.HAMSTRINGS,
-                    )
-                )
+                id = plan.id,
+                name = plan.name,
+                isDefault = plan.default,
+                primaryMuscles = primaryMuscles
             )
         }
     }
@@ -120,88 +106,99 @@ data class MainViewModel(
 fun MainView(
     vm: MainViewModel
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .windowInsetsPadding(WindowInsets.safeDrawing),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        /**
-         * Heading
-         */
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            horizontalArrangement = Arrangement.Start
-        ) {
-            Text(
-                text = stringResource(Res.string.readyToWorkQuestion),
-                style = MaterialTheme.typography.headlineLarge
-            )
-        }
-        /**
-         * Calendar Part
-         */
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-        ) {
-            JimCalendarWidget(
-                dates = vm.getCalendarEntries(
-                    now = Clock.System.now()
-                )
-            )
-        }
-        /**
-         * Plans
-         */
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp)
-        ) {
-            Column {
+    Scaffold(
+        content = {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .windowInsetsPadding(WindowInsets.safeDrawing),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                /**
+                 * Heading
+                 */
                 Row(
-                    modifier = Modifier.padding(bottom = 4.dp)
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    horizontalArrangement = Arrangement.Start
                 ) {
                     Text(
-                        text = stringResource(Res.string.yourPlans),
-                        style = MaterialTheme.typography.headlineMedium
+                        text = stringResource(Res.string.readyToWorkQuestion),
+                        style = MaterialTheme.typography.headlineLarge
                     )
                 }
-                Row {
-                    JimWorkoutPlansWidget(
-                        plans = vm.getWorkoutPlans(),
-                        onClick = { planId ->
-                            vm.onNavigateToWorkoutPlan(planId)
-                        },
-                        onStart = { planId ->
-                            // TODO: navigate to plan run view
-                        }
-                    )
-                }
-            }
-        }
-        /**
-         * Latest Workouts
-         */
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp)
-        ) {
-            Column {
+                /**
+                 * Calendar Part
+                 */
                 Row(
-                    modifier = Modifier.padding(bottom = 4.dp)
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
                 ) {
-                    Text(
-                        text = stringResource(Res.string.latestWorkouts),
-                        style = MaterialTheme.typography.headlineMedium
+                    JimCalendarWidget(
+                        dates = vm.getCalendarEntries(
+                            now = Clock.System.now()
+                        )
                     )
                 }
-                Row {
-                    JimWorkoutHistoryWidget(
-                        workouts = vm.getLatestWorkoutsLastMonth(),
-                        onClick = { workoutId ->
-                            // TODO: navigate to bottom sheet with more information
+                /**
+                 * Plans
+                 */
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                ) {
+                    Column {
+                        Row(
+                            modifier = Modifier.padding(bottom = 4.dp)
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.yourPlans),
+                                style = MaterialTheme.typography.headlineMedium
+                            )
                         }
-                    )
+                        Row {
+                            JimWorkoutPlansWidget(
+                                plans = vm.getWorkoutPlans(),
+                                onClick = { planId ->
+                                    vm.onNavigateToWorkoutPlan(planId)
+                                },
+                                onStart = { planId ->
+                                    // TODO: navigate to plan run view
+                                }
+                            )
+                        }
+                    }
+                }
+                /**
+                 * Latest Workouts
+                 */
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(8.dp)
+                ) {
+                    Column {
+                        Row(
+                            modifier = Modifier.padding(bottom = 4.dp)
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.latestWorkouts),
+                                style = MaterialTheme.typography.headlineMedium
+                            )
+                        }
+                        Row {
+                            JimWorkoutHistoryWidget(
+                                workouts = vm.getLatestWorkoutsLastMonth(),
+                                onClick = { workoutId ->
+                                    // TODO: navigate to bottom sheet with more information
+                                }
+                            )
+                        }
+                    }
                 }
             }
+        },
+        bottomBar = {
+            JimBottomBar(
+                onAddWorkoutPlan = {
+                    vm.root.navStack.value += NavRoute.WorkoutPlanRoute(null)
+                }
+            )
         }
-    }
+    )
 }
