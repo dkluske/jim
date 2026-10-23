@@ -22,7 +22,7 @@ import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun JimEditableHeader(
+fun EditableHeader(
     value: String,
     modifier: Modifier = Modifier,
     onValueChange: (String) -> Unit

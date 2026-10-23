@@ -12,13 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import jim.sharedui.generated.resources.*
-import net.jim.components.utils.JimCard
-import net.jim.components.utils.JimListWrapper
+import net.jim.components.utils.ListWrapper
 import net.jim.data.models.JsonExerciseType
 import org.jetbrains.compose.resources.stringResource
 import kotlin.uuid.Uuid
 
-data class JimWorkoutWidgetPlan(
+data class WorkoutWidgetPlan(
     val id: Uuid,
     val name: String,
     val isDefault: Boolean,
@@ -26,14 +25,14 @@ data class JimWorkoutWidgetPlan(
 )
 
 @Composable
-fun JimWorkoutPlansWidget(
-    plans: List<JimWorkoutWidgetPlan>,
+fun WorkoutPlansWidget(
+    plans: List<WorkoutWidgetPlan>,
     onClick: (Uuid) -> Unit,
     onStart: (Uuid) -> Unit
 ) {
     if (plans.isEmpty()) {
-        JimCard {
-            JimListWrapper(
+        Card {
+            ListWrapper(
                 list = plans,
                 wrap = 3,
                 onEmpty = {
@@ -88,7 +87,7 @@ fun JimWorkoutPlansWidget(
                 Column(
                     modifier = Modifier.padding(8.dp)
                 ) {
-                    JimCard {
+                    Card {
                         ListItem(
                             headlineContent = {
                                 Column(modifier = Modifier.fillMaxWidth()) {

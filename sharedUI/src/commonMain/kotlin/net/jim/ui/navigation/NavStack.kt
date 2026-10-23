@@ -1,13 +1,19 @@
-package net.jim.components.navigation
+package net.jim.ui.navigation
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.Snapshot
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.snapshots.StateObject
-import androidx.navigation3.runtime.NavKey
 import kotlinx.coroutines.sync.Mutex
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
+import net.jim.ui.BottomSheet
+import net.jim.ui.Dialog
+import net.jim.ui.Route
 
-open class NavStack<T : NavKey>(private val base: SnapshotStateList<T>) : MutableList<T>, StateObject by base,
+@Serializable
+open class NavStack<T : Route>(private val base: @Contextual SnapshotStateList<T>) : MutableList<T>,
+    StateObject by base,
     RandomAccess {
     private val mutex = Mutex()
 
@@ -42,8 +48,6 @@ open class NavStack<T : NavKey>(private val base: SnapshotStateList<T>) : Mutabl
         }
     }
 
-    fun toRootView() = sync { base.removeAll { it !is NavRoute.RootRoute && it !is Dialog } }
-
     override val size: Int get() = sync { base.size }
 
     override fun get(index: Int): T = sync { base[index] }
@@ -64,8 +68,8 @@ open class NavStack<T : NavKey>(private val base: SnapshotStateList<T>) : Mutabl
                 base.add(element)
             }
 
-            is NavRoute.RootRoute -> {
-                val lastRootView = base.findLast { it is NavRoute.RootRoute }
+            is Route.MainRoute -> {
+                val lastRootView = base.findLast { it is Route.MainRoute }
                 if (lastRootView == element) {
                     return@sync false
                 }
@@ -77,7 +81,7 @@ open class NavStack<T : NavKey>(private val base: SnapshotStateList<T>) : Mutabl
                 true
             }
 
-            is NavRoute -> {
+            is Route.SecondaryRoute -> {
                 base.add(element)
                 true
             }
@@ -142,7 +146,7 @@ open class NavStack<T : NavKey>(private val base: SnapshotStateList<T>) : Mutabl
     }
 
     override fun remove(element: T): Boolean = sync {
-        if (element is NavRoute.RootRoute) {
+        if (element is Route.MainRoute) {
             return@sync false
         }
         base.remove(element)
@@ -156,19 +160,27 @@ open class NavStack<T : NavKey>(private val base: SnapshotStateList<T>) : Mutabl
     }
 
     override fun removeAll(elements: Collection<T>): Boolean = sync {
-        if (elements.any { it is NavRoute.RootRoute }) {
+        if (elements.any { it is Route.MainRoute }) {
             return@sync false
         }
         base.removeAll(elements)
     }
 
     fun removeAll(predicate: (T) -> Boolean): Boolean = sync {
-        val toRemove = base.filter { predicate(it) && it !is NavRoute.RootRoute }
+        val toRemove = base.filter { predicate(it) && it !is Route.MainRoute }
         base.removeAll(toRemove)
     }
 
+    fun removeLastOrNull(): T? = sync {
+        if (base.isEmpty() && base.filterIsInstance<Route.MainRoute>().size > 1) {
+            return@sync base.removeLast()
+        } else {
+            return@sync null
+        }
+    }
+
     override fun retainAll(elements: Collection<T>): Boolean = sync {
-        if (elements.none { it is NavRoute.RootRoute }) {
+        if (elements.none { it is Route.MainRoute }) {
             return@sync false
         }
         base.retainAll(elements)

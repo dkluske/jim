@@ -7,15 +7,15 @@ import androidx.compose.runtime.remember
 import jim.sharedui.generated.resources.Res
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import net.jim.components.navigation.NavRoute
-import net.jim.components.navigation.NavRoute.MainRoute
-import net.jim.components.navigation.NavStack
-import net.jim.components.navigation.NavigationRoot
 import net.jim.data.DatabaseDriverManager
 import net.jim.data.JimDatabaseManager
 import net.jim.data.models.JsonExerciseChangeset
 import net.jim.data.table.JsonExerciseTable
 import net.jim.theme.AppTheme
+import net.jim.ui.HomeRoute
+import net.jim.ui.Route
+import net.jim.ui.navigation.NavStack
+import net.jim.ui.navigation.NavigationRoot
 import net.jim.views.Root
 
 @Composable
@@ -25,7 +25,7 @@ fun App(
     val database = JimDatabaseManager.createDatabase(databaseDriverManager)
     JimDatabaseManager.initTables(database)
 
-    val backStack = remember { mutableStateOf(NavStack<NavRoute>(MainRoute)) }
+    val backStack = remember { mutableStateOf(NavStack<Route>(HomeRoute)) }
 
     val root = remember {
         Root(

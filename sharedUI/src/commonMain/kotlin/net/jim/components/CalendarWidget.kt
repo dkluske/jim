@@ -19,28 +19,28 @@ import kotlinx.datetime.toLocalDateTime
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Instant
 
-data class JimCalendarWidgetEntry(
+data class CalendarWidgetEntry(
     val date: Instant,
     val hasWorkedOut: Boolean
 )
 
 @Composable
-fun JimCalendarWidget(
-    dates: List<JimCalendarWidgetEntry>
+fun CalendarWidget(
+    dates: List<CalendarWidgetEntry>
 ) {
     LazyRow(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         items(dates) { date ->
-            JimCalendarWidgetEntry(value = date)
+            CalendarWidgetEntry(value = date)
         }
     }
 }
 
 @Composable
-private fun JimCalendarWidgetEntry(
-    value: JimCalendarWidgetEntry
+private fun CalendarWidgetEntry(
+    value: CalendarWidgetEntry
 ) {
     val date = value.date.toLocalDateTime(TimeZone.currentSystemDefault())
     Column(

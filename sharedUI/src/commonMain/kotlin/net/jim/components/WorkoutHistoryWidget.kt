@@ -9,24 +9,23 @@ import jim.sharedui.generated.resources.noWorkoutsStartNow
 import jim.sharedui.generated.resources.showMore
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
-import net.jim.components.utils.JimCard
-import net.jim.components.utils.JimListWrapper
+import net.jim.components.utils.ListWrapper
 import org.jetbrains.compose.resources.stringResource
 import kotlin.time.Instant
 import kotlin.uuid.Uuid
 
-data class JimWorkoutHistoryWidget(
+data class WorkoutHistoryWidget(
     val id: Uuid,
     val finishDate: Instant
 )
 
 @Composable
-fun JimWorkoutHistoryWidget(
-    workouts: List<JimWorkoutHistoryWidget>,
+fun WorkoutHistoryWidget(
+    workouts: List<WorkoutHistoryWidget>,
     onClick: (Uuid) -> Unit,
 ) {
-    JimCard {
-        JimListWrapper(
+    Card {
+        ListWrapper(
             list = workouts,
             wrap = 3,
             onEmpty = {

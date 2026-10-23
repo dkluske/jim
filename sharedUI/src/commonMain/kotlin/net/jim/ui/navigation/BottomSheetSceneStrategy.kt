@@ -1,4 +1,4 @@
-package net.jim.components.navigation
+package net.jim.ui.navigation
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
@@ -9,7 +9,6 @@ import androidx.navigation3.scene.OverlayScene
 import androidx.navigation3.scene.Scene
 import androidx.navigation3.scene.SceneStrategy
 import androidx.navigation3.scene.SceneStrategyScope
-import net.jim.components.navigation.BottomSheetSceneStrategy.Companion.bottomSheet
 
 /**
  * An [OverlayScene] that renders an [entry] within a [ModalBottomSheet].
