@@ -1,9 +1,7 @@
 package net.jim.data.table
 
 import net.jim.data.models.Entity
-import net.jim.data.models.exception.NoDatabaseException
 import net.jim.sqldelight.JimRuntimeDatabase
-import kotlin.concurrent.atomics.AtomicReference
 
 /**
  * Central Interface for Database Table Implementations
@@ -11,7 +9,7 @@ import kotlin.concurrent.atomics.AtomicReference
  * E: The Entity, that shall be managed by that table
  */
 sealed interface Table<ID : Any, E : Entity<ID, *>> {
-    val database: AtomicReference<JimRuntimeDatabase?>
+    val database: JimRuntimeDatabase
 
     /**
      * Queries an Entity by it's ID
@@ -46,21 +44,4 @@ sealed interface Table<ID : Any, E : Entity<ID, *>> {
      * @return The new Entity instance
      */
     fun update(id: ID, entity: E): E
-
-    /**
-     * Central method for querying the database instance for queries.
-     * Please use this method instead of using the nullable database atomic reference.
-     * @return [JimRuntimeDatabase]
-     */
-    fun getDatabase(): JimRuntimeDatabase {
-        return database.load() ?: throw NoDatabaseException(clazz = this::class)
-    }
-
-    /**
-     * Central method to initialize the Table by setting the database
-     * @param database The database instance from SQLDelight to be set to the atomic reference
-     */
-    fun setDatabase(database: JimRuntimeDatabase) {
-        this.database.store(database)
-    }
 }

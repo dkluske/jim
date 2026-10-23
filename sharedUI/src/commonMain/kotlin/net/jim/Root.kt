@@ -1,4 +1,4 @@
-package net.jim.views
+package net.jim
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf

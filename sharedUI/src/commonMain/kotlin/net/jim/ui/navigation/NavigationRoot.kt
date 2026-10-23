@@ -7,6 +7,8 @@ import androidx.compose.runtime.remember
 import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.scene.DialogSceneStrategy
 import androidx.navigation3.ui.NavDisplay
+import net.jim.Root
+import net.jim.data.TableHolder
 import net.jim.ui.*
 import net.jim.ui.routes.home.HomeView
 import net.jim.ui.routes.home.HomeViewModel
@@ -18,10 +20,12 @@ import net.jim.ui.routes.workoutPlan.WorkoutPlanView
 import net.jim.ui.routes.workoutPlan.WorkoutPlanViewModel
 import net.jim.ui.routes.workoutPlanPartRun.WorkoutPlanPartRunView
 import net.jim.ui.routes.workoutPlanPartRun.WorkoutPlanPartRunViewModel
-import net.jim.views.Root
 
 @Composable
-fun NavigationRoot(root: Root) {
+fun NavigationRoot(
+    root: Root,
+    tableHolder: TableHolder
+) {
     val dialogSceneStrategy = remember { DialogSceneStrategy<Route>() }
     val bottomSheetSceneStrategy = remember { BottomSheetSceneStrategy<Route>() }
 

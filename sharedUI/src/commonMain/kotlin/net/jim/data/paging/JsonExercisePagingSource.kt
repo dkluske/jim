@@ -6,6 +6,7 @@ import net.jim.data.models.JsonExerciseType
 import net.jim.data.table.JsonExerciseTable
 
 class JsonExercisePagingSource(
+    val jsonExerciseTable: JsonExerciseTable,
     val searchQuery: String
 ) : PagingSource<Int, JsonExerciseType>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, JsonExerciseType> {
@@ -13,7 +14,7 @@ class JsonExercisePagingSource(
             val page = params.key ?: 0
             val offset = page * params.loadSize
 
-            val result = JsonExerciseTable.searchByNamePaged(
+            val result = jsonExerciseTable.searchByNamePaged(
                 name = "%$searchQuery%",
                 pageSize = params.loadSize,
                 offset = offset

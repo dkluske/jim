@@ -9,6 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import net.jim.data.DatabaseDriverManager
 import net.jim.data.JimDatabaseManager
+import net.jim.data.TableHolder
 import net.jim.data.models.JsonExerciseChangeset
 import net.jim.data.table.JsonExerciseTable
 import net.jim.theme.AppTheme
@@ -16,14 +17,13 @@ import net.jim.ui.HomeRoute
 import net.jim.ui.Route
 import net.jim.ui.navigation.NavStack
 import net.jim.ui.navigation.NavigationRoot
-import net.jim.views.Root
 
 @Composable
 fun App(
     databaseDriverManager: DatabaseDriverManager
 ) = AppTheme {
     val database = JimDatabaseManager.createDatabase(databaseDriverManager)
-    JimDatabaseManager.initTables(database)
+    val tableHolder = TableHolder(database)
 
     val backStack = remember { mutableStateOf(NavStack<Route>(HomeRoute)) }
 
@@ -33,28 +33,30 @@ fun App(
         )
     }
     NavigationRoot(
-        root = root
+        root = root,
+        tableHolder = tableHolder
     )
 
     LaunchedEffect(Unit) {
         withContext(Dispatchers.Default) {
-            loadMissingRevisions()
+            loadMissingRevisions(tableHolder.jsonExerciseTable)
         }
     }
 }
 
-private suspend fun loadMissingRevisions() {
-    ((JsonExerciseTable.getMaxStoredRevision() + 1)..JsonExerciseTable.MAX_REVISION).forEach { revision ->
+private suspend fun loadMissingRevisions(jsonExerciseTable: JsonExerciseTable) {
+    ((jsonExerciseTable.getMaxStoredRevision() + 1)..jsonExerciseTable.MAX_REVISION).forEach { revision ->
         val bytes = Res.readBytes("files/exercises/exercises_$revision.json")
         JimDatabaseManager.json.decodeFromString<JsonExerciseChangeset>(bytes.decodeToString()).let {
             it.exercises.forEach { exercise ->
                 when (it.dbOperationType) {
-                    JsonExerciseChangeset.DBOperationType.INSERT -> JsonExerciseTable.save(entity = exercise)
-                    JsonExerciseChangeset.DBOperationType.UPDATE -> JsonExerciseTable.update(
+                    JsonExerciseChangeset.DBOperationType.INSERT -> jsonExerciseTable.save(entity = exercise)
+                    JsonExerciseChangeset.DBOperationType.UPDATE -> jsonExerciseTable.update(
                         id = exercise.id,
                         entity = exercise
                     )
-                    JsonExerciseChangeset.DBOperationType.DELETE -> JsonExerciseTable.delete(id = exercise.id)
+
+                    JsonExerciseChangeset.DBOperationType.DELETE -> jsonExerciseTable.delete(id = exercise.id)
                 }
             }
         }

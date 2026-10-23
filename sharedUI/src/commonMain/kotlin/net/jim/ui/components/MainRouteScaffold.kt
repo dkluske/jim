@@ -17,10 +17,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import net.jim.Root
 import net.jim.ui.HomeRoute
 import net.jim.ui.SettingsRoute
 import net.jim.ui.StatsRoute
-import net.jim.views.Root
 
 @Composable
 fun MainRouteScaffold(

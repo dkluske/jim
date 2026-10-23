@@ -3,29 +3,28 @@ package net.jim.data.table
 import net.jim.data.models.JsonExerciseType
 import net.jim.data.models.PhysicalJsonExercise
 import net.jim.sqldelight.JimRuntimeDatabase
-import kotlin.concurrent.atomics.AtomicReference
 import kotlin.uuid.Uuid
 
-object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
+data class JsonExerciseTable(
+    override val database: JimRuntimeDatabase
+) : Table<Uuid, JsonExerciseType> {
     // TODO: add mapping for JsonExerciseType Interface instead of straight PhysicalJsonExercise
-    const val MAX_REVISION: Int = 0
-
-    override val database: AtomicReference<JimRuntimeDatabase?> = AtomicReference(null)
+    val MAX_REVISION: Int = 0
 
     override fun getById(id: Uuid): PhysicalJsonExercise {
         return PhysicalJsonExercise.fromDB(
-            getDatabase().jsonExercisesQueries.getById(id = id).executeAsOne()
+            database.jsonExercisesQueries.getById(id = id).executeAsOne()
         )
     }
 
     override fun getAll(): List<JsonExerciseType> {
-        return getDatabase().jsonExercisesQueries.getAll().executeAsList().map {
+        return database.jsonExercisesQueries.getAll().executeAsList().map {
             PhysicalJsonExercise.fromDB(it)
         }
     }
 
     override fun save(entity: JsonExerciseType): JsonExerciseType {
-        getDatabase().jsonExercisesQueries.insert(
+        database.jsonExercisesQueries.insert(
             json_exercises = entity.toDB()
         )
 
@@ -33,14 +32,14 @@ object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
     }
 
     override fun delete(id: Uuid) {
-        getDatabase().jsonExercisesQueries.deleteById(id = id)
+        database.jsonExercisesQueries.deleteById(id = id)
     }
 
     override fun update(
         id: Uuid,
         entity: JsonExerciseType
     ): JsonExerciseType {
-        getDatabase().jsonExercisesQueries.updateById(
+        database.jsonExercisesQueries.updateById(
             id = id,
             name = entity.name,
             level = entity.level,
@@ -54,7 +53,7 @@ object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
     }
 
     fun getMaxStoredRevision(): Long {
-        return getDatabase().jsonExercisesQueries.getMaxRevision().executeAsOne().MAX ?: -1L
+        return database.jsonExercisesQueries.getMaxRevision().executeAsOne().MAX ?: -1L
     }
 
     fun searchByNamePaged(
@@ -62,7 +61,7 @@ object JsonExerciseTable : Table<Uuid, JsonExerciseType> {
         pageSize: Int,
         offset: Int,
     ): List<JsonExerciseType> {
-        return getDatabase().jsonExercisesQueries.searchByNamePaged(
+        return database.jsonExercisesQueries.searchByNamePaged(
             name = name,
             limit = pageSize.toLong(),
             offset = offset.toLong()

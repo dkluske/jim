@@ -10,7 +10,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import net.jim.views.Root
+import net.jim.Root
 
 @Composable
 fun SecondaryRouteScaffold(

@@ -2,40 +2,39 @@ package net.jim.data.table
 
 import net.jim.data.models.WorkoutPlan
 import net.jim.sqldelight.JimRuntimeDatabase
-import kotlin.concurrent.atomics.AtomicReference
 import kotlin.uuid.Uuid
 
-object WorkoutPlanTable : Table<Uuid, WorkoutPlan> {
-    override val database: AtomicReference<JimRuntimeDatabase?> = AtomicReference(null)
-
+data class WorkoutPlanTable(
+    override val database: JimRuntimeDatabase
+) : Table<Uuid, WorkoutPlan> {
     override fun getById(id: Uuid): WorkoutPlan {
-        return getDatabase().workoutPlansQueries.getAll().executeAsOne().let {
+        return database.workoutPlansQueries.getAll().executeAsOne().let {
             WorkoutPlan.fromDB(it)
         }
     }
 
     override fun getAll(): List<WorkoutPlan> {
-        return getDatabase().workoutPlansQueries.getAll().executeAsList().map {
+        return database.workoutPlansQueries.getAll().executeAsList().map {
             WorkoutPlan.fromDB(it)
         }
     }
 
     override fun save(entity: WorkoutPlan): WorkoutPlan {
-        getDatabase().workoutPlansQueries.insert(
+        database.workoutPlansQueries.insert(
             entity.toDB()
         )
         return entity
     }
 
     override fun delete(id: Uuid) {
-        getDatabase().workoutPlansQueries.deleteById(id)
+        database.workoutPlansQueries.deleteById(id)
     }
 
     override fun update(
         id: Uuid,
         entity: WorkoutPlan
     ): WorkoutPlan {
-        getDatabase().workoutPlansQueries.updateById(
+        database.workoutPlansQueries.updateById(
             id = id,
             name = entity.name,
             default_plan = entity.default,
@@ -45,7 +44,7 @@ object WorkoutPlanTable : Table<Uuid, WorkoutPlan> {
     }
 
     fun getDefaultPlan(): WorkoutPlan {
-        return getDatabase().workoutPlansQueries.getDefault().executeAsOne().let {
+        return database.workoutPlansQueries.getDefault().executeAsOne().let {
             WorkoutPlan.fromDB(it)
         }
     }

@@ -4,7 +4,6 @@ import app.cash.sqldelight.db.SqlDriver
 import kotlinx.serialization.json.Json
 import net.jim.data.models.adapter.TableAdapters
 import net.jim.data.models.serializer.jimSerializersModule
-import net.jim.data.table.*
 import net.jim.sqldelight.JimRuntimeDatabase
 
 /**
@@ -29,18 +28,6 @@ object JimDatabaseManager {
     val json: Json = Json {
         ignoreUnknownKeys = true
         serializersModule = jimSerializersModule
-    }
-
-    /**
-     * Method to initialize the DAOs with the database object
-     * @param database The database object to inject to the DAOs
-     */
-    fun initTables(database: JimRuntimeDatabase) {
-        JsonExerciseTable.setDatabase(database)
-        WorkoutPlanTable.setDatabase(database)
-        WorkoutPlanPartTable.setDatabase(database)
-        WorkoutEntryTable.setDatabase(database)
-        WorkoutEntryExerciseTable.setDatabase(database)
     }
 
     /**
