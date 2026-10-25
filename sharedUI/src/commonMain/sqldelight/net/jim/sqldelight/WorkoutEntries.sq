@@ -21,6 +21,9 @@ SELECT * FROM workout_entries WHERE finish_time IS NULL;
 getAllAfter:
 SELECT * FROM workout_entries WHERE finish_time IS NOT NULL AND finish_time >= ?;
 
+getLast:
+SELECT * FROM workout_entries WHERE finish_time IS NOT NULL ORDER BY finish_time DESC LIMIT ?;
+
 insert:
 INSERT INTO workout_entries(
     id, start_time, finish_time, workout_plan_id, workout_plan_part_id

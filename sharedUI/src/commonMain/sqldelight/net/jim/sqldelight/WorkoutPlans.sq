@@ -9,7 +9,7 @@ CREATE TABLE workout_plans (
 );
 
 getAll:
-SELECT * FROM workout_plans;
+SELECT * FROM workout_plans ORDER BY default_plan DESC;
 
 getById:
 SELECT * FROM workout_plans WHERE id = ? LIMIT 1;

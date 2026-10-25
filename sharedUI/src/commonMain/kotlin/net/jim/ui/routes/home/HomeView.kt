@@ -13,6 +13,8 @@ import net.jim.components.CalendarWidget
 import net.jim.components.WorkoutHistoryWidget
 import net.jim.components.WorkoutPlansWidget
 import net.jim.ui.BottomSheet
+import net.jim.ui.WorkoutEntryDetailRoute
+import net.jim.ui.WorkoutPlanRoute
 import net.jim.ui.components.MainRouteScaffold
 
 @Composable
@@ -33,7 +35,7 @@ fun HomeView(
             modifier = Modifier.fillMaxWidth().padding(8.dp)
         ) {
             CalendarWidget(
-                dates = listOf() // TODO: fill data from viewModel
+                dates = viewModel.getCalendarWorkoutEntries()
             )
         }
         Row(
@@ -51,9 +53,9 @@ fun HomeView(
                 .horizontalScroll(workoutPlanScrollState)
         ) {
             WorkoutPlansWidget(
-                plans = listOf(), // TODO: fill with data from viewModel
+                plans = viewModel.getWorkoutPlans(),
                 onClick = {
-                    // TODO: navigate to plan edit
+                    viewModel.root.navStack.value += WorkoutPlanRoute
                 },
                 onStart = {
                     viewModel.root.navStack.value += BottomSheet.WorkoutPlanPartSelectionModal
@@ -71,9 +73,9 @@ fun HomeView(
             modifier = Modifier.fillMaxWidth().padding(8.dp)
         ) {
             WorkoutHistoryWidget(
-                workouts = listOf(), // TODO: fill with data from viewModel
+                workouts = viewModel.getLastWorkouts(),
                 onClick = {
-                    // TODO: navigate to workout detail view
+                    viewModel.root.navStack.value += WorkoutEntryDetailRoute
                 }
             )
         }

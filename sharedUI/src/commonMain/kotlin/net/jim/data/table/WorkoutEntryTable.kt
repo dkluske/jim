@@ -55,4 +55,16 @@ data class WorkoutEntryTable(
             )
         }
     }
+
+    fun getLast(count: Int): List<WorkoutEntry> {
+        return database.workoutEntriesQueries.getLast(count.toLong()).executeAsList().map {
+            WorkoutEntry(
+                id = it.id,
+                startTime = it.start_time,
+                finishTime = it.finish_time,
+                workoutPlanId = it.workout_plan_id,
+                workoutPlanPartId = it.workout_plan_part_id
+            )
+        }
+    }
 }

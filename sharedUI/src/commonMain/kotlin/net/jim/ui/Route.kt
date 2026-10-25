@@ -45,4 +45,4 @@ data object WorkoutPlanPartRunRoute : Route.SecondaryRoute
 data object WorkoutPlanRoute : Route.SecondaryRoute
 
 @Serializable
-data object WorkoutPlanDetailRoute : Route.SecondaryRoute
+data object WorkoutEntryDetailRoute : Route.SecondaryRoute

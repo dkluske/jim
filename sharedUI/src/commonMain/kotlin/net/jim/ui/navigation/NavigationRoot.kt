@@ -39,7 +39,9 @@ fun NavigationRoot(
                     is HomeRoute -> NavEntry(key) {
                         HomeView(
                             viewModel = HomeViewModel(
-                                root = root
+                                root = root,
+                                workoutEntryTable = tableHolder.workoutEntryTable,
+                                workoutPlanTable = tableHolder.workoutPlanTable,
                             ),
                         )
                     }
@@ -76,7 +78,7 @@ fun NavigationRoot(
                         )
                     }
 
-                    is WorkoutPlanDetailRoute -> TODO()
+                    is WorkoutEntryDetailRoute -> TODO()
                     is BottomSheet.JsonExerciseSearchModal -> TODO()
                     is BottomSheet.WorkoutPlanPartSelectionModal -> TODO()
                     is Dialog.ResetAppDialog -> TODO()
