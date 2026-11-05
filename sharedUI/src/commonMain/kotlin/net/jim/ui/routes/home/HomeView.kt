@@ -55,7 +55,7 @@ fun HomeView(
             WorkoutPlansWidget(
                 plans = viewModel.getWorkoutPlans(),
                 onClick = {
-                    viewModel.root.navStack.value += WorkoutPlanRoute
+                    viewModel.root.navStack.value += WorkoutPlanRoute(workoutPlanIdentifier = it)
                 },
                 onStart = {
                     viewModel.root.navStack.value += BottomSheet.WorkoutPlanPartSelectionModal

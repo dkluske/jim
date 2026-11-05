@@ -16,6 +16,7 @@ import net.jim.Root
 fun SecondaryRouteScaffold(
     root: Root,
     title: @Composable RowScope.() -> Unit,
+    bottomBar: @Composable () -> Unit = {},
     content: @Composable ColumnScope.() -> Unit
 ) {
     Scaffold(
@@ -35,7 +36,8 @@ fun SecondaryRouteScaffold(
                 }
                 title()
             }
-        }
+        },
+        bottomBar = bottomBar
     ) {
         val contentScrollState = rememberScrollState()
         Column(

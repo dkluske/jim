@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import jim.sharedui.generated.resources.*
 import net.jim.components.utils.ListWrapper
+import net.jim.data.models.Identifier
 import net.jim.data.models.JsonExerciseType
 import org.jetbrains.compose.resources.stringResource
 import kotlin.uuid.Uuid
@@ -27,8 +28,8 @@ data class WorkoutWidgetPlan(
 @Composable
 fun WorkoutPlansWidget(
     plans: List<WorkoutWidgetPlan>,
-    onClick: (Uuid) -> Unit,
-    onStart: (Uuid) -> Unit
+    onClick: (Identifier) -> Unit,
+    onStart: (Identifier) -> Unit
 ) {
     if (plans.isEmpty()) {
         Card {
@@ -66,14 +67,20 @@ fun WorkoutPlansWidget(
                     },
                     trailingContent = {
                         IconButton(
-                            onClick = { onStart(plan.id) },
+                            onClick = {
+                                onStart(
+                                    Identifier(plan.id, plan.name)
+                                )
+                            },
                         ) {
                             Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "start workout")
                         }
                     },
                     modifier = Modifier.fillMaxWidth()
                         .clickable {
-                            onClick(plan.id)
+                            onClick(
+                                Identifier(plan.id, plan.name)
+                            )
                         }
                 )
             }
@@ -101,7 +108,9 @@ fun WorkoutPlansWidget(
                                                 color = MaterialTheme.colorScheme.onBackground,
                                                 style = MaterialTheme.typography.displaySmall,
                                                 modifier = Modifier.clickable {
-                                                    onClick(plans[index].id)
+                                                    onClick(
+                                                        Identifier(plans[index].id, plans[index].name)
+                                                    )
                                                 }
                                             )
                                         }

@@ -3,6 +3,7 @@ package net.jim.ui
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Polymorphic
 import kotlinx.serialization.Serializable
+import net.jim.data.models.Identifier
 
 @Serializable
 @Polymorphic
@@ -42,7 +43,12 @@ data object StatsRoute : Route.MainRoute
 data object WorkoutPlanPartRunRoute : Route.SecondaryRoute
 
 @Serializable
-data object WorkoutPlanRoute : Route.SecondaryRoute
+data class WorkoutPlanRoute(
+    val workoutPlanIdentifier: Identifier?
+) : Route.SecondaryRoute
+
+@Serializable
+data object WorkoutPlanPartRoute : Route.SecondaryRoute
 
 @Serializable
 data object WorkoutEntryDetailRoute : Route.SecondaryRoute

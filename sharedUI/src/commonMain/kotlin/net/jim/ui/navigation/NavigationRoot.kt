@@ -18,6 +18,8 @@ import net.jim.ui.routes.stats.StatsView
 import net.jim.ui.routes.stats.StatsViewModel
 import net.jim.ui.routes.workoutPlan.WorkoutPlanView
 import net.jim.ui.routes.workoutPlan.WorkoutPlanViewModel
+import net.jim.ui.routes.workoutPlan.workoutPlanPart.WorkoutPlanPartView
+import net.jim.ui.routes.workoutPlan.workoutPlanPart.WorkoutPlanPartViewModel
 import net.jim.ui.routes.workoutPlanPartRun.WorkoutPlanPartRunView
 import net.jim.ui.routes.workoutPlanPartRun.WorkoutPlanPartRunViewModel
 
@@ -72,12 +74,22 @@ fun NavigationRoot(
 
                     is WorkoutPlanRoute -> NavEntry(key) {
                         WorkoutPlanView(
+                            workoutPlanIdentifier = key.workoutPlanIdentifier,
                             viewModel = WorkoutPlanViewModel(
-                                root = root
+                                root = root,
+                                workoutPlanTable = tableHolder.workoutPlanTable,
+                                workoutPlanPartTable = tableHolder.workoutPlanPartTable
                             )
                         )
                     }
 
+                    is WorkoutPlanPartRoute -> NavEntry(key) {
+                        WorkoutPlanPartView(
+                            viewModel = WorkoutPlanPartViewModel(
+                                root = root
+                            )
+                        )
+                    }
                     is WorkoutEntryDetailRoute -> TODO()
                     is BottomSheet.JsonExerciseSearchModal -> TODO()
                     is BottomSheet.WorkoutPlanPartSelectionModal -> TODO()
