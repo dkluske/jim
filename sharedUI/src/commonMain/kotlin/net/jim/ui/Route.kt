@@ -51,4 +51,9 @@ data class WorkoutPlanRoute(
 data object WorkoutPlanPartRoute : Route.SecondaryRoute
 
 @Serializable
-data object WorkoutEntryDetailRoute : Route.SecondaryRoute
+data class WorkoutEntryDetailRoute(
+    val workoutIdentifier: Identifier
+) : Route.SecondaryRoute
+
+@Serializable
+data object WorkoutEntryListRoute : Route.SecondaryRoute

@@ -14,6 +14,7 @@ import net.jim.components.WorkoutHistoryWidget
 import net.jim.components.WorkoutPlansWidget
 import net.jim.ui.BottomSheet
 import net.jim.ui.WorkoutEntryDetailRoute
+import net.jim.ui.WorkoutEntryListRoute
 import net.jim.ui.WorkoutPlanRoute
 import net.jim.ui.components.MainRouteScaffold
 
@@ -48,7 +49,6 @@ fun HomeView(
         val workoutPlanScrollState = rememberScrollState()
         Row(
             modifier = Modifier
-                .fillMaxWidth()
                 .padding(vertical = 8.dp)
                 .horizontalScroll(workoutPlanScrollState)
         ) {
@@ -75,7 +75,10 @@ fun HomeView(
             WorkoutHistoryWidget(
                 workouts = viewModel.getLastWorkouts(),
                 onClick = {
-                    viewModel.root.navStack.value += WorkoutEntryDetailRoute
+                    viewModel.root.navStack.value += WorkoutEntryDetailRoute(it)
+                },
+                onShowMore = {
+                    viewModel.root.navStack.value += WorkoutEntryListRoute
                 }
             )
         }

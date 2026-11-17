@@ -16,6 +16,10 @@ import net.jim.ui.routes.settings.SettingsView
 import net.jim.ui.routes.settings.SettingsViewModel
 import net.jim.ui.routes.stats.StatsView
 import net.jim.ui.routes.stats.StatsViewModel
+import net.jim.ui.routes.workout.WorkoutEntryDetailView
+import net.jim.ui.routes.workout.WorkoutEntryDetailViewModel
+import net.jim.ui.routes.workout.WorkoutEntryListView
+import net.jim.ui.routes.workout.WorkoutEntryListViewModel
 import net.jim.ui.routes.workoutPlan.WorkoutPlanView
 import net.jim.ui.routes.workoutPlan.WorkoutPlanViewModel
 import net.jim.ui.routes.workoutPlan.workoutPlanPart.WorkoutPlanPartView
@@ -44,6 +48,7 @@ fun NavigationRoot(
                                 root = root,
                                 workoutEntryTable = tableHolder.workoutEntryTable,
                                 workoutPlanTable = tableHolder.workoutPlanTable,
+                                workoutPlanPartTable = tableHolder.workoutPlanPartTable
                             ),
                         )
                     }
@@ -90,7 +95,24 @@ fun NavigationRoot(
                             )
                         )
                     }
-                    is WorkoutEntryDetailRoute -> TODO()
+                    is WorkoutEntryListRoute -> NavEntry(key) {
+                        WorkoutEntryListView(
+                            viewModel = WorkoutEntryListViewModel(
+                                root = root,
+                                workoutEntryTable = tableHolder.workoutEntryTable
+                            )
+                        )
+                    }
+
+                    is WorkoutEntryDetailRoute -> NavEntry(key) {
+                        WorkoutEntryDetailView(
+                            viewModel = WorkoutEntryDetailViewModel(
+                                root = root,
+                                workoutIdentifier = key.workoutIdentifier,
+                                workoutEntryTable = tableHolder.workoutEntryTable
+                            )
+                        )
+                    }
                     is BottomSheet.JsonExerciseSearchModal -> TODO()
                     is BottomSheet.WorkoutPlanPartSelectionModal -> TODO()
                     is Dialog.ResetAppDialog -> TODO()

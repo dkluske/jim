@@ -30,7 +30,7 @@ fun MainRouteScaffold(
     Scaffold(
         bottomBar = {
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().padding(8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 // Left Content

@@ -6,7 +6,9 @@ import net.jim.Root
 import net.jim.components.CalendarWidgetEntry
 import net.jim.components.WorkoutHistoryWidget
 import net.jim.components.WorkoutWidgetPlan
+import net.jim.data.models.Identifier
 import net.jim.data.table.WorkoutEntryTable
+import net.jim.data.table.WorkoutPlanPartTable
 import net.jim.data.table.WorkoutPlanTable
 import net.jim.ui.routes.util.ViewModel
 import kotlin.time.Clock
@@ -16,6 +18,7 @@ data class HomeViewModel(
     override val root: Root,
     private val workoutEntryTable: WorkoutEntryTable,
     private val workoutPlanTable: WorkoutPlanTable,
+    private val workoutPlanPartTable: WorkoutPlanPartTable
 ) : ViewModel {
     fun getCalendarWorkoutEntries(): List<CalendarWidgetEntry> {
         val today = Clock.System.now()
@@ -50,7 +53,10 @@ data class HomeViewModel(
         return workoutEntryTable.getLast(count = 3).map {
             WorkoutHistoryWidget(
                 id = it.id,
-                finishDate = it.finishTime!!
+                finishDate = it.finishTime!!,
+                workoutPlanPartIdentifier = workoutPlanPartTable.getById(it.workoutPlanPartId).let { planPart ->
+                    Identifier(planPart.id, planPart.name)
+                }
             )
         }
     }

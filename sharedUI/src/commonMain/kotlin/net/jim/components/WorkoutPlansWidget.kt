@@ -2,8 +2,6 @@ package net.jim.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
@@ -86,11 +84,9 @@ fun WorkoutPlansWidget(
             }
         }
     } else {
-        val scrollState = rememberLazyListState()
-        LazyRow(
-            state = scrollState
+        Row(
         ) {
-            items(plans.size) { index ->
+            plans.forEach { plan ->
                 Column(
                     modifier = Modifier.padding(8.dp)
                 ) {
@@ -104,12 +100,12 @@ fun WorkoutPlansWidget(
                                     ) {
                                         Column {
                                             Text(
-                                                text = plans[index].name,
+                                                text = plan.name,
                                                 color = MaterialTheme.colorScheme.onBackground,
                                                 style = MaterialTheme.typography.displaySmall,
                                                 modifier = Modifier.clickable {
                                                     onClick(
-                                                        Identifier(plans[index].id, plans[index].name)
+                                                        Identifier(plan.id, plan.name)
                                                     )
                                                 }
                                             )
@@ -117,7 +113,7 @@ fun WorkoutPlansWidget(
                                     }
                                     Row {
                                         Text(
-                                            text = plans[index].primaryMuscles.joinToString(),
+                                            text = plan.primaryMuscles.joinToString(),
                                             color = MaterialTheme.colorScheme.onSecondary,
                                             style = MaterialTheme.typography.displaySmall
                                         )
@@ -125,7 +121,7 @@ fun WorkoutPlansWidget(
                                 }
                             },
                             trailingContent = {
-                                if (plans[index].isDefault) {
+                                if (plan.isDefault) {
                                     Column(
                                         verticalArrangement = Arrangement.Top
                                     ) {
@@ -143,7 +139,7 @@ fun WorkoutPlansWidget(
                                     horizontalArrangement = Arrangement.End,
                                 ) {
                                     Button(
-                                        onClick = { /* TODO: Start the Workout */ },
+                                        onClick = { onStart(plan.let { Identifier(it.id, it.name) }) },
                                         colors = ButtonDefaults.textButtonColors(
                                             contentColor = MaterialTheme.colorScheme.onPrimary,
                                             containerColor = MaterialTheme.colorScheme.primary
