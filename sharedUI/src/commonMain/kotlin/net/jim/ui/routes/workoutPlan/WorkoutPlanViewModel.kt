@@ -5,11 +5,13 @@ import net.jim.data.models.WorkoutPlan
 import net.jim.data.models.WorkoutPlanPart
 import net.jim.data.table.WorkoutPlanPartTable
 import net.jim.data.table.WorkoutPlanTable
+import net.jim.ui.Route
 import net.jim.ui.routes.util.ViewModel
 import kotlin.uuid.Uuid
 
 data class WorkoutPlanViewModel(
     override val root: Root,
+    override val routeOrigin: Route,
     private val workoutPlanTable: WorkoutPlanTable,
     private val workoutPlanPartTable: WorkoutPlanPartTable,
 ) : ViewModel {

@@ -10,12 +10,14 @@ import net.jim.data.models.Identifier
 import net.jim.data.table.WorkoutEntryTable
 import net.jim.data.table.WorkoutPlanPartTable
 import net.jim.data.table.WorkoutPlanTable
+import net.jim.ui.Route
 import net.jim.ui.routes.util.ViewModel
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.days
 
 data class HomeViewModel(
     override val root: Root,
+    override val routeOrigin: Route,
     private val workoutEntryTable: WorkoutEntryTable,
     private val workoutPlanTable: WorkoutPlanTable,
     private val workoutPlanPartTable: WorkoutPlanPartTable

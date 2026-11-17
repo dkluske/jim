@@ -58,7 +58,9 @@ fun HomeView(
                     viewModel.root.navStack.value += WorkoutPlanRoute(workoutPlanIdentifier = it)
                 },
                 onStart = {
-                    viewModel.root.navStack.value += BottomSheet.WorkoutPlanPartSelectionModal
+                    viewModel.root.navStack.value += BottomSheet.WorkoutPlanPartSelectionModal(
+                        workoutPlanIdentifier = it
+                    )
                 }
             )
         }

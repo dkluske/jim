@@ -10,6 +10,8 @@ import androidx.navigation3.ui.NavDisplay
 import net.jim.Root
 import net.jim.data.TableHolder
 import net.jim.ui.*
+import net.jim.ui.routes.bottomsheet.workoutPlanPartSelection.WorkoutPlanPartSelectionBottomSheet
+import net.jim.ui.routes.bottomsheet.workoutPlanPartSelection.WorkoutPlanPartSelectionBottomSheetViewModel
 import net.jim.ui.routes.home.HomeView
 import net.jim.ui.routes.home.HomeViewModel
 import net.jim.ui.routes.settings.SettingsView
@@ -46,6 +48,7 @@ fun NavigationRoot(
                         HomeView(
                             viewModel = HomeViewModel(
                                 root = root,
+                                routeOrigin = key,
                                 workoutEntryTable = tableHolder.workoutEntryTable,
                                 workoutPlanTable = tableHolder.workoutPlanTable,
                                 workoutPlanPartTable = tableHolder.workoutPlanPartTable
@@ -56,7 +59,8 @@ fun NavigationRoot(
                     is SettingsRoute -> NavEntry(key) {
                         SettingsView(
                             viewModel = SettingsViewModel(
-                                root = root
+                                root = root,
+                                routeOrigin = key
                             ),
                         )
                     }
@@ -64,7 +68,8 @@ fun NavigationRoot(
                     is StatsRoute -> NavEntry(key) {
                         StatsView(
                             viewModel = StatsViewModel(
-                                root = root
+                                root = root,
+                                routeOrigin = key
                             ),
                         )
                     }
@@ -72,7 +77,8 @@ fun NavigationRoot(
                     is WorkoutPlanPartRunRoute -> NavEntry(key) {
                         WorkoutPlanPartRunView(
                             viewModel = WorkoutPlanPartRunViewModel(
-                                root = root
+                                root = root,
+                                routeOrigin = key
                             )
                         )
                     }
@@ -82,6 +88,7 @@ fun NavigationRoot(
                             workoutPlanIdentifier = key.workoutPlanIdentifier,
                             viewModel = WorkoutPlanViewModel(
                                 root = root,
+                                routeOrigin = key,
                                 workoutPlanTable = tableHolder.workoutPlanTable,
                                 workoutPlanPartTable = tableHolder.workoutPlanPartTable
                             )
@@ -91,7 +98,8 @@ fun NavigationRoot(
                     is WorkoutPlanPartRoute -> NavEntry(key) {
                         WorkoutPlanPartView(
                             viewModel = WorkoutPlanPartViewModel(
-                                root = root
+                                root = root,
+                                routeOrigin = key
                             )
                         )
                     }
@@ -99,6 +107,7 @@ fun NavigationRoot(
                         WorkoutEntryListView(
                             viewModel = WorkoutEntryListViewModel(
                                 root = root,
+                                routeOrigin = key,
                                 workoutEntryTable = tableHolder.workoutEntryTable
                             )
                         )
@@ -108,13 +117,24 @@ fun NavigationRoot(
                         WorkoutEntryDetailView(
                             viewModel = WorkoutEntryDetailViewModel(
                                 root = root,
+                                routeOrigin = key,
                                 workoutIdentifier = key.workoutIdentifier,
                                 workoutEntryTable = tableHolder.workoutEntryTable
                             )
                         )
                     }
+
+                    is BottomSheet.WorkoutPlanPartSelectionModal -> NavEntry(key) {
+                        WorkoutPlanPartSelectionBottomSheet(
+                            viewModel = WorkoutPlanPartSelectionBottomSheetViewModel(
+                                root = root,
+                                routeOrigin = key,
+                                workoutPlanIdentifier = key.workoutPlanIdentifier,
+                                workoutPlanPartTable = tableHolder.workoutPlanPartTable
+                            )
+                        )
+                    }
                     is BottomSheet.JsonExerciseSearchModal -> TODO()
-                    is BottomSheet.WorkoutPlanPartSelectionModal -> TODO()
                     is Dialog.ResetAppDialog -> TODO()
                 }
             }

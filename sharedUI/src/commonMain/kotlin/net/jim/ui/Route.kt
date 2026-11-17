@@ -19,7 +19,9 @@ sealed interface Route : NavKey {
 
 sealed interface BottomSheet : Route, NavKey {
     @Serializable
-    data object WorkoutPlanPartSelectionModal : BottomSheet
+    data class WorkoutPlanPartSelectionModal(
+        val workoutPlanIdentifier: Identifier
+    ) : BottomSheet
 
     @Serializable
     data object JsonExerciseSearchModal : BottomSheet
