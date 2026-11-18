@@ -81,10 +81,11 @@ fun MainRouteScaffold(
                 }
             }
         }
-    ) {
+    ) { paddingValues ->
         val contentScrollState = rememberScrollState()
         Column(
             modifier = Modifier.fillMaxSize()
+                .padding(paddingValues)
                 .verticalScroll(contentScrollState)
         ) {
             content()

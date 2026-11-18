@@ -15,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import net.jim.components.ListItem
+import net.jim.data.models.Identifier
 import net.jim.data.models.WorkoutPlanPart
 import net.jim.ui.WorkoutPlanPartRunRoute
 
@@ -42,7 +43,11 @@ fun WorkoutPlanPartSelectionBottomSheet(
                             val part = parts[index]
                             ListItem(
                                 onClick = {
-                                    viewModel.root.navStack.value += WorkoutPlanPartRunRoute
+                                    viewModel.root.navStack.value += WorkoutPlanPartRunRoute(
+                                        workoutPlanPartIdentifier = part.let {
+                                            Identifier(it.id, it.name)
+                                        }
+                                    )
                                     viewModel.root.navStack.value.remove(viewModel.routeOrigin)
                                 }
                             ) {

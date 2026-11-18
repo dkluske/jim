@@ -9,25 +9,25 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import net.jim.Root
+import net.jim.ui.routes.util.ViewModel
 
 @Composable
 fun SecondaryRouteScaffold(
-    root: Root,
-    title: @Composable RowScope.() -> Unit,
+    viewModel: ViewModel,
+    title: @Composable () -> Unit,
     bottomBar: @Composable () -> Unit = {},
     content: @Composable ColumnScope.() -> Unit
 ) {
     Scaffold(
         topBar = {
             Row(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 IconButton(
-                    onClick = {
-                        root.navStack.value.removeLastOrNull()
-                    }
+                    onClick = { viewModel.root.navStack.value.remove(viewModel.routeOrigin) }
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -38,10 +38,12 @@ fun SecondaryRouteScaffold(
             }
         },
         bottomBar = bottomBar
-    ) {
+    ) { innerPadding ->
         val contentScrollState = rememberScrollState()
         Column(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
                 .verticalScroll(contentScrollState),
         ) {
             content()

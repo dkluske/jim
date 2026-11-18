@@ -101,7 +101,7 @@ fun WorkoutPlanView(
     }
 
     SecondaryRouteScaffold(
-        root = viewModel.root,
+        viewModel = viewModel,
         title = {
             EditableHeader(
                 value = workoutPlan.value.name(),

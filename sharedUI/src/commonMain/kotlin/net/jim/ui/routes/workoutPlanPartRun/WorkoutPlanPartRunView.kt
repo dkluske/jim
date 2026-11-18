@@ -1,5 +1,6 @@
 package net.jim.ui.routes.workoutPlanPartRun
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import net.jim.ui.components.SecondaryRouteScaffold
 
@@ -8,8 +9,8 @@ fun WorkoutPlanPartRunView(
     viewModel: WorkoutPlanPartRunViewModel
 ) {
     SecondaryRouteScaffold(
-        root = viewModel.root,
-        title = {}
+        viewModel = viewModel,
+        title = { Text(viewModel.workoutPlanPartIdentifier.name) }
     ) {
 
     }

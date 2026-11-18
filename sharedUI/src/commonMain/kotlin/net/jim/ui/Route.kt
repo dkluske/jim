@@ -42,7 +42,9 @@ data object SettingsRoute : Route.MainRoute
 data object StatsRoute : Route.MainRoute
 
 @Serializable
-data object WorkoutPlanPartRunRoute : Route.SecondaryRoute
+data class WorkoutPlanPartRunRoute(
+    val workoutPlanPartIdentifier: Identifier
+) : Route.SecondaryRoute
 
 @Serializable
 data class WorkoutPlanRoute(

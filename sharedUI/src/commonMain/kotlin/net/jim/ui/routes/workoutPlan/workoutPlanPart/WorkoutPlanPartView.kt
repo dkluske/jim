@@ -8,7 +8,7 @@ fun WorkoutPlanPartView(
     viewModel: WorkoutPlanPartViewModel
 ) {
     SecondaryRouteScaffold(
-        root = viewModel.root,
+        viewModel = viewModel,
         title = {}
     ) {
 

@@ -9,7 +9,7 @@ fun WorkoutEntryListView(
     viewModel: WorkoutEntryListViewModel
 ) {
     SecondaryRouteScaffold(
-        root = viewModel.root,
+        viewModel = viewModel,
         title = {
             Text("Workout History") // TODO: i18n
         }

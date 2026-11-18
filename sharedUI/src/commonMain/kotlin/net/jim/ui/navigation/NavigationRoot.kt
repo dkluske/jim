@@ -78,7 +78,8 @@ fun NavigationRoot(
                         WorkoutPlanPartRunView(
                             viewModel = WorkoutPlanPartRunViewModel(
                                 root = root,
-                                routeOrigin = key
+                                routeOrigin = key,
+                                workoutPlanPartIdentifier = key.workoutPlanPartIdentifier
                             )
                         )
                     }

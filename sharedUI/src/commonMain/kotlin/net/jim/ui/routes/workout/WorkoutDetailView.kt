@@ -9,7 +9,7 @@ fun WorkoutEntryDetailView(
     viewModel: WorkoutEntryDetailViewModel,
 ) {
     SecondaryRouteScaffold(
-        root = viewModel.root,
+        viewModel = viewModel,
         title = {
             Text(
                 text = viewModel.workoutIdentifier.name
